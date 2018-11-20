@@ -645,3 +645,46 @@ font-size: 0.9rem;
 .MuiInput-root-57 {
   color: #ccc !important;
 }
+
+
+/*gokul edit*/
+div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"]{
+  background-color: #646777 !important;
+  min-height: 48px !important;
+  margin-top: 4px;
+  border-bottom: 2px solid #3f51b5;
+}
+div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"] > div[class^="EnhancedTableToolbar"]{
+  width: 100% !important;
+}
+.dashboard.container .row > div > div > div #tableTitle{color:#fff !important;font-size: 14px;text-align: center;font-weight: bold;text-transform: uppercase;}
+.dashboard.container .row > div > div table tbody tr th{padding: 0px !important;}
+.dashboard.container .row > div > div table{border-right: 2px solid #e0e0e0 !important;}
+.dashboard.container .row > div > div table tbody tr{border-bottom: 2px solid #e0e0e0 !important;}
+div[class^="MuiGrid"] > div[class^="MuiGrid"]{
+  padding-left: 0px !important;
+}
+div[class^="MuiTypography"]{
+  padding: 0px !important;
+  padding-left: 0px !important;
+}
+div[class^="MuiGrid"] > div[class^="MuiGrid"] tbody tr td{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dashboard.container div[class^="MuiPaper"] table tr{
+height: 199px;
+}
+.dashboard.container div[class^="MuiGrid"] header{
+  background-color: #646777 !important;
+}
+.dashboard.container div[class^="MuiGrid"] header button span{
+  color: #fff !important;
+}
+.dashboard.container hr[class^="MuiDivider"]{
+display: none !important; height: 0px !important;
+  }
+div[class^="MuiTypography"] tbody tr td{
+border-bottom: 2px solid #e0e0e0 !important;
+padding-top: 13px !important;
+}

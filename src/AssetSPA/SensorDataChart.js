@@ -19,7 +19,7 @@ class SensorDataChart extends PureComponent {
        let sensor =this.props.chartValue;
       let group = this.props.group
   	return (
-    	<ComposedChart width={650} height={250} data={data}
+    	<ComposedChart width={650} height={180} data={data}
             margin={{top: 7, right: 20, left: 20, bottom: 5}}>
        <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="timeStamp"/>
@@ -27,7 +27,7 @@ class SensorDataChart extends PureComponent {
        {/* <YAxis yAxisId="right" orientation="right" /> */}
        <Tooltip/>
       <Legend/>
-      <Brush />
+      {/* <Brush /> */}
       <Line name ={sensor}yAxisId="left"  dataKey="sensorValue" fill='#413ea0' />
        
     
