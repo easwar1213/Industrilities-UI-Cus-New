@@ -41,6 +41,7 @@ import Typography from '@material-ui/core/Typography';
 
 
 const items = [
+    { name: 'getDashboardData', label: 'Dashboard', icon: <DashboardIcon /> },
     { name: 'getMapViewData', label: 'Map', icon: <LocationIcon /> },
     { name: 'getAssetList', label: 'Assets', icon: <AssetIcon /> },
     { name: 'getDeviceList', label: 'Devices', icon: <DeviceIcon /> },

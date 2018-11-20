@@ -26,6 +26,7 @@ import dataProvider from './dataProvider';
 import CustomLoginPage from './CustomLoginPage';
 import CustomLayout from './CustomLayout'
 import './index.css';
+import DashboardIcon from '@material-ui/icons/Dashboard';
 
 import { MapView } from '././MapSPA/MapView';
 import Dashboard from '././DashboardSPA/Dashboard';
@@ -46,6 +47,13 @@ class App extends React.Component {
         loginPage={Login}
         appLayout={CustomLayout}
       >
+
+      <Resource
+          name="getDashboardData"
+          options={{ label: 'Dashboard' }}
+          list={Dashboard}
+          icon={DashboardIcon}
+        />
 
         <Resource
           name="getMapViewData"

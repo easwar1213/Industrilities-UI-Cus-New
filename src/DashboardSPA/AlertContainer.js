@@ -22,19 +22,20 @@ import AlertIcon from '@material-ui/icons/ErrorOutline';
 import PriorityDataTable from './PriorityDataTable'
 import dataProvider from '../dataProvider'
 import Loader from '../Loader'
-import {fetchEnd,fetchStart,required,Button,GET_ONE} from 'react-admin';
+import { fetchEnd, fetchStart, required, Button, GET_ONE } from 'react-admin';
 import Grid from "@material-ui/core/Grid";
-
+import Panel from '../components/Panel';
+import { Col, Container, Row, Badge } from 'reactstrap';
 
 const styles = theme => ({
   card: {
     maxWidth: 400,
-    
+
 
   },
   content: {
     minWidth: 100,
-    height:100
+    height: 100
   },
   media: {
     height: 0,
@@ -62,120 +63,158 @@ const styles = theme => ({
 });
 
 class AlertContainer extends React.Component {
-  state = { 
-    expanded: false ,
-    dataTable : '',
-    pieChart : '' ,
-    isRendering:true
+  state = {
+    expanded: false,
+    dataTable: '',
+    pieChart: '',
+    isRendering: true
   };
 
   handleExpandClick = () => {
     this.setState(state => ({ expanded: !state.expanded }));
   };
 
-  handleRefresh =() =>{
+  handleRefresh = () => {
     this.loadData()
   }
-componentWillMount(){
-this.loadData();
+  componentWillMount() {
+    this.loadData();
 
-}
+  }
 
-loadData =() =>{
-  fetchStart();
-  this.setState({isRendering:true})
-  dataProvider(GET_ONE, 'AlertPriorityStatistics', { id: "AlertPriorityStatistics" })
-        .then((response) => {
-       //   console.log()
-          let dataTable = response.data.dataTable
-          let pieChart = response.data.pieChart
-            this.setState({ pieChart: pieChart });
-            this.setState({ dataTable: dataTable });
-            
-            this.setState({isRendering:false})
-        })
-        .catch(error => {
-            
-        })
-        .finally(() => {
-           
-            fetchEnd();
-        });
-}
+  loadData = () => {
+    fetchStart();
+    this.setState({ isRendering: true })
+    dataProvider(GET_ONE, 'AlertPriorityStatistics', { id: "AlertPriorityStatistics" })
+      .then((response) => {
+        //   console.log()
+        let dataTable = response.data.dataTable
+        let pieChart = response.data.pieChart
+        this.setState({ pieChart: pieChart });
+        this.setState({ dataTable: dataTable });
+
+        this.setState({ isRendering: false })
+      })
+      .catch(error => {
+
+      })
+      .finally(() => {
+
+        fetchEnd();
+      });
+  }
 
   render() {
     const { classes } = this.props;
-   // console.log(this.state)
+    // console.log(this.state)
 
 
     return (
-      <Card  className={classes.card}>
-        <CardHeader
-          avatar={
-            <Avatar aria-label="Alerts" className={classes.avatar}>
-              P
-            </Avatar>
-          }
-          action={
-            <IconButton
-            onClick ={this.handleRefresh}
-            >
-              <Refresh />
-            </IconButton>
-          }
-          title="Alert Priority Statistics"
-          subheader={"on "+ new Date().toLocaleString()}
-        />
-        {/* <CardMedia
-          className={classes.media}
-          image="/static/images/cards/paella.jpg"
-          title="Contemplative Reptile"
-        /> */}
-        <Divider/>
-        <CardContent classes ={classes.content}>
-          <Typography align="center" component="p">
-           % Alert Priority Distribution
-          </Typography>
-          <br/>
+      // <Card  className={classes.card}>
+      //   <CardHeader
+      //     avatar={
+      //       <Avatar aria-label="Alerts" className={classes.avatar}>
+      //         P
+      //       </Avatar>
+      //     }
+      //     action={
+      //       <IconButton
+      //       onClick ={this.handleRefresh}
+      //       >
+      //         <Refresh />
+      //       </IconButton>
+      //     }
+      //     title="Alert Priority Statistics"
+      //     subheader={"on "+ new Date().toLocaleString()}
+      //   />
+      //   {/* <CardMedia
+      //     className={classes.media}
+      //     image="/static/images/cards/paella.jpg"
+      //     title="Contemplative Reptile"
+      //   /> */}
+      //   <Divider/>
+      //   <CardContent classes ={classes.content}>
+      //     <Typography align="center" component="p">
+      //      % Alert Priority Distribution
+      //     </Typography>
+      //     <br/>
+      //     {this.state.isRendering ===true &&(<Loader/>)}
+      //     {this.state.isRendering ===false &&( <PriorityChart value ={this.state.pieChart}/>)}
+      //     {this.state.isRendering ===false &&( <PriorityChart value ={this.state.pieChart}/>)}
+      //   </CardContent>
+      //   <Divider/>
+      //   <CardActions className={classes.actions} disableActionSpacing>
+      //     {/* <IconButton aria-label="Add to favorites">
+      //       <FavoriteIcon />
+      //     </IconButton> */}
+      //     {/* <IconButton aria-label="Share">
+      //       <ShareIcon />
+      //     </IconButton> */}
+      //     <IconButton
+      //       className={classnames(classes.expand, {
+      //         [classes.expandOpen]: this.state.expanded,
+      //       })}
+      //       onClick={this.handleExpandClick}
+      //       aria-expanded={this.state.expanded}
+      //       aria-label="Show more"
+      //       label ="Show"
+      //     >
+      //       <ExpandMoreIcon />
+      //     </IconButton>
+      //   </CardActions>
+      //   <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+
+      //     <CardContent>
+      //       <Typography align="center" paragraph>Asset Counts</Typography>
+      //       {this.state.isRendering ===true &&(<Loader/>)}
+      //       {this.state.isRendering ===false &&(<PriorityDataTable value ={this.state.dataTable}/>)}
+      //     </CardContent>
+      //   </Collapse>
+      // </Card>
+
+      // <Panel xs={12} md={12} lg={12} title="Device Status Details">
+      //   {this.state.isRendering === true && (<Loader />)}
+      //   {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
+      //   {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
+      // </Panel>
+
+      <Container id="deviceContainer">
+        <Row>
+          <Col md={12}>
+            <h3 className='page-title'>Dashboard</h3>
+          </Col>
+        </Row>
+        <Row>
+          <br />
+        </Row>
+        <Row>
+          <Panel xs={12} md={12} lg={12} title="Alert Priority Statistics" subhead={"on " + new Date().toLocaleString()}>
+          <Row>
+          <Col md={4}>
+          {this.state.isRendering === true && (<Loader />)}
+              {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
+          </Col>
+          <Col md={4}>
           {this.state.isRendering ===true &&(<Loader/>)}
- 
-   
-          {this.state.isRendering ===false &&( <PriorityChart value ={this.state.pieChart}/>)}
-          
-
-          {this.state.isRendering ===false &&( <PriorityChart value ={this.state.pieChart}/>)}
-        
-        </CardContent>
-        <Divider/>
-        <CardActions className={classes.actions} disableActionSpacing>
-          {/* <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton> */}
-          {/* <IconButton aria-label="Share">
-            <ShareIcon />
-          </IconButton> */}
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-            label ="Show"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
-        </CardActions>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-        
-          <CardContent>
-            <Typography align="center" paragraph>Asset Counts</Typography>
-            {this.state.isRendering ===true &&(<Loader/>)}
-
             {this.state.isRendering ===false &&(<PriorityDataTable value ={this.state.dataTable}/>)}
-          </CardContent>
-        </Collapse>
-      </Card>
+          </Col>
+          <Col md={4}>
+          {this.state.isRendering === true && (<Loader />)}
+              {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
+          </Col>
+        </Row>
+            {/* <Panel xs={12} md={12} lg={6}>
+              {this.state.isRendering === true && (<Loader />)}
+              {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
+            </Panel>
+            <Panel xs={12} md={12} lg={6}>
+              {this.state.isRendering === true && (<Loader />)}
+              {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
+            </Panel> */}
+          </Panel>
+        </Row>
+      </Container>
+
     );
   }
 }

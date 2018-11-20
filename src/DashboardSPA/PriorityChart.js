@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 
-import {Doughnut} from 'react-chartjs-2';
+import { Doughnut } from 'react-chartjs-2';
 import Paper from "@material-ui/core/Paper";
 
 import Card from '@material-ui/core/Card';
@@ -19,7 +19,7 @@ const getState = (props) => ({
 
 
   datasets: [{
-    data: (props.value)?[props.value.highAlertPercentage,props.value.mediumAlertPercentage,props.value.lowAlertPercentage]:[0,0,0],
+    data: (props.value) ? [props.value.highAlertPercentage, props.value.mediumAlertPercentage, props.value.lowAlertPercentage] : [0, 0, 0],
     backgroundColor: [
       '#D81B60',
       '#F4D03F',
@@ -32,13 +32,13 @@ const getState = (props) => ({
       '#EAEDED'
     ],
     borderColor: 'rgba(255,255,255,0.54)',
-    borderWidth	:2,
+    borderWidth: 2,
   }]
 });
 
-const options={
+const options = {
   legend: {
-    position:'bottom'
+    position: 'bottom'
   }
 }
 class PriorityChart extends PureComponent {
@@ -47,34 +47,28 @@ class PriorityChart extends PureComponent {
     super(props);
     //console.log(props)
     this.state = {
-      props:props,
+      props: props,
       data: getState(props),
-      options:options
+      options: options
     };
   }
-  
+
 
   componentDidMount() {
     console.log(this.props)
     //setInterval(() => {
-      this.setState({data: getState(this.props)});
-      this.setState({options:options});
-      
-   // }, 4000);
+    this.setState({ data: getState(this.props) });
+    this.setState({ options: options });
+    // }, 4000);
   }
-  
+
   render() {
-  
+
 
     return (
-      
-
       <div >
-            <Doughnut options={this.state.options}  data={this.state.data}/>
-          
-         </div>
-
-      
+        <Doughnut height={250} options={this.state.options} data={this.state.data} />
+      </div>
     )
   }
 }

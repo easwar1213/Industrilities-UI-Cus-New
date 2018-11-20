@@ -536,7 +536,7 @@ font-size: 0.9rem;
   border-radius: 0px !important;
 }
 
-.MuiPaper-elevation1-17, .MuiPaper-elevation1-20{
+.MuiPaper-elevation1-17, .MuiPaper-elevation1-20,.MuiPaper-elevation1-22{
   box-shadow: none !important;
 }
 

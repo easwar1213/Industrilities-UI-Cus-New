@@ -19,16 +19,14 @@ const styles = theme => ({
   },
 });
 
-
-
 function PriorityDataTable(props) {
   const { classes,value } = props;
   let data =props.value
   let keys = Object.keys(props.value)
 
   return (
-    <Paper className={classes.root}>
-      <Table className={classes.table}>
+    <Paper>
+      <Table>
         <TableHead>
           <TableRow>
             <TableCell>Alert Priority</TableCell>
