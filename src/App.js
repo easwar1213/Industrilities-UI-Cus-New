@@ -27,31 +27,40 @@ import CustomLoginPage from './CustomLoginPage';
 import CustomLayout from './CustomLayout'
 import './index.css';
 
+import { MapView } from '././MapSPA/MapView';
 
-  class App extends React.Component {
 
-    render(){
-      console.log(this.props)
-      return(
+class App extends React.Component {
 
-        <Admin 
+  render() {
+    console.log(this.props)
+    return (
+
+      <Admin
         title="Fleet-Admin"
         catchAll={NotFound}
-       // dashboard={Dashboard}
+        // dashboard={Dashboard}
         authProvider={authProvider}
         dataProvider={dataProvider}
         loginPage={Login}
         appLayout={CustomLayout}
       >
-  
+
+        <Resource
+          name="getMapViewData"
+          options={{ label: 'Map' }}
+          list={MapView}
+          icon={LocationIcon}
+        />
+
         <Resource
           name="getAssetList"
           options={{ label: 'Assets' }}
           list={AssetList}
           show={showAsset}
-          icon={AssetIcon}          
+          icon={AssetIcon}
         />
-        
+
         <Resource
           name="getDeviceList"
           options={{ label: 'Devices' }}
@@ -59,22 +68,22 @@ import './index.css';
           show={showDevice}
           icon={DeviceIcon}
         />
-  
-  
+
+
         <Resource name="getAssetListForReference" />
         <Resource name="getListOfDataPoints" />
         <Resource name="getAssetAlerts" />
         <Resource name="getAssetMaintenance" />
         <Resource name="getListOfAttributes" />
         <Resource name="getAssetCurrentData" />
-  
+
       </Admin>
-  
 
-      )
-    }
 
+    )
   }
+
+}
 
 export default App;
 
