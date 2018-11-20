@@ -5,7 +5,7 @@ import { push } from 'react-router-redux';
 export default (type, params) => {
     if (type === AUTH_LOGIN) {
         const { username, password } = params;
-       
+       // const request = new Request('https://xl1xob5uqg.execute-api.us-east-2.amazonaws.com/dev/login', {
         const request = new Request('https://f594u5uu7j.execute-api.us-east-2.amazonaws.com/dev/login', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
@@ -13,7 +13,7 @@ export default (type, params) => {
         })
         return fetch(request)
             .then(response => {
-                
+                //console.log(response)
                 if (response.status < 200 || response.status >= 300) {
                     throw new Error(response.statusText);
                    
@@ -25,7 +25,7 @@ export default (type, params) => {
                 localStorage.setItem('token', response.AuthenticationResult.AccessToken);
                 localStorage.setItem('username', response.username);
                 let username = localStorage.getItem('username');
-               
+               // console.log('token :'+username)
             });
     }
         // called when the API returns an error
@@ -50,6 +50,10 @@ export default (type, params) => {
         // called when the user navigates to a new location
         if (type === AUTH_CHECK) {
             let { status } = params;
+            console.log("AUTH_CHECK")
+
+            console.log(localStorage.getItem('token'))
+           // console.log(localStorage.getItem('username'))
             return localStorage.getItem('token') ? Promise.resolve() : Promise.reject({ redirectTo: '/login' });
         }
 

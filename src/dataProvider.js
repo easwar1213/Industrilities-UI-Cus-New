@@ -19,8 +19,14 @@ import APIConfig from "./APIConfig.json"
 
 const convertDataProviderRequestToHTTP = (type, resource, params) => {
     let token = localStorage.getItem('token')
-    console.log(token);
     let API_URL = APIConfig[resource];
+
+
+    // console.log(type)
+    // console.log(resource)
+    // console.log("External Data Provider")
+    // console.log("APIConfig")
+    // console.log(APIConfig[resource])
     let options = {}
 
 
@@ -29,9 +35,9 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
 
         case GET_LIST: {
 
-            console.log("GET_LIST")
-            console.log(params)
-            console.log(API_URL)
+            // console.log("GET_LIST")
+            // console.log(params)
+            // console.log(API_URL)
             const { page, perPage } = params.pagination;
             const { field, order } = params.sort;
             options.headers = new Headers({ Accept: 'application/json', Authorization: token });
@@ -41,7 +47,8 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
                 range: JSON.stringify([(page - 1) * perPage, page * perPage - 1]),
                 filter: JSON.stringify(params.filter),
             };
-            console.log(JSON.stringify(query));
+            console.log((query))
+            console.log(stringify(query))
             return {
                 url: `${API_URL}/${resource}?${stringify(query)}`
                 , options: options
@@ -51,12 +58,16 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
 
         case GET_ONE:
 
+      
+
             options.headers = new Headers({ Accept: 'application/json', Authorization: token });
             let query = {
                 id: params.id
             }
-          
-  
+         
+            if (resource == "getAssetCurrentData") {
+           
+            }
             return {
                 url: `${API_URL}/${resource}?${stringify(query)}`
                 , options: options
@@ -64,7 +75,7 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
 
 
         case GET_MANY: {
-           
+         
             options.headers = new Headers({ Accept: 'application/json', Authorization: token });
             const query = {
                 filter: JSON.stringify({ id: params.ids })
@@ -78,7 +89,7 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
 
 
         case GET_MANY_REFERENCE: {
-          
+           
             options.headers = new Headers({ Accept: 'application/json', Authorization: token });
             const { page, perPage } = params.pagination;
             const { field, order } = params.sort;
@@ -95,8 +106,11 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
 
 
         case UPDATE:
- 
-        
+            if (resource == 'getListOfMaintenancePlan') {
+                resource = 'updateMaintenancePlan';
+            }
+            //   console.log(resource)
+            //  console.log(params)
             options.method = 'PUT';
             options.body = JSON.stringify(params)
             options.headers = new Headers({ Accept: 'application/json', Authorization: token });
@@ -107,12 +121,18 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
 
 
         case CREATE:
-
+            console.log(resource)
+            if (resource == 'getListOfMaintenancePlan') {
+                resource = 'createMaintenancePlan';
+            }
+            if (resource == 'getListOfAlertConfiguration') {
+                resource = 'createAlertConfiguration';
+            }
 
             options.method = 'POST';
             options.body = JSON.stringify(params.data)
             options.headers = new Headers({ Accept: 'application/json', Authorization: token });
-        
+            // console.log(options.body)
             return {
                 url: `${API_URL}/${resource}`,
                 options: options,
@@ -131,19 +151,21 @@ const convertDataProviderRequestToHTTP = (type, resource, params) => {
 
 
 const convertHTTPResponseToDataProvider = (response, type, resource, params) => {
-   
+    // console.log()
     const { headers, json } = response;
     switch (type) {
 
         case GET_ONE:
-       
+           // console.log(response)
             return {
                 data: json.data
             }
             break;
 
         case GET_LIST:
-           
+            console.log(response)
+            console.log(headers.get('content-range'))
+            //  console.log(parseInt(headers.get('content-range').split('/').pop(), 10));
             if (resource == "getDailyAssetRunData" || resource == "getDetailedAssetRunData" || resource == "getAssetUtilizationSummary" || resource =="getAssetCurrentData"|| resource =="getCustomerAssets") {
                 return response
             }
@@ -156,23 +178,27 @@ const convertHTTPResponseToDataProvider = (response, type, resource, params) => 
 
 
         case GET_MANY:
-        
+            // console.log(response)
             let resp = {
                 data: json
 
             }
 
+            // console.log(resp)
             return resp
             break;
 
         case GET_MANY_REFERENCE:
-           
+            //  console.log(response)
             return {
                 data: json.map(x => x),
                 total: parseInt(headers.get('content-range').split('/').pop(), 10),
             };
 
         case UPDATE:
+            //  console.log("update response")
+            // console.log(response)
+
             break;
 
         case CREATE:
@@ -184,10 +210,14 @@ const convertHTTPResponseToDataProvider = (response, type, resource, params) => 
 
 
 export default (type, resource, params) => {
+    // let options ={};
 
-    const { fetchJson } = fetchUtils;    
+    const { fetchJson } = fetchUtils;
     const { url, options } = convertDataProviderRequestToHTTP(type, resource, params);
-    console.log(url);
+      console.log(options)
+     console.log(url)
+
+
     return fetchJson(url, options)
         .then(response => convertHTTPResponseToDataProvider(response, type, resource, params));
 };
