@@ -14,7 +14,7 @@ export const MapView = (props) => (
     <Container id="deviceContainer">
         <Row>
             <Col md={12}>
-                <h3 className='page-title'>Assets</h3>
+                <h3 className='page-title'>Map</h3>
             </Col>
         </Row>
         <Row>

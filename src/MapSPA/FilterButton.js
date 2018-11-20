@@ -173,9 +173,8 @@ class FilterButton extends Component {
                             {/* <TextField source={record.alertName}/> */}
                             <FormControl >
                                 <InputLabel htmlFor="select-multiple-checkbox">Alert</InputLabel>
-                                <Select
+                                <Select className="SelectFieldDiv"
                                     multiple
-
                                     value={this.state.alertPriority}
                                     onChange={this.handleChange('alertPriority')}
                                     input={<Input id="select-multiple-checkbox" />}
@@ -195,9 +194,8 @@ class FilterButton extends Component {
                             <br />
                             <FormControl>
                                 <InputLabel htmlFor="select-multiple-checkbox">Maintenance</InputLabel>
-                                <Select
+                                <Select className="SelectFieldDiv"
                                     multiple
-
                                     value={this.state.maintenanceStatus}
                                     onChange={this.handleChange('maintenanceStatus')}
                                     input={<Input id="select-multiple-checkbox" />}
@@ -218,15 +216,13 @@ class FilterButton extends Component {
                                     <ReferenceInput label="Attribute" source="dataPoint" reference="getListOfAttributes">
                                         <SelectInput optionText="id" />
                                     </ReferenceInput>
-                                    <TextInput source="value" />
-                                   
+                                    <TextInput source="value" />                                   
                                 </SimpleFormIterator>
                             </ArrayInput>
                         </SimpleForm>
                     </DialogContent>
                     <DialogActions>
                         <SaveButton
-
                             saving={isSubmitting}
                             onClick={this.handleSaveClick}
                         />
