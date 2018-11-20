@@ -5,7 +5,7 @@ import { AssetList, showAsset } from '././AssetSPA/Assets';
 import { DeviceList, showDevice } from '././DevicesSPA/Devices';
 
 import UserIcon from '@material-ui/icons/People';
-import Dashboard from './Dashboard';
+//import Dashboard from './Dashboard';
 
 import authProvider from './authProvider';
 
@@ -28,6 +28,7 @@ import CustomLayout from './CustomLayout'
 import './index.css';
 
 import { MapView } from '././MapSPA/MapView';
+import Dashboard from '././DashboardSPA/Dashboard';
 
 
 class App extends React.Component {
@@ -39,7 +40,7 @@ class App extends React.Component {
       <Admin
         title="Fleet-Admin"
         catchAll={NotFound}
-        // dashboard={Dashboard}
+        dashboard={Dashboard}
         authProvider={authProvider}
         dataProvider={dataProvider}
         loginPage={Login}
