@@ -168,36 +168,65 @@ export default class Mymap extends React.Component {
 
         // Return Map.
         return (
+            <Container>
+                <Row>
+                    <Col xs={12} md={12} lg={12}>
+                        <FilterButton action={this.handleClickSubmitOnChild} />
+                        <section id="map">
+                            <div className="container">
+                                <h3 className="info-title"><span className="info-title-span"></span></h3>
+                                <div className="row">
+                                    <div className="col-md-12 text-left">
+                                        <MapWithAMarker
+                                            markers={this.state.markers}
+                                            // maps={this.state.maps}
+                                            lat={28.4595}
+                                            lng={77.0266}
+                                            zoom={3}
+                                        />
+                                    </div>
+                                </div>
+                                <div className="row text-center">
+                                    <br />
+                                </div>
+                            </div>
+                        </section>
+                    </Col>
+                </Row>
+            </Container>
+
+
             // <Container style={{  minHeight: '86vh'}} fluid={true}>
             //     <Row>
             //     {/* <SimpleModal action ={this.handleClickSubmitOnChild}/> */}
             //     <FilterButton action ={this.handleClickSubmitOnChild} />
             //     </Row>    
             //     <Row>
-            <div>
-                <FilterButton action={this.handleClickSubmitOnChild} />
-                <section id="map">
-                    <div className="container">
-                        <h3 className="info-title"><span className="info-title-span"></span></h3>
-                        <div className="row">
-                            <div className="col-md-12 text-left">
-                                <MapWithAMarker
-                                    markers={this.state.markers}
-                                    // maps={this.state.maps}
-                                    lat={28.4595}
-                                    lng={77.0266}
-                                    zoom={3}
-                                />
-                            </div>
-                        </div>
-                        <div className="row text-center">
-                        <br/>
-                        </div>
-                    </div>
-                </section>
-            </div>
+            // <div>
+            //     <FilterButton action={this.handleClickSubmitOnChild} />
+            //     <section id="map">
+            //         <div className="container">
+            //             <h3 className="info-title"><span className="info-title-span"></span></h3>
+            //             <div className="row">
+            //                 <div className="col-md-12 text-left">
+            //                     <MapWithAMarker
+            //                         markers={this.state.markers}
+            //                         // maps={this.state.maps}
+            //                         lat={28.4595}
+            //                         lng={77.0266}
+            //                         zoom={3}
+            //                     />
+            //                 </div>
+            //             </div>
+            //             <div className="row text-center">
+            //             <br/>
+            //             </div>
+            //         </div>
+            //     </section>
+            // </div>
             //     </Row>            
             // </Container>
+
         )
 
     }

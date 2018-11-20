@@ -7,23 +7,34 @@ import Grid from "@material-ui/core/Grid";
 import { Card, CardBody, Col, Container, Row } from 'reactstrap';
 import Paper from "@material-ui/core/Paper";
 import ClusterMapInfo from './ClusterMapInfo'
-
+import Panel from '../components/Panel';
 
 
 export const MapView = (props) => (
-
-    <Card>
-
-        <Paper>
-            {/* <Row>
-                <SimpleModal/>
-            </Row>
-            <Row> */}
+    <Container id="deviceContainer">
+        <Row>
+            <Col md={12}>
+                <h3 className='page-title'>Assets</h3>
+            </Col>
+        </Row>
+        <Row>
+            <br />
+        </Row>
+        <Row>
+            <Panel xs={12} md={12} lg={12} title="Map Details">
                 <ClusterMapInfo />
-            {/* </Row> */}
-        </Paper>
+            </Panel>
+        </Row>
+    </Container>
 
-    </Card>
-
-
+    // <div>
+    //     {/* <Paper> */}
+    //     {/* <Row>
+    //             <SimpleModal/>
+    //         </Row>
+    //         <Row> */}
+    //     <ClusterMapInfo />
+    //     {/* </Row> */}
+    //     {/* </Paper> */}
+    // </div>
 );
