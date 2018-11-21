@@ -45,6 +45,7 @@ const items = [
     { name: 'getMapViewData', label: 'Map', icon: <LocationIcon /> },
     { name: 'getAssetList', label: 'Assets', icon: <AssetIcon /> },
     { name: 'getDeviceList', label: 'Devices', icon: <DeviceIcon /> },
+    { name: 'getListOfAnalyticsReports', label: 'Analytics', icon: <AnalytcisIcon /> },
 ];
 
 const styles = theme => ({
@@ -236,7 +237,7 @@ class Menu extends React.Component {
                         </List>
                     </div>*/}
 
-                    {/* <div className={classes.root}>
+                    <div className={classes.root}>
                         <List>
                             <ListItem className={classes.item} button onClick ={this.changeRoute} >
                                 <ListItemIcon className={classes.item2} >
@@ -249,7 +250,7 @@ class Menu extends React.Component {
                                  />
                             </ListItem>
                         </List>
-                    </div>  */}
+                    </div> 
                 </Paper>
             </div>
         )

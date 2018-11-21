@@ -42,6 +42,8 @@ import { Alerts } from '././AlertsSPA/Alerts';
 import { AlertsHistory } from '././AlertsSPA/AlertHistory';
 import { AlertConfiguration, createAlertConfiguration, showAlertConfiguration, editAlertConfiguration } from '././AlertsSPA/AlertConfiguration'
 
+import { AnalyticsView, ShowReport } from '././AnalyticsSPA/Analytics';
+
 
 class App extends React.Component {
 
@@ -148,6 +150,13 @@ class App extends React.Component {
           list={PartsDashboard}
         //  show={ShowCustomerAssets}
           //icon={AnalytcisIcon}
+        />
+
+        <Resource name="getListOfAnalyticsReports"
+          options={{ label: 'Analytics' }}
+          list={AnalyticsView}
+          show={ShowReport}
+          icon={AnalytcisIcon}
         />
 
 
