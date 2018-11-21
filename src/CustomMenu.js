@@ -118,7 +118,7 @@ class Menu extends React.Component {
                                 <ListItemIcon>
                                     <MaintenanceIcon />
                                 </ListItemIcon>
-                                <ListItemText className={classes.item2}
+                                <ListItemText className={classes.item}
                                 disableTypography 
                                 primary={<Typography variant="subheading" color="textSecondary" >Maintenance</Typography>}
                                 />
@@ -154,7 +154,7 @@ class Menu extends React.Component {
                                 <ListItemIcon>
                                     <AlertDashboard />
                                 </ListItemIcon>
-                                <ListItemText className={classes.item2}
+                                <ListItemText className={classes.item}
                                  disableTypography 
                                  primary={<Typography variant="subheading" color="textSecondary" >Alerts</Typography>}
                                 />
@@ -190,7 +190,7 @@ class Menu extends React.Component {
                                 <ListItemIcon>
                                     <PartsIcon />
                                 </ListItemIcon>
-                                <ListItemText className={classes.item2}
+                                <ListItemText className={classes.item}
                                   disableTypography 
                                   primary={<Typography variant="subheading" color="textSecondary" >Parts</Typography>}
                                  />
