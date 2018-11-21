@@ -21,15 +21,15 @@ const getState = (props) => ({
   datasets: [{
     data: (props.value) ? [props.value.highAlertPercentage, props.value.mediumAlertPercentage, props.value.lowAlertPercentage] : [0, 0, 0],
     backgroundColor: [
-      '#D81B60',
-      '#F4D03F',
-      '#EAEDED'
+      '#FF6384',
+      '#FFCE56',
+      '#E7E9ED'
     ],
     hoverBackgroundColor: [
 
-      '#D81B60',
-      '#F4D03F',
-      '#EAEDED'
+      '#FF6384',
+      '#FFCE56',
+      '#E7E9ED'
     ],
     borderColor: 'rgba(255,255,255,0.54)',
     borderWidth: 2,

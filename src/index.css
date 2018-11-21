@@ -844,4 +844,13 @@ div[class^="MuiCardActions"]{
   font-size: 18px !important;
 }
 .list-page table thead tr th{color: #FFFFFF !important;}
-#partstbl tbody tr td{padding: 4px 15px 4px 15px !important;}
+#partstbl tbody tr td{
+  padding: 4px 15px 4px 15px !important;
+}
+
+/* div[class^="MuiInput"]{
+  color: #FFFFFF !important;
+}
+div[class^="Login"] form label{
+  color: #FFFFFF !important;
+} */
