@@ -565,7 +565,7 @@ font-size: 0.9rem;
 }
 
 .Datagrid-table-249 td, .datagrid-body td, .Datagrid-table-71 th, .TableResponsive th {
-  border: 1px solid #ccc !important;
+  border: 1px solid #ccc;
   padding: 0px 12px !important;
 }
 
@@ -695,9 +695,9 @@ div[class^="MuiTypography"] tbody tr td{
   min-width: 190px !important;
 }
 .simple-form div[class^="MuiFormControl"] .button-add{
-  min-width: 200px !important;
+  min-width: 103px !important;
   margin-top: 15px !important;
-  background: #3f51b5 !important;
+  background: #3ea3fc !important;
   color: #FFFFFF !important;
 }
 .simple-form .button-add svg{
@@ -738,14 +738,104 @@ ul[class^="MuiList"]{
   padding-bottom: 0px !important;
   border-bottom: 1px solid #eff1f5;
 }
+li[class^="MuiListItem"] a{
+  border-bottom:none !important;
+}
 li[class^="MuiListItem"]{
 padding-top: 0px !important;
 padding-bottom: 0px !important;
+border-bottom: 1px solid #eff1f5;
 }
-/* li[class^="MuiListItem"] a{
-  border-bottom: none !important;
-} */
+li[class^="MuiListItem"] a{
+  font-size: 14px !important;
+}
+div[class^="MuiButtonBase"] a{
+  font-size: 14px !important;
+}
 div[class^="MuiList"] > div[class^="MuiButtonBase"]{
   padding-top: 0px !important;
   padding-bottom: 0px !important;
+  border-bottom: 1px solid #eff1f5;
 }
+.list-page th[class^="MuiTableCell"]{
+  text-align: center !important;
+  padding: 4px 10px 4px 10px !important;
+}
+tbody[class^="MuiTableBody"] td{
+  text-align: center !important;
+}
+.list-page table{
+  width: 100% !important;
+}
+label[class^="MuiFormLabel"] span{
+  font-size: 16px !important;
+}
+.ra-input div[class^="MuiInput"]{
+  width: 100% !important;
+}
+div[class^="SaveButton"] > button[class^="SaveButton"]{
+  background-color:#3ea3fc !important;
+}
+.ra-input-assets{float: left !important;margin-right: 20px !important;}
+.ra-input-tags{float: left !important;margin-right: 20px !important;}
+.ra-input-description{float: left !important;margin-right: 20px !important;}
+.fade-enter-done{border-bottom: none !important;}
+.fade-enter-done p{display: none !important;}
+table .datagrid-body td{border-bottom: 1px solid #ccc !important; border-top: 1px solid #ccc !important;border-left: none !important; border-right:none !important;}
+.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"]{
+  background: #646777 !important;
+}
+.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] tr th span span{color: #FFFFFF !important;}
+.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] svg{
+  fill: #ffffff !important;
+} 
+.datagrid-body td a:hover{
+  background: #646777 !important;
+  color: #fff !important;
+}
+.datagrid-body td a{color: #646777 !important;}
+div[class^="Labeled"] table thead tr th{
+text-align: center !important;
+}
+div[class^="Labeled"] table thead{
+background: #646777 !important;
+}
+div[class^="Labeled"] table thead tr th span span{color: #FFFFFF !important;}
+.ra-field-planName{float: left !important;}
+.ra-field-description{float: left !important;}
+.ra-field-scheduleType{float: left !important;}
+.ra-field-meterBased{float: left !important;}
+.ra-field-c_DueEvery{float: left !important;}
+div[class^="MuiCardActions"]{
+  padding: 12px 12px !important;
+}
+.ra-field-assetName{float: left !important;margin-right: 20px !important;}
+.ra-field-plan{float: left !important;margin-right: 20px !important;}
+.ra-field.ra-field-undefined{float: left !important;margin-right: 20px !important;}
+.ra-field-workOrder{float: left !important;margin-right: 20px !important;}
+.ra-field-completedBy{float: left !important;margin-right: 20px !important;}
+.ra-field-serviceRunHours{float: left !important;margin-right: 20px !important;}
+.ra-field-dateOfService{float: left !important;margin-right: 20px !important;}
+.ra-field-status{float: left !important;margin-right: 20px !important;}
+.ra-field-assetName label span {
+  font-size: 18px !important;
+}
+.ra-field-plan label span {
+  font-size: 18px !important;
+}
+.ra-field-workOrder label span {
+  font-size: 18px !important;
+}
+.ra-field-completedBy label span {
+  font-size: 18px !important;
+}
+.ra-field-serviceRunHours label span {
+  font-size: 18px !important;
+}
+.ra-field-dateOfService label span {
+  font-size: 18px !important;
+}
+.ra-field-status label span {
+  font-size: 18px !important;
+}
+.list-page table thead tr th{color: #FFFFFF !important;}
