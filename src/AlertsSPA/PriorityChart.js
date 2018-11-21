@@ -4,10 +4,6 @@ import {Doughnut} from 'react-chartjs-2';
 import Paper from "@material-ui/core/Paper";
 
 
-// function getRandomInt(min, max) {
-//   return Math.floor(Math.random() * (max - min + 1)) + min;
-// }
-
 const getState = (props) => ({
 
   labels: [
@@ -20,18 +16,17 @@ const getState = (props) => ({
   datasets: [{
     data: (props.value)?[props.value.highAlertPercentage,props.value.mediumAlertPercentage,props.value.lowAlertPercentage]:[0,0,0],
     backgroundColor: [
-      '#D81B60',
-      '#F4D03F',
-      '#EAEDED'
+      '#FF6384',
+      '#FFCE56',
+      '#E7E9ED'
     ],
     hoverBackgroundColor: [
 
-      '#D81B60',
-      '#F4D03F',
-      '#EAEDED'
+      '#FF6384',
+      '#FFCE56',
+      '#E7E9ED'
     ],
-    borderColor: 'rgba(255,255,255,0.54)',
-    borderWidth	:2,
+    borderColor: 'rgba(255,255,255,0.54)'
   }]
 });
 
@@ -47,8 +42,7 @@ class PriorityChart extends PureComponent {
     //console.log(props)
     this.state = {
       props:props,
-      data: getState(props),
-      options:options
+      data: getState(props)
     };
   }
   
@@ -57,8 +51,6 @@ class PriorityChart extends PureComponent {
     console.log(this.props)
     //setInterval(() => {
       this.setState({data: getState(this.props)});
-      this.setState({options:options});
-      
    // }, 4000);
   }
   
@@ -66,21 +58,11 @@ class PriorityChart extends PureComponent {
   
 
     return (
-      
-      // <Col >
-      //   <Card>
-      //     <CardBody>
       <div>
-            <Doughnut options={this.state.options}  data={this.state.data}/>
-            <div className="bg-info clearfix" style={{ padding: '.5rem' }}>
-          {/* <CardText >&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
-          &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; High Priority: 1</CardText> */}
-         </div>
-         </div>
-      //     </CardBody>
-      //   </Card>
-      // </Col>
-      
+            <Doughnut height={310} data={this.state.data}/>
+            {/* <div className="bg-info clearfix" style={{ padding: '.5rem' }}>
+         </div> */}
+         </div>     
     )
   }
 }

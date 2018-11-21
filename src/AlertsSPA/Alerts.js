@@ -3,7 +3,6 @@ import React from 'react';
 import { ChipField, Button, SelectArrayInput, Filter, List, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } from 'react-admin';
 import IconButton from '@material-ui/core/IconButton';
 import AcknowledgeButton from './AcknowledgeButton';
-import { Col, Container, Row } from 'reactstrap';
 import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import AddCommentButton from './AddCommentButton';
 import UndoIcon from '@material-ui/icons/Undo';
@@ -38,7 +37,8 @@ import grey from '@material-ui/core/colors/grey';
 import Refresh from '@material-ui/icons/Refresh';
 import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import PriorityTrendContainer from './PriorityTrendContainer'
-
+import { Col, Container, Row, Badge } from 'reactstrap';
+import Panel from '../components/Panel';
 
 
 const AlertFilter = (props) => (
@@ -48,7 +48,7 @@ const AlertFilter = (props) => (
             { id: 'active', name: 'Active' },
             { id: 'returned', name: 'Returned' },
             { id: 'acknowledged', name: 'Acknowledged' }
-           
+
         ]} />
 
         <SelectArrayInput label="Priority" source="alertPriority" choices={[
@@ -84,46 +84,74 @@ const themeShadow = createMuiTheme({
     },
 });
 export const Alerts = withStyles(listStyles)(({ classes, ...props }) => (
-    <div style={{backgroundColor:"#ECEFF1"}}>
-    <Grid container spacing={24}>
-        <Grid item xs={4}>
+
+    <Container id="deviceContainer">
+        <Row>
+            <Col md={12}>
+                <h3 className='page-title'>Alerts</h3>
+            </Col>
+        </Row>
+        <Row>
+            <br />
+        </Row>
+        <Row>
             <PriorityStatisticsContainer />
-        </Grid>
-
-
-        <Grid item xs={8}>
             <PriorityTrendContainer />
-        </Grid>
-
-        <Grid item xs={4}>
-            <StatusStatisticsContainer/>
-        </Grid>
-
-        <Grid item xs={8}>
-            <StatusTrendContainer/>
-        </Grid>
-
-        <Grid item xs={12}>
-            <Paper elevation={11}>
-                <List title="Alerts" classes={classes} {...props} filters={<AlertFilter />} >
-
+        </Row>
+        <Row>
+            <StatusStatisticsContainer />
+            <StatusTrendContainer />
+        </Row>
+        <Row>
+            <Panel xs={12} md={12} lg={12} title="Alerts Details">
+                <List title="Alerts" {...props} filters={<AlertFilter />} >
                     <AlertGrid />
-
-                    {/* <Datagrid >
-             <TextField source="assetName" />
-             <TextField label = "Time Active" source="timeStamp" />
-             <TextField source="alertPriority" />
-             <TextField source="alertStatus" />
-             <TextField source="event" />
-             <AddCommentButton />
-            <AcknowledgeButton/>  
-         </Datagrid> */}
                 </List>
-            </Paper>
-        </Grid>
+            </Panel>
+        </Row>
+    </Container>
 
-    </Grid>
-</div>
+
+    //     <div style={{backgroundColor:"#ECEFF1"}}>
+    //     <Grid container spacing={24}>
+    //         <Grid item xs={4}>
+    //             <PriorityStatisticsContainer />
+    //         </Grid>
+
+
+    //         <Grid item xs={8}>
+    //             <PriorityTrendContainer />
+    //         </Grid>
+
+    //         <Grid item xs={4}>
+    //             <StatusStatisticsContainer/>
+    //         </Grid>
+
+    //         <Grid item xs={8}>
+    //             <StatusTrendContainer/>
+    //         </Grid>
+
+    //         <Grid item xs={12}>
+    //             <Paper elevation={11}>
+    //                 <List title="Alerts" classes={classes} {...props} filters={<AlertFilter />} >
+
+    //                     <AlertGrid />
+
+    //                     {/* <Datagrid >
+    //              <TextField source="assetName" />
+    //              <TextField label = "Time Active" source="timeStamp" />
+    //              <TextField source="alertPriority" />
+    //              <TextField source="alertStatus" />
+    //              <TextField source="event" />
+    //              <AddCommentButton />
+    //             <AcknowledgeButton/>  
+    //          </Datagrid> */}
+    //                 </List>
+    //             </Paper>
+    //         </Grid>
+
+    //     </Grid>
+    // </div>
 
 
 

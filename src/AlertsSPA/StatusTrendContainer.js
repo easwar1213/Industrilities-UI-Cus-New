@@ -21,8 +21,9 @@ import AlertIcon from '@material-ui/icons/ErrorOutline';
 import PriorityDataTable from './PriorityDataTable'
 import StatusTrendChart from './StatusTrendChart'
 import { fetchEnd, fetchStart, required, Button, GET_LIST } from 'react-admin';
-import dataProvider from '../dataProvider'
-import Loader from '../Loader'
+import dataProvider from '../dataProvider';
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 const styles = theme => ({
   card: {
@@ -40,9 +41,9 @@ const styles = theme => ({
 });
 
 class StatusTrendContainer extends React.Component {
-  state = { 
-    expanded: false ,
-    isRendering:true,
+  state = {
+    expanded: false,
+    isRendering: true,
     Data: []
   };
 
@@ -71,7 +72,7 @@ class StatusTrendContainer extends React.Component {
     })
       .then((response) => {
         this.setState({ Data: response.data });
-         console.log(this.state.Data)
+        console.log(this.state.Data)
         this.setState({ isRendering: false })
       })
       .catch(error => {
@@ -89,29 +90,32 @@ class StatusTrendContainer extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Card  className={classes.card} >
-        <CardHeader
-          avatar={
-            <Avatar className={classes.avatar}>
-              S
-            </Avatar>
-          }
-          action={
-            <IconButton
-            onClick = {this.handleRefresh}
-            >
-              <Refresh />
-            </IconButton>
-          }
-          title="Alert Status Trend"
-          subheader={"No. of Assets with different Alert Status"}
-        />
+      // <Card  className={classes.card} >
+      //   <CardHeader
+      //     avatar={
+      //       <Avatar className={classes.avatar}>
+      //         S
+      //       </Avatar>
+      //     }
+      //     action={
+      //       <IconButton
+      //       onClick = {this.handleRefresh}
+      //       >
+      //         <Refresh />
+      //       </IconButton>
+      //     }
+      //     title="Alert Status Trend"
+      //     subheader={"No. of Assets with different Alert Status"}
+      //   />
+      //   <Divider />
+      //   {this.state.isRendering === true && (<Loader/>)}
+      //   {this.state.isRendering ===false &&(<StatusTrendChart data ={this.state.Data} />)}
+      // </Card>
 
-        <Divider />
-        {this.state.isRendering === true && (<Loader/>)}
-        {this.state.isRendering ===false &&(<StatusTrendChart data ={this.state.Data} />)}
-
-      </Card>
+      <Panel xs={12} md={12} lg={8} title="Alert Status Trend" subhead="No. of Assets with different Alert Status">
+        {this.state.isRendering === true && (<Loader />)}
+        {this.state.isRendering === false && (<StatusTrendChart data={this.state.Data} />)}
+      </Panel>
     );
   }
 }

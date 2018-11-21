@@ -22,7 +22,8 @@ import AckIcon from '@material-ui/icons/ThumbUp';
 import PriorityTrendChart from './PriorityTrendChart'
 import {fetchEnd,fetchStart,required,Button,GET_LIST} from 'react-admin';
 import dataProvider from '../dataProvider'
-import Loader from '../Loader'
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 const styles = theme => ({
     card: {
@@ -88,29 +89,33 @@ class PriorityTrendContainer extends React.Component {
         const { classes, avatarAlphabet, headerHeading, pierChartHeading, dataTableSource } = this.props;
 
         return (
-            <Card classes={classes.card} >
-                <CardHeader
-                    avatar={
-                        <Avatar classes={classes.avatar} >
-                            S
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton
-                        onClick = {this.handleRefresh}
-                        >
-                            <Refresh />
-                        </IconButton>
-                    }
+            // <Card classes={classes.card} >
+            //     <CardHeader
+            //         avatar={
+            //             <Avatar classes={classes.avatar} >
+            //                 S
+            //             </Avatar>
+            //         }
+            //         action={
+            //             <IconButton
+            //             onClick = {this.handleRefresh}
+            //             >
+            //                 <Refresh />
+            //             </IconButton>
+            //         }
 
-                    title="Alert Priority Trend"
-                    subheader={"Count of Assets with different Alert Priority"}
-                />
-                <Divider />
+            //         title="Alert Priority Trend"
+            //         subheader={"Count of Assets with different Alert Priority"}
+            //     />
+            //     <Divider />
+            //     {this.state.isRendering === true && (<Loader/>)}
+            //     {this.state.isRendering ===false &&(<PriorityTrendChart data ={this.state.Data}/>)}                
+            // </Card>
+
+            <Panel xs={12} md={12} lg={8} title="Alert Priority Trend" subhead="Count of Assets with different Alert Priority">
                 {this.state.isRendering === true && (<Loader/>)}
-                {this.state.isRendering ===false &&(<PriorityTrendChart data ={this.state.Data}/>)}
-                
-            </Card>
+                {this.state.isRendering ===false &&(<PriorityTrendChart data ={this.state.Data}/>)}                
+            </Panel>
         );
     }
 }

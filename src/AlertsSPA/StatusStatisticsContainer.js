@@ -23,7 +23,8 @@ import AckIcon from '@material-ui/icons/ThumbUp';
 import StatusPieChart from './StatusPieChart'
 import {fetchEnd,fetchStart,required,Button,GET_ONE} from 'react-admin';
 import dataProvider from '../dataProvider'
-import Loader from '../Loader'
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 const styles = theme => ({
   card: {
@@ -98,59 +99,65 @@ class StatusStatisticsContainer extends React.Component {
     const { classes, avatarAlphabet, headerHeading, pierChartHeading ,dataTableSource} = this.props;
 
     return (
-      <Card  className={classes.card}>
-        <CardHeader
-          avatar={
-            <Avatar aria-label="Alerts" className={classes.avatar}>
-              S
-            </Avatar>
-          }
-          action={
-            <IconButton
-            onClick ={this.handleRefresh}
-            >
-              <Refresh />
-            </IconButton>
-          }
-          title="Alert Status Statistics"
-          subheader={"on " + new Date().toLocaleString()}
-        />
+      // <Card  className={classes.card}>
+      //   <CardHeader
+      //     avatar={
+      //       <Avatar aria-label="Alerts" className={classes.avatar}>
+      //         S
+      //       </Avatar>
+      //     }
+      //     action={
+      //       <IconButton
+      //       onClick ={this.handleRefresh}
+      //       >
+      //         <Refresh />
+      //       </IconButton>
+      //     }
+      //     title="Alert Status Statistics"
+      //     subheader={"on " + new Date().toLocaleString()}
+      //   />
 
-        <Divider />
-        <CardContent>
-          <Typography align="center" component="p">
-            {"% Alert Status Distribution"}
-          </Typography>
-          <br/>
-          {/* <StatusPieChart/> */}
+      //   <Divider />
+      //   <CardContent>
+      //     <Typography align="center" component="p">
+      //       {"% Alert Status Distribution"}
+      //     </Typography>
+      //     <br/>
+      //     {/* <StatusPieChart/> */}
+      //     {this.state.isRendering ===true &&(<Loader/>)}
+      //     {this.state.isRendering ===false &&( <StatusPieChart value ={this.state.pieChart}/>)}
+      //   </CardContent>
+      //   <Divider />
+      //   <CardActions className={classes.actions} disableActionSpacing>
+      //     <IconButton
+      //       className={classnames(classes.expand, {
+      //         [classes.expandOpen]: this.state.expanded,
+      //       })}
+      //       onClick={this.handleExpandClick}
+      //       aria-expanded={this.state.expanded}
+      //       aria-label="Show more"
+      //       label="Show"
+      //     >
+      //       <ExpandMoreIcon />
+      //     </IconButton>
+      //   </CardActions>
+      //   <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+          
+      //     <CardContent>
+      //       <Typography align="center" paragraph>Asset Counts</Typography>
+      //       {this.state.isRendering ===true &&(<Loader/>)}
+      //       {this.state.isRendering ===false &&(<DataTable value ={this.state.dataTable}/>)}
+
+      //       {/* <DataTable /> */}
+      //     </CardContent>
+      //   </Collapse>
+      // </Card>
+
+      <Panel xs={12} md={12} lg={4} title="Alert Status Statistics" subhead={"on " + new Date().toLocaleString()}>
           {this.state.isRendering ===true &&(<Loader/>)}
           {this.state.isRendering ===false &&( <StatusPieChart value ={this.state.pieChart}/>)}
-        </CardContent>
-        <Divider />
-        <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-            label="Show"
-          >
-            <ExpandMoreIcon />
-          </IconButton>
-        </CardActions>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-          
-          <CardContent>
-            <Typography align="center" paragraph>Asset Counts</Typography>
-            {this.state.isRendering ===true &&(<Loader/>)}
-            {this.state.isRendering ===false &&(<DataTable value ={this.state.dataTable}/>)}
+      </Panel>
 
-            {/* <DataTable /> */}
-          </CardContent>
-        </Collapse>
-      </Card>
     );
   }
 }
