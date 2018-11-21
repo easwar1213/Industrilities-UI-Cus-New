@@ -25,7 +25,7 @@ function PriorityDataTable(props) {
   let keys = Object.keys(props.value)
 
   return (
-    <Paper>
+    // <Paper>
       <Table>
         <TableHead>
           <TableRow>
@@ -47,7 +47,7 @@ function PriorityDataTable(props) {
           })}
         </TableBody>
       </Table>
-    </Paper>
+    // </Paper>
   );
 }
 

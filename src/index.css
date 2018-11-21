@@ -53,15 +53,7 @@ div[class^="Login"] > div[class^="MuiPaper"] {
 .deviceTable{
   margin-top:30px;
 }
-table thead th, table thead th span{
-  font-size:14px !important;
-  font-weight:600 !important;
-  color:#646777 !important;
-}
-table tbody td{
-  font-size:13px !important;
-  color:#646777 !important;
-}
+
 .list-page [class^="MuiToolbar"] {
   padding:0px !important;
 }
@@ -183,8 +175,6 @@ form div[class^="MuiFormControl"]{display:inline-block !important;}
 
 
 .recharts-wrapper, .recharts-wrapper svg{ width:100% !important;}
-.list-page span[class^="MuiButton"]{ color:#70bbfd;}
-.list-page span[class^="MuiButton"] span{ text-transform:capitalize !important; font-weight: 600; }
 
 .layout, div[class^="Layout"] { max-width:100% !important;   min-width:auto !important; background: #f2f4f7 !important;}
 
@@ -217,9 +207,6 @@ form div[class^="MuiFormControl"]{display:inline-block !important;}
   font-size: 14px;
 }
 
-.table-heading th{
-  color: #fff !important;
-}
 .card-body .table tbody td{
   color: #646777;
   font-size: 14px;
@@ -561,32 +548,7 @@ font-size: 0.9rem;
   left: calc(50% - 24px);
 }
 
-.table-class-new {
-  float: left;
-}
 
-.table-bordered thead {
-  background-color: #646777 !important;
-}
-
-.Datagrid-table-249 td, .datagrid-body td, .Datagrid-table-71 th, .TableResponsive th {
-  border: 1px solid #ccc;
-  padding: 0px 12px !important;
-}
-
-.TableResponsive thead {
-  background-color: #646777 !important;
-  color: #fff !important;
-  border: 1px solid #ccc !important;
-}
-
-.TableResponsive thead span{
-  color: #fff !important;
-}
-
-.table-bordered {
-  border: 1px solid #dee2e6 !important;
-}
 
 .heading-txt {
   border-left: 3px solid #646777;
@@ -786,26 +748,15 @@ div[class^="SaveButton"] > button[class^="SaveButton"]{
 .ra-input-description{float: left !important;margin-right: 20px !important;}
 .fade-enter-done{border-bottom: none !important;}
 .fade-enter-done p{display: none !important;}
+
 table .datagrid-body td{border-bottom: 1px solid #ccc !important; border-top: 1px solid #ccc !important;border-left: none !important; border-right:none !important;}
-.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"]{
-  background: #646777 !important;
-}
-.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] tr th span span{color: #FFFFFF !important;}
-.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] svg{
-  fill: #ffffff !important;
-} 
+
 .datagrid-body td a:hover{
   background: #646777 !important;
   color: #fff !important;
 }
 .datagrid-body td a{color: #646777 !important;}
-div[class^="Labeled"] table thead tr th{
-text-align: center !important;
-}
-div[class^="Labeled"] table thead{
-background: #646777 !important;
-}
-div[class^="Labeled"] table thead tr th span span{color: #FFFFFF !important;}
+
 .ra-field-planName{float: left !important;}
 .ra-field-description{float: left !important;}
 .ra-field-scheduleType{float: left !important;}
@@ -843,10 +794,89 @@ div[class^="MuiCardActions"]{
 .ra-field-status label span {
   font-size: 18px !important;
 }
-.list-page table thead tr th{color: #FFFFFF !important;}
+
 #partstbl tbody tr td{
   padding: 4px 15px 4px 15px !important;
 }
+
+/* MuiButton Customization*/
+
+/* .list-page span[class^="MuiButton"]{ color:#70bbfd;}
+.list-page span[class^="MuiButton"] span{ text-transform:capitalize !important; font-weight: 600; } */
+
+/* Table Customization*/
+
+/*Bootstrap Table*/
+table thead th, table thead th span{
+  font-size:14px !important;
+  font-weight:600 !important;
+  /* color:#646777 !important; */
+}
+
+.table-class-new {
+  float: left;
+}
+
+/* .table-bordered thead {
+  background-color: #646777 !important;
+} */
+
+/* .TableResponsive thead {
+  background-color: #646777 !important;
+  color: #fff !important;
+  border: 1px solid #ccc !important;
+} */
+
+div[class^="Labeled"] table thead tr th{
+  text-align: center !important;
+}
+  /* div[class^="Labeled"] table thead{
+  background: #646777 !important;
+} */
+  div[class^="Labeled"] table thead tr th span span{
+    color: #646777  !important;
+ }
+
+ /* .table-heading th{
+  color: #fff !important;
+} */
+
+/* .TableResponsive thead span{
+  color: #fff !important;
+} */
+
+.table-bordered {
+  border: 1px solid #dee2e6 !important;
+}
+
+/* table tbody td{
+  font-size:13px !important;
+  color:#646777 !important;
+} */
+
+/*MUI Table*/
+
+/* .list-page table thead tr th{
+  color: #FFFFFF !important;
+} */
+
+/* .list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"]{
+  background: #646777 !important;
+} */
+
+/* .list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] tr th span span{
+  color: #FFFFFF !important;
+}
+.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] svg{
+  fill: #ffffff !important;
+}  */
+
+/* .Datagrid-table-249 td, .datagrid-body td, .Datagrid-table-71 th, .TableResponsive th {
+  border: 1px solid #ccc;
+  padding: 0px 12px !important;
+} */
+
+/*Login Page*/
 
 /* div[class^="MuiInput"]{
   color: #FFFFFF !important;
