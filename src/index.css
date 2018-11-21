@@ -742,9 +742,9 @@ li[class^="MuiListItem"]{
 padding-top: 0px !important;
 padding-bottom: 0px !important;
 }
-li[class^="MuiListItem"] a{
+/* li[class^="MuiListItem"] a{
   border-bottom: none !important;
-}
+} */
 div[class^="MuiList"] > div[class^="MuiButtonBase"]{
   padding-top: 0px !important;
   padding-bottom: 0px !important;
