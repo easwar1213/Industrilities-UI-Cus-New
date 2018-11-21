@@ -30,6 +30,8 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 
 import { MapView } from '././MapSPA/MapView';
 import Dashboard from '././DashboardSPA/Dashboard';
+import {PartsCustomerView,ShowCustomerAssets} from '././PartsSPA/Customers'
+import {PartsDashboard} from '././PartsSPA/PartsDashboard'
 
 
 class App extends React.Component {
@@ -76,6 +78,20 @@ class App extends React.Component {
           list={DeviceList}
           show={showDevice}
           icon={DeviceIcon}
+        />
+
+        <Resource name="getListOfCustomers"
+          options={{ label: 'Parts' }}
+          list={PartsCustomerView}
+          show={ShowCustomerAssets}
+          //icon={AnalytcisIcon}
+        />
+  
+       <Resource name="getPartsStatus"
+          options={{ label: 'Parts Dashboard' }}
+          list={PartsDashboard}
+        //  show={ShowCustomerAssets}
+          //icon={AnalytcisIcon}
         />
 
 
