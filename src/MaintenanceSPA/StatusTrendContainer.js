@@ -22,7 +22,8 @@ import AckIcon from '@material-ui/icons/ThumbUp';
 import StatusTrendChart from './StatusTrendChart'
 import { fetchEnd, fetchStart, required, Button, GET_LIST } from 'react-admin';
 import dataProvider from '../dataProvider'
-import Loader from '../Loader'
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 const styles = theme => ({
     card: {
@@ -54,9 +55,9 @@ const styles = theme => ({
 });
 
 class StatusTrendContainer extends React.Component {
-    state = { 
+    state = {
         expanded: false,
-        isRendering:true,
+        isRendering: true,
         Data: []
     };
 
@@ -66,67 +67,72 @@ class StatusTrendContainer extends React.Component {
 
     handleRefresh = () => {
         this.loadData();
-      }
+    }
 
     componentWillMount() {
         this.loadData();
-      }
+    }
 
-      loadData = () => {
+    loadData = () => {
         fetchStart();
         this.setState({ isRendering: true })
         //(GET_ONE, 'AlertPriorityTrend', { id: "AlertPriorityTrend" })
         dataProvider(GET_LIST, 'MaintenanceStatusTrend', {
-          pagination: { page: 1, perPage: 5 },
-          sort: { field: 'title', order: 'DESC' },
-          filter: {
-            id: "MaintenanceStatusTrend",
-            dateRange: 1, //or 7 or 30 days,
-          },
+            pagination: { page: 1, perPage: 5 },
+            sort: { field: 'title', order: 'DESC' },
+            filter: {
+                id: "MaintenanceStatusTrend",
+                dateRange: 1, //or 7 or 30 days,
+            },
         })
-          .then((response) => {
-            
-            this.setState({ Data: response.data });
-             console.log(this.state.Data)
-            this.setState({ isRendering: false })
-          })
-          .catch(error => {
-            console.log(error)
-            this.setState({ isRendering: false })
-          })
-          .finally(() => {
-    
-            fetchEnd();
-            this.setState({ isRendering: false })
-          });
-      }  
+            .then((response) => {
+
+                this.setState({ Data: response.data });
+                console.log(this.state.Data)
+                this.setState({ isRendering: false })
+            })
+            .catch(error => {
+                console.log(error)
+                this.setState({ isRendering: false })
+            })
+            .finally(() => {
+
+                fetchEnd();
+                this.setState({ isRendering: false })
+            });
+    }
     render() {
         const { classes, avatarAlphabet, headerHeading, pierChartHeading, dataTableSource } = this.props;
 
         return (
-            <Card classes={classes.card} raised>
-                <CardHeader
-                    avatar={
-                        <Avatar classes={classes.avatar} aria-label="Alerts">
-                            S
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton
-                        onClick = {this.handleRefresh}
-                        >
-                            <Refresh />
-                        </IconButton>
-                    }
+            // <Card classes={classes.card} raised>
+            //     <CardHeader
+            //         avatar={
+            //             <Avatar classes={classes.avatar} aria-label="Alerts">
+            //                 S
+            //             </Avatar>
+            //         }
+            //         action={
+            //             <IconButton
+            //             onClick = {this.handleRefresh}
+            //             >
+            //                 <Refresh />
+            //             </IconButton>
+            //         }
 
-                    title="Maintenance Status Trend"
-                    subheader={"Count of Assets with different Maintenance Status"}
-                />
-                <Divider />
-                {/* <StatusTrendChart /> */}
-                {this.state.isRendering === true && (<Loader/>)}
-                {this.state.isRendering ===false &&(<StatusTrendChart data ={this.state.Data} />)}
-            </Card>
+            //         title="Maintenance Status Trend"
+            //         subheader={"Count of Assets with different Maintenance Status"}
+            //     />
+            //     <Divider />
+            //     {/* <StatusTrendChart /> */}
+            //     {this.state.isRendering === true && (<Loader/>)}
+            //     {this.state.isRendering ===false &&(<StatusTrendChart data ={this.state.Data} />)}
+            // </Card>
+
+            <Panel xs={12} md={12} lg={8} title="Maintenance Status Trend" subhead="Count of Assets with different Maintenance Status">
+                {this.state.isRendering === true && (<Loader />)}
+                {this.state.isRendering === false && (<StatusTrendChart data={this.state.Data} />)}
+            </Panel>
         );
     }
 }

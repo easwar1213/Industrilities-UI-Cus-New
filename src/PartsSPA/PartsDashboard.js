@@ -197,7 +197,7 @@ export const PartsDashboard = ({ ...props }) => (
             <StatusTrendContainer />
         </Row>
         <Row>
-            <Panel xs={12} md={12} lg={12} title="Device Status Details">
+            <Panel xs={12} md={12} lg={12} title="Parts Details">
                 <List title="Parts Dashboard" filters={<PartsFilter />} {...props}>
                     <PartsDataGrid />
                 </List>

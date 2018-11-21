@@ -24,6 +24,8 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import { Col, Container, Row, Badge } from 'reactstrap';
+import Panel from '../components/Panel';
 
 const MaintenanceFilter = (props) => (
     <Filter title="Status Filter" {...props}>
@@ -56,32 +58,53 @@ const styles = {
 
 export const Maintenance = (props) => (
 
-    <Grid container spacing={24}>
-        <Grid item xs={4}>
-        <StatusStatisticsContainer/>
-        </Grid>
-
-        <Grid item xs ={8}>
-            <StatusTrendContainer/>   
-        </Grid>
-
-        <Grid item xs={12}>
-            <Paper elevation={11}>
-                <List title="Maintenance"  {...props} filters={<MaintenanceFilter />}>
+    <Container id="deviceContainer">
+        <Row>
+            <Col md={12}>
+                <h3 className='page-title'>Maintenance</h3>
+            </Col>
+        </Row>
+        <Row>
+            <br />
+        </Row>
+        <Row>
+            <StatusStatisticsContainer/>
+            <StatusTrendContainer/> 
+        </Row>       
+        <Row>
+            <Panel xs={12} md={12} lg={12} title="Maintenance Details">
+                <List title="Maintenance Dashboard" filters={<MaintenanceFilter />} {...props}>
                     <MaintenanceGrid/>
-                    {/* <Datagrid >
-                        <TextField label="Plan" source="plan" />
-                        <TextField label="Next Service" source="nextService" />
-                        <TextField label="Last Service" source="lastService" />
-                        <TextField label="Status" source="status" />
-                        <TextField label="Asset Name" source="assetName" />
-                        <Complete/>
-                    </Datagrid> */}
                 </List>
-            </Paper>
-        </Grid>
+            </Panel>
+        </Row>
+    </Container>
 
-    </Grid>
+    // <Grid container spacing={24}>
+    //     <Grid item xs={4}>
+    //     <StatusStatisticsContainer/>
+    //     </Grid>
+
+    //     <Grid item xs ={8}>
+    //         <StatusTrendContainer/>   
+    //     </Grid>
+
+    //     <Grid item xs={12}>
+    //         <Paper elevation={11}>
+    //             <List title="Maintenance"  {...props} filters={<MaintenanceFilter />}>
+    //                 <MaintenanceGrid/>
+    //                 {/* <Datagrid >
+    //                     <TextField label="Plan" source="plan" />
+    //                     <TextField label="Next Service" source="nextService" />
+    //                     <TextField label="Last Service" source="lastService" />
+    //                     <TextField label="Status" source="status" />
+    //                     <TextField label="Asset Name" source="assetName" />
+    //                     <Complete/>
+    //                 </Datagrid> */}
+    //             </List>
+    //         </Paper>
+    //     </Grid>
+    // </Grid>
 );
 
 
