@@ -149,6 +149,42 @@ class Menu extends React.Component {
 
                     <div>
                         <List>
+                            <ListItem className={classes.item} button onClick={this.handleClickAlert}>
+                                <ListItemIcon>
+                                    <AlertDashboard />
+                                </ListItemIcon>
+                                <ListItemText className={classes.item2}
+                                 disableTypography 
+                                 primary={<Typography variant="subheading" color="textSecondary" >Alerts</Typography>}
+                                />
+                                {this.state.openAlert ? <ExpandLess color="textSecondary" /> : <ExpandMore color="textSecondary" />}
+                            </ListItem>
+                            <Collapse in={this.state.openAlert} timeout="auto" unmountOnExit>
+                                <List component="div" disablePadding>
+                                    <ListItem className={classes.nested} >
+                                        <ListItemIcon>
+                                            <MenuItemLink to="/getAlerts" className={classes.item3}  primaryText="Dashboard" onClick={onMenuClick} />
+                                        </ListItemIcon>
+                                    </ListItem>
+
+                                    <ListItem button className={classes.nested} >
+                                        <ListItemIcon>
+                                            <MenuItemLink to="/getAlerstHistory" className={classes.item3}  primaryText="Historical Alerts" onClick={onMenuClick} />
+                                        </ListItemIcon>
+                                    </ListItem>
+
+                                    <ListItem button className={classes.nested} >
+                                        <ListItemIcon>
+                                            <MenuItemLink to="/getListOfAlertConfiguration" className={classes.item3} primaryText="Alert Configuration" onClick={onMenuClick} />
+                                        </ListItemIcon>
+                                    </ListItem>
+                                </List>
+                            </Collapse>
+                        </List>
+                    </div>
+
+                    <div>
+                        <List>
                             <ListItem className={classes.item} button onClick={this.handleClickParts}>
                                 <ListItemIcon>
                                     <PartsIcon />

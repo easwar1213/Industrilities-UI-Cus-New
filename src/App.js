@@ -30,11 +30,17 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 
 import { MapView } from '././MapSPA/MapView';
 import Dashboard from '././DashboardSPA/Dashboard';
+
 import {PartsCustomerView,ShowCustomerAssets} from '././PartsSPA/Customers';
 import {PartsDashboard} from '././PartsSPA/PartsDashboard';
+
 import { MaintenancePlanList, MaintenancePlanShow, MaintenancePlanEdit, MaintenancePlanCreate } from '././MaintenanceSPA/MaintenancePlan';
 import { Maintenance, MaintenanceShow } from '././MaintenanceSPA/Maintenance';
 import { MaintenanceHistory, MaintenanceHistoryDetails } from '././MaintenanceSPA/MaintenanceHistory';
+
+import { Alerts } from '././AlertsSPA/Alerts';
+import { AlertsHistory } from '././AlertsSPA/AlertHistory';
+import { AlertConfiguration, createAlertConfiguration, showAlertConfiguration, editAlertConfiguration } from '././AlertsSPA/AlertConfiguration'
 
 
 class App extends React.Component {
@@ -113,6 +119,29 @@ class App extends React.Component {
           show={MaintenanceHistoryDetails}
           icon={MaintenanceHistoryIcon} 
         />
+
+        <Resource
+          name="getAlerts"
+          options={{ label: 'Alerts Dashboard' }}
+          list={Alerts}
+          icon={AlertDashboard}
+        />
+  
+        <Resource
+          name="getAlerstHistory"
+          options={{ label: 'Historical Alerts' }}
+          list={AlertsHistory}
+          icon={HistoryAlertIcon}
+        />  
+  
+        <Resource name="getListOfAlertConfiguration"
+          options={{ label: 'Alert Configuration' }}
+          list={AlertConfiguration} icon={AlertIcon}
+          create={createAlertConfiguration}
+          show={showAlertConfiguration}
+          edit={editAlertConfiguration}
+          icon={AlertConfigIcon}
+        />
   
        <Resource name="getPartsStatus"
           options={{ label: 'Parts Dashboard' }}
@@ -124,8 +153,10 @@ class App extends React.Component {
 
         <Resource name="getAssetListForReference" />
         <Resource name="getListOfDataPoints" />
+
         <Resource name="getAssetAlerts" />
         <Resource name="getAssetMaintenance" />
+
         <Resource name="getListOfAttributes" />
         <Resource name="getAssetCurrentData" />
 
