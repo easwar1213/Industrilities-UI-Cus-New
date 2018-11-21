@@ -111,7 +111,43 @@ class Menu extends React.Component {
                         ))}
                     </div>
 
-                    <div className={classes.root}>
+                    <div>
+                        <List>
+                            <ListItem className={classes.item} button onClick={this.handleClick}>
+                                <ListItemIcon>
+                                    <MaintenanceIcon />
+                                </ListItemIcon>
+                                <ListItemText className={classes.item2}
+                                disableTypography 
+                                primary={<Typography variant="subheading" color="textSecondary" >Maintenance</Typography>}
+                                />
+                                {this.state.open ? <ExpandLess /> : <ExpandMore />}
+                            </ListItem>
+                            <Collapse in={this.state.open} timeout="auto" unmountOnExit>
+                                <List component="div" disablePadding>
+                                    <ListItem className={classes.nested} >
+                                        <ListItemIcon>
+                                            <MenuItemLink to="/getMaintenance" className={classes.item3} primaryText="Dashboard" onClick={onMenuClick} />
+                                        </ListItemIcon>
+                                    </ListItem>
+
+                                    <ListItem button className={classes.nested} >
+                                        <ListItemIcon>
+                                            <MenuItemLink to="/getListOfMaintenancePlan" className={classes.item3}  primaryText="Maintenance Plan" onClick={onMenuClick} />
+                                        </ListItemIcon>
+                                    </ListItem>
+
+                                    <ListItem button className={classes.nested} >
+                                        <ListItemIcon>
+                                            <MenuItemLink to="/getMaintenanceHistory" className={classes.item3} primaryText="Maintenance History" onClick={onMenuClick} />
+                                        </ListItemIcon>
+                                    </ListItem>
+                                </List>
+                            </Collapse>
+                        </List>
+                    </div>
+
+                    <div>
                         <List>
                             <ListItem className={classes.item} button onClick={this.handleClickParts}>
                                 <ListItemIcon>
@@ -163,7 +199,7 @@ class Menu extends React.Component {
                             </ListItem>
                         </List>
                     </div>*/}
-                    
+
                     {/* <div className={classes.root}>
                         <List>
                             <ListItem className={classes.item} button onClick ={this.changeRoute} >

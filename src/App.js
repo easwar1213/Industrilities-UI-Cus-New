@@ -30,8 +30,11 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 
 import { MapView } from '././MapSPA/MapView';
 import Dashboard from '././DashboardSPA/Dashboard';
-import {PartsCustomerView,ShowCustomerAssets} from '././PartsSPA/Customers'
-import {PartsDashboard} from '././PartsSPA/PartsDashboard'
+import {PartsCustomerView,ShowCustomerAssets} from '././PartsSPA/Customers';
+import {PartsDashboard} from '././PartsSPA/PartsDashboard';
+import { MaintenancePlanList, MaintenancePlanShow, MaintenancePlanEdit, MaintenancePlanCreate } from '././MaintenanceSPA/MaintenancePlan';
+import { Maintenance, MaintenanceShow } from '././MaintenanceSPA/Maintenance';
+import { MaintenanceHistory, MaintenanceHistoryDetails } from '././MaintenanceSPA/MaintenanceHistory';
 
 
 class App extends React.Component {
@@ -85,6 +88,30 @@ class App extends React.Component {
           list={PartsCustomerView}
           show={ShowCustomerAssets}
           //icon={AnalytcisIcon}
+        />
+
+        <Resource
+          name="getMaintenance"
+          options={{ label: 'Maintenance Dashboard' }}
+          list={Maintenance}
+          icon={MaintenanceHistoryIcon} 
+        />
+  
+        <Resource
+          name="getListOfMaintenancePlan"
+          options={{ label: 'Maintenance Plan' }}
+          show={MaintenancePlanShow}
+          list={MaintenancePlanList}
+          edit={MaintenancePlanEdit}
+          create={MaintenancePlanCreate}
+        />  
+  
+        <Resource
+          name="getMaintenanceHistory"
+          options={{ label: 'Maintenance History' }}
+          list={MaintenanceHistory}
+          show={MaintenanceHistoryDetails}
+          icon={MaintenanceHistoryIcon} 
         />
   
        <Resource name="getPartsStatus"
