@@ -149,7 +149,7 @@ class FilterButton extends Component {
         //   console.log(record)
 
         return (
-            <Fragment>
+            <Fragment id="test">
                 <Button label="Filter" onClick={this.handleClick} >
                     <FilterList />
                 </Button>

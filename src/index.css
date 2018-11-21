@@ -721,3 +721,12 @@ div[class^="MuiDialogActions"]{
 div[class^="MuiDialogActions"] svg{
   fill: #FFFFFF !important;
 }
+div[class^="MuiGrid"] > div[class^="MuiPaper"]{
+  margin-top: 8px !important;
+}
+div[class^="MuiGrid"] > div[class^="MuiGrid"]{
+  padding-top: 4px !important;
+}
+div[class^="MuiModal"] > div[class^="MuiPaper"]{
+  max-width: 400px !important;
+}
