@@ -29,7 +29,7 @@ body {
 }
 
 /* Login Form Style */
-.Login-card-2 {    
+div[class^="Login"] > div[class^="MuiPaper"] {    
   min-width: auto !important;
   margin-top: 10em !important;  
   /* border: solid #fff; */
@@ -177,7 +177,7 @@ div[class^="MuiDrawer"] div[class^="MuiPaper"] {
 } 
 label[class^="MuiFormLabel"] > span{ font-size:22px !important; color:#646777 !important; font-weight:bold; }
 .show-page div[class^="MuiFormControl"]{ width:100%; display:block;}
-form div[class^="MuiFormControl"]{ width:auto !important; display:inline-block !important;}
+form div[class^="MuiFormControl"]{display:inline-block !important;}
 .show-page div[class^="MuiFormControl"] div[class^="Labeled"]{ padding:0 !important;}
 .show-page div[class^="MuiFormLabel"] { font-size: 1.2rem !important; color: rgba(0, 0, 0, 0.9);}
 
@@ -227,7 +227,7 @@ form div[class^="MuiFormControl"]{ width:auto !important; display:inline-block !
 button, * {
   outline: none !important; 
 }
-.Layout-content-4{
+main div[class^="Layout"]{
   padding: 24px !important;
 }
 div[class^="MuiDrawer"] div[class^="MuiPaper"] { 
@@ -729,4 +729,23 @@ div[class^="MuiGrid"] > div[class^="MuiGrid"]{
 }
 div[class^="MuiModal"] > div[class^="MuiPaper"]{
   max-width: 400px !important;
+}
+.list-page div[class^="MuiPaper"]{
+  box-shadow:none !important;
+}
+ul[class^="MuiList"]{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  border-bottom: 1px solid #eff1f5;
+}
+li[class^="MuiListItem"]{
+padding-top: 0px !important;
+padding-bottom: 0px !important;
+}
+li[class^="MuiListItem"] a{
+  border-bottom: none !important;
+}
+div[class^="MuiList"] > div[class^="MuiButtonBase"]{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
