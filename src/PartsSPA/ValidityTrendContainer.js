@@ -13,10 +13,10 @@ import Refresh from '@material-ui/icons/Refresh';
 import Divider from '@material-ui/core/Divider';
 
 import ValidityTrendChart from './ValidityTrendChart'
-import { fetchEnd, fetchStart,  GET_LIST } from 'react-admin';
+import { fetchEnd, fetchStart, GET_LIST } from 'react-admin';
 import dataProvider from '../dataProvider'
-import Loader from '../Loader'
-
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 
 const styles = theme => ({
@@ -49,81 +49,87 @@ const styles = theme => ({
 });
 
 class ValidityTrendContainer extends React.Component {
-    state = { expanded: false ,
-        isRendering:true,
+    state = {
+        expanded: false,
+        isRendering: true,
         Data: []
-   };
-
-    handleExpandClick = () => {
-        this.setState(state => ({ expanded: !state.expanded }));
     };
 
     handleExpandClick = () => {
         this.setState(state => ({ expanded: !state.expanded }));
     };
-    componentWillMount(){
+
+    handleExpandClick = () => {
+        this.setState(state => ({ expanded: !state.expanded }));
+    };
+    componentWillMount() {
         this.loadData();
-        
-        }
-        handleRefresh =() =>{
-          this.loadData()
-        }
-        loadData = () => {
-            fetchStart();
-            this.setState({ isRendering: true })
-            //(GET_ONE, 'AlertPriorityTrend', { id: "AlertPriorityTrend" })
-            dataProvider(GET_LIST, 'PartValidityTrend', {
-              pagination: { page: 1, perPage: 5 },
-              sort: { field: 'title', order: 'DESC' },
-              filter: {
+
+    }
+    handleRefresh = () => {
+        this.loadData()
+    }
+    loadData = () => {
+        fetchStart();
+        this.setState({ isRendering: true })
+        //(GET_ONE, 'AlertPriorityTrend', { id: "AlertPriorityTrend" })
+        dataProvider(GET_LIST, 'PartValidityTrend', {
+            pagination: { page: 1, perPage: 5 },
+            sort: { field: 'title', order: 'DESC' },
+            filter: {
                 id: "PartValidityTrend",
                 dateRange: 1, //or 7 or 30 days,
-              },
-            })
-              .then((response) => {
+            },
+        })
+            .then((response) => {
                 this.setState({ Data: response.data });
                 console.log("PartValidityTrend")
-                 console.log(this.state.Data)
+                console.log(this.state.Data)
                 this.setState({ isRendering: false })
-              })
-              .catch(error => {
+            })
+            .catch(error => {
                 console.log(error)
                 this.setState({ isRendering: false })
-              })
-              .finally(() => {
-        
+            })
+            .finally(() => {
+
                 fetchEnd();
                 this.setState({ isRendering: false })
-              });
-          }
+            });
+    }
 
     render() {
         const { classes, avatarAlphabet, headerHeading, pierChartHeading, dataTableSource } = this.props;
 
         return (
-            <Card classes={classes.card} raised>
-                <CardHeader
-                    avatar={
-                        <Avatar style={{ backgroundColor: grey[500] }} aria-label="Alerts">
-                            V
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton
-                        onClick ={this.handleRefresh}
-                        >
-                            <Refresh />
-                        </IconButton>
-                    }
+            // <Card classes={classes.card} raised>
+            //     <CardHeader
+            //         avatar={
+            //             <Avatar style={{ backgroundColor: grey[500] }} aria-label="Alerts">
+            //                 V
+            //             </Avatar>
+            //         }
+            //         action={
+            //             <IconButton
+            //                 onClick={this.handleRefresh}
+            //             >
+            //                 <Refresh />
+            //             </IconButton>
+            //         }
 
-                    title="Parts Validity Trend"
-                    subheader={"Count of Parts with different Validity"}
-                />
-                <Divider />
-                {/* <ValidityTrendChart /> */}
-                {this.state.isRendering === true && (<Loader/>)}
-                 {this.state.isRendering ===false &&(<ValidityTrendChart data ={this.state.Data} />)}
-            </Card>
+            //         title="Parts Validity Trend"
+            //         subheader={"Count of Parts with different Validity"}
+            //     />
+            //     <Divider />
+            //     {/* <ValidityTrendChart /> */}
+            //     {this.state.isRendering === true && (<Loader />)}
+            //     {this.state.isRendering === false && (<ValidityTrendChart data={this.state.Data} />)}
+            // </Card>
+
+            <Panel xs={12} md={12} lg={8} title="Parts Validity Trend" subhead="Count of Parts with different Validity">
+                {this.state.isRendering === true && (<Loader />)}
+                {this.state.isRendering === false && (<ValidityTrendChart data={this.state.Data} />)}
+            </Panel>
         );
     }
 }

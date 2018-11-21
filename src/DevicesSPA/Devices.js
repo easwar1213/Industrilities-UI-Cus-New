@@ -36,7 +36,6 @@ const styles = theme => ({
 
 const gridStyle = {
     width: '60%',
-
 };
 
 

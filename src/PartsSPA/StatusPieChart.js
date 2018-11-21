@@ -14,48 +14,39 @@ const getState = (props) => ({
 
 
     datasets: [{
-        data: (props.value)?[props.value.authorisedPartPercentage,props.value.unauthorisedPartPercentage]:[0,0],
+        data: (props.value) ? [props.value.authorisedPartPercentage, props.value.unauthorisedPartPercentage] : [0, 0],
         backgroundColor: [
-            '#81C784',
-            '#D81B60',
+            '#4ce1b6',
+            '#ff4861',
         ],
         hoverBackgroundColor: [
-            '#81C784',
-            '#D81B60',
+            '#4ce1b6',
+            '#ff4861',
         ],
-        borderColor: 'rgba(255,255,255,0.54)',
-        borderWidth: 2,
+        borderColor: 'rgba(255,255,255,0.54)'
     }]
 });
 
-const options = {
-    legend: {
-        position: 'left'
-    }
-}
 class StatusPieChart extends PureComponent {
 
     constructor(props) {
         super(props);
         this.state = {
-            props:props,
-            data: getState(props),
-            options: options
+            props: props,
+            data: getState(props)
         };
     }
 
     componentWillMount() {
         //setInterval(() => {
-        this.setState({data: getState(this.props)});
-        this.setState({ options: options });
-
+        this.setState({ data: getState(this.props) });
         // }, 4000);
     }
 
     render() {
         return (
             <div>
-                <Doughnut options={this.state.options} data={this.state.data} />
+                <Doughnut height={310} data={this.state.data} />
             </div>
         )
     }

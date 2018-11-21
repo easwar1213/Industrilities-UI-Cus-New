@@ -21,9 +21,10 @@ import AlertIcon from '@material-ui/icons/ErrorOutline';
 import AckIcon from '@material-ui/icons/ThumbUp';
 import ValidityPieChart from './ValidityPieChart'
 import ValidityDataTable from './ValidityDataTable'
-import {fetchEnd,fetchStart,required,Button,GET_ONE} from 'react-admin';
+import { fetchEnd, fetchStart, required, Button, GET_ONE } from 'react-admin';
 import dataProvider from '../dataProvider'
-import Loader from '../Loader'
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 const styles = theme => ({
     card: {
@@ -55,103 +56,108 @@ const styles = theme => ({
 });
 
 class ValidityStatisticsContainer extends React.Component {
-    state = { 
-        expanded: false ,
-        dataTable : '',
-        pieChart : '' ,
-        isRendering:true
+    state = {
+        expanded: false,
+        dataTable: '',
+        pieChart: '',
+        isRendering: true
     };
 
     handleExpandClick = () => {
         this.setState(state => ({ expanded: !state.expanded }));
     };
 
-    componentWillMount(){
+    componentWillMount() {
         this.loadData();
-        
-        }
-        handleRefresh =() =>{
-          this.loadData()
-        }
-      loadData =() =>{
+
+    }
+    handleRefresh = () => {
+        this.loadData()
+    }
+    loadData = () => {
         fetchStart();
-        this.setState({isRendering:true})
+        this.setState({ isRendering: true })
         dataProvider(GET_ONE, 'PartValidityStatistics', { id: "PartValidityStatistics" })
-              .then((response) => {
+            .then((response) => {
                 console.log(response)
                 let dataTable = response.data.dataTable
                 let pieChart = response.data.pieChart
-                  this.setState({ pieChart: pieChart });
-                  this.setState({ dataTable: dataTable });
-                  
-                  this.setState({isRendering:false})
-              })
-              .catch(error => {
-                  
-              })
-              .finally(() => {
-                 
-                  fetchEnd();
-              });
-      }
+                this.setState({ pieChart: pieChart });
+                this.setState({ dataTable: dataTable });
+
+                this.setState({ isRendering: false })
+            })
+            .catch(error => {
+
+            })
+            .finally(() => {
+
+                fetchEnd();
+            });
+    }
     render() {
         const { classes, avatarAlphabet, headerHeading, pierChartHeading, dataTableSource } = this.props;
 
         return (
-            <Card raised className={classes.card}>
-                <CardHeader
-                    avatar={
-                        <Avatar aria-label="Alerts" className={classes.avatar}>
-                            {"V"}
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton
-                        onClick ={this.handleRefresh}
-                        >
-                            <Refresh />
-                        </IconButton>
-                    }
-                    title={"Parts Vaidity Statistics"}
-                    subheader={"on " + new Date().toLocaleString()}
-                />
+            // <Card raised className={classes.card}>
+            //     <CardHeader
+            //         avatar={
+            //             <Avatar aria-label="Alerts" className={classes.avatar}>
+            //                 {"V"}
+            //             </Avatar>
+            //         }
+            //         action={
+            //             <IconButton
+            //                 onClick={this.handleRefresh}
+            //             >
+            //                 <Refresh />
+            //             </IconButton>
+            //         }
+            //         title={"Parts Vaidity Statistics"}
+            //         subheader={"on " + new Date().toLocaleString()}
+            //     />
 
-                <Divider />
+            //     <Divider />
 
-                <CardContent>
-                    <Typography align="center" component="p">
-                        {"% Parts Validity Distribution"}
-                    </Typography>
-                    <br />
-                    {/* <ValidityPieChart /> */}
-                    {this.state.isRendering ===true &&(<Loader/>)}
-                    {this.state.isRendering ===false &&( <ValidityPieChart value ={this.state.pieChart}/>)}
-                </CardContent>
+            //     <CardContent>
+            //         <Typography align="center" component="p">
+            //             {"% Parts Validity Distribution"}
+            //         </Typography>
+            //         <br />
+            //         {/* <ValidityPieChart /> */}
+            //         {this.state.isRendering === true && (<Loader />)}
+            //         {this.state.isRendering === false && (<ValidityPieChart value={this.state.pieChart} />)}
+            //     </CardContent>
 
-                <Divider />
+            //     <Divider />
 
-                <CardActions className={classes.actions} disableActionSpacing>
-                    <IconButton
-                        className={classnames(classes.expand, {
-                            [classes.expandOpen]: this.state.expanded,
-                        })}
-                        onClick={this.handleExpandClick}
-                        aria-expanded={this.state.expanded}
-                        aria-label="Show more"
-                        label="Show"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
-                </CardActions>
-                <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                        <Typography align="center" paragraph>Parts Count</Typography>
-                        {/* <ValidityDataTable /> */}
-                        {this.state.isRendering ===true &&(<Loader/>)}
-                        {this.state.isRendering ===false &&(<ValidityDataTable value ={this.state.dataTable}/>)}    
-                    </CardContent>
-                </Collapse>
-            </Card>
+            //     <CardActions className={classes.actions} disableActionSpacing>
+            //         <IconButton
+            //             className={classnames(classes.expand, {
+            //                 [classes.expandOpen]: this.state.expanded,
+            //             })}
+            //             onClick={this.handleExpandClick}
+            //             aria-expanded={this.state.expanded}
+            //             aria-label="Show more"
+            //             label="Show"
+            //         >
+            //             <ExpandMoreIcon />
+            //         </IconButton>
+            //     </CardActions>
+            //     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+            //         <CardContent>
+            //             <Typography align="center" paragraph>Parts Count</Typography>
+            //             {/* <ValidityDataTable /> */}
+            //             {this.state.isRendering === true && (<Loader />)}
+            //             {this.state.isRendering === false && (<ValidityDataTable value={this.state.dataTable} />)}
+            //         </CardContent>
+            //     </Collapse>
+            // </Card>
+
+            <Panel xs={12} md={12} lg={4} title="Parts Vaidity Statistics" subhead={"on " + new Date().toLocaleString()}>
+                {this.state.isRendering === true && (<Loader />)}
+                {this.state.isRendering === false && (<ValidityPieChart value={this.state.pieChart} />)}
+            </Panel>
         );
     }
 }

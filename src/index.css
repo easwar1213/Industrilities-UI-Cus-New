@@ -416,6 +416,11 @@ font-size: 0.9rem;
   background-color: #70bbfd !important;
 }
 
+.badge-secondary {
+  color: #fff;
+  background-color: #e7e2e2 !important;
+}
+
 .MuiInput-input-65 {
   padding: 6px 36px 8px 0px !important;
 }
@@ -839,3 +844,4 @@ div[class^="MuiCardActions"]{
   font-size: 18px !important;
 }
 .list-page table thead tr th{color: #FFFFFF !important;}
+#partstbl tbody tr td{padding: 4px 15px 4px 15px !important;}

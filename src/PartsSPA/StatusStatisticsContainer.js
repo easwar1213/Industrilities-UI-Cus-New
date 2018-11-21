@@ -23,7 +23,8 @@ import StatusPieChart from './StatusPieChart'
 import StatusDataTable from './StatusDataTable'
 import {fetchEnd,fetchStart,required,Button,GET_ONE} from 'react-admin';
 import dataProvider from '../dataProvider'
-import Loader from '../Loader'
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 const styles = theme => ({
     card: {
@@ -99,60 +100,65 @@ class StatusStatisticsContainer extends React.Component {
         const { classes, avatarAlphabet, headerHeading, pierChartHeading, dataTableSource } = this.props;
 
         return (
-            <Card raised className={classes.card}>
-                <CardHeader
-                    avatar={
-                        <Avatar  className={classes.avatar}>
-                            {"S"}
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton
-                        onClick ={this.handleRefresh}
-                        >
-                            <Refresh />
-                        </IconButton>
-                    }
-                    title={"Parts Status Statistics"}
-                    subheader={"on " + new Date().toLocaleString()}
-                />
+            // <Card raised className={classes.card}>
+            //     <CardHeader
+            //         avatar={
+            //             <Avatar  className={classes.avatar}>
+            //                 {"S"}
+            //             </Avatar>
+            //         }
+            //         action={
+            //             <IconButton
+            //             onClick ={this.handleRefresh}
+            //             >
+            //                 <Refresh />
+            //             </IconButton>
+            //         }
+            //         title={"Parts Status Statistics"}
+            //         subheader={"on " + new Date().toLocaleString()}
+            //     />
 
-                <Divider />
+            //     <Divider />
 
-                <CardContent>
-                    <Typography align="center" component="p">
-                        {"% Parts Status Distribution"}
-                    </Typography>
-                    <br />
-                    {/* <StatusPieChart /> */}
-                    {this.state.isRendering ===true &&(<Loader/>)}
-                    {this.state.isRendering ===false &&( <StatusPieChart value ={this.state.pieChart}/>)}
-                </CardContent>
+            //     <CardContent>
+            //         <Typography align="center" component="p">
+            //             {"% Parts Status Distribution"}
+            //         </Typography>
+            //         <br />
+            //         {/* <StatusPieChart /> */}
+            //         {this.state.isRendering ===true &&(<Loader/>)}
+            //         {this.state.isRendering ===false &&( <StatusPieChart value ={this.state.pieChart}/>)}
+            //     </CardContent>
 
-                <Divider />
+            //     <Divider />
 
-                <CardActions className={classes.actions} disableActionSpacing>
-                    <IconButton
-                        className={classnames(classes.expand, {
-                            [classes.expandOpen]: this.state.expanded,
-                        })}
-                        onClick={this.handleExpandClick}
-                        aria-expanded={this.state.expanded}
-                        aria-label="Show more"
-                        label="Show"
-                    >
-                        <ExpandMoreIcon />
-                    </IconButton>
-                </CardActions>
-                <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-                    <CardContent>
-                        <Typography align="center" paragraph>Parts Counts</Typography>
-                        {/* <StatusDataTable /> */}
-                        {this.state.isRendering ===true &&(<Loader/>)}
-                        {this.state.isRendering ===false &&(<StatusDataTable value ={this.state.dataTable}/>)}    
-                    </CardContent>
-                </Collapse>
-            </Card>
+            //     <CardActions className={classes.actions} disableActionSpacing>
+            //         <IconButton
+            //             className={classnames(classes.expand, {
+            //                 [classes.expandOpen]: this.state.expanded,
+            //             })}
+            //             onClick={this.handleExpandClick}
+            //             aria-expanded={this.state.expanded}
+            //             aria-label="Show more"
+            //             label="Show"
+            //         >
+            //             <ExpandMoreIcon />
+            //         </IconButton>
+            //     </CardActions>
+            //     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+            //         <CardContent>
+            //             <Typography align="center" paragraph>Parts Counts</Typography>
+            //             {/* <StatusDataTable /> */}
+            //             {this.state.isRendering ===true &&(<Loader/>)}
+            //             {this.state.isRendering ===false &&(<StatusDataTable value ={this.state.dataTable}/>)}    
+            //         </CardContent>
+            //     </Collapse>
+            // </Card>
+
+            <Panel xs={12} md={12} lg={4} title="Parts Status Statistics" subhead={"on " + new Date().toLocaleString()}>
+                {this.state.isRendering === true && (<Loader />)}
+                {this.state.isRendering === false && (<StatusPieChart value={this.state.pieChart} />)}
+            </Panel>
         );
     }
 }

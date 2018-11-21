@@ -16,7 +16,8 @@ import Divider from '@material-ui/core/Divider';
 import StatusTrendChart from './StatusTrendChart'
 import { fetchEnd, fetchStart,  GET_LIST } from 'react-admin';
 import dataProvider from '../dataProvider'
-import Loader from '../Loader'
+import Loader from '../Loader';
+import Panel from '../components/Panel';
 
 
 const styles = theme => ({
@@ -101,29 +102,34 @@ class StatusTrendContainer extends React.Component {
         const { classes, avatarAlphabet, headerHeading, pierChartHeading, dataTableSource } = this.props;
 
         return (
-            <Card classes={classes.card} raised>
-                <CardHeader
-                    avatar={
-                        <Avatar style={{ backgroundColor: grey[500] }} aria-label="Alerts">
-                            S
-                        </Avatar>
-                    }
-                    action={
-                        <IconButton
-                        onClick ={this.handleRefresh}
-                        >
-                            <Refresh />
-                        </IconButton>
-                    }
+            // <Card classes={classes.card} raised>
+            //     <CardHeader
+            //         avatar={
+            //             <Avatar style={{ backgroundColor: grey[500] }} aria-label="Alerts">
+            //                 S
+            //             </Avatar>
+            //         }
+            //         action={
+            //             <IconButton
+            //             onClick ={this.handleRefresh}
+            //             >
+            //                 <Refresh />
+            //             </IconButton>
+            //         }
 
-                    title="Parts Status Trend"
-                    subheader={"Count of Parts with different Status"}
-                />
-                <Divider />
-                {/* <StatusTrendChart /> */}
-                {this.state.isRendering === true && (<Loader/>)}
-                 {this.state.isRendering ===false &&(<StatusTrendChart data ={this.state.Data} />)}
-            </Card>
+            //         title="Parts Status Trend"
+            //         subheader={"Count of Parts with different Status"}
+            //     />
+            //     <Divider />
+            //     {/* <StatusTrendChart /> */}
+            //     {this.state.isRendering === true && (<Loader/>)}
+            //      {this.state.isRendering ===false &&(<StatusTrendChart data ={this.state.Data} />)}
+            // </Card>
+
+            <Panel xs={12} md={12} lg={8} title="Parts Status Trend" subhead="Count of Parts with different Status">
+                {this.state.isRendering === true && (<Loader />)}
+                {this.state.isRendering === false && (<StatusTrendChart data={this.state.Data} />)}
+            </Panel>
         );
     }
 }

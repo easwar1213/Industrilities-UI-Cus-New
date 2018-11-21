@@ -23,6 +23,8 @@ import StatusTrendContainer from './StatusTrendContainer'
 import BlockIcon from '@material-ui/icons/Block';
 import DoneIcon from '@material-ui/icons/Done';
 import AlertIcon from '@material-ui/icons/ErrorOutline';
+import { Col, Container, Row, Badge } from 'reactstrap';
+import Panel from '../components/Panel';
 
 const styles = theme => ({
     root: {
@@ -36,14 +38,12 @@ const styles = theme => ({
 });
 
 const gridStyle = {
-    width: '50%',
-
+    width: '60%',
 };
 
-const PartsDataGrid = withStyles(styles)(({ ids, data, basePath, classes }) => (
-    <div classes={classes.root}>
-
-        <Table classes={classes.table} fixedHeader={false} >
+const PartsDataGrid = (({ ids, data, basePath, classes }) => (
+    <div style={{ gridStyle }}>
+        <Table responsive style={{ tableLayout: 'auto' }} id="partstbl">
             <TableHead>
                 <TableRow>
                     <TableCell>Part Serial Number</TableCell>
@@ -76,74 +76,80 @@ const PartsDataGrid = withStyles(styles)(({ ids, data, basePath, classes }) => (
                             {/* <TableCell>{(data[id]).gatewayId}</TableCell> */}
                             <TableCell>{(data[id]).lifeTime}</TableCell>
                             {(data[id]).validity == "Valid" && (
-                            //      <TableCell>
-                            //      <Chip
-                            //          avatar={
-                            //              <Avatar style={{ backgroundColor: '#81C784', width: 30, height: 30 }} >
-                            //                  <DoneIcon />
-                            //              </Avatar>
-                            //          }
-                            //          label="Valid "
-                            //          // color="default"
-                            //          variant="outlined"
-                            //      />
-                            //  </TableCell>
-                                <TableCell style={{ backgroundColor: "#63D16C" }} >{(data[id]).validity}</TableCell>
+                                //      <TableCell>
+                                //      <Chip
+                                //          avatar={
+                                //              <Avatar style={{ backgroundColor: '#81C784', width: 30, height: 30 }} >
+                                //                  <DoneIcon />
+                                //              </Avatar>
+                                //          }
+                                //          label="Valid "
+                                //          // color="default"
+                                //          variant="outlined"
+                                //      />
+                                //  </TableCell>
+                                // <TableCell style={{ backgroundColor: "#63D16C" }} >{(data[id]).validity}</TableCell>
+                                <TableCell><Badge color='success'>{(data[id]).validity}</Badge></TableCell>
                             )}
                             {(data[id]).validity == "NA" && (
-                                <TableCell style={{ backgroundColor: "grey" }} >{(data[id]).validity}</TableCell>
+                                // <TableCell style={{ backgroundColor: "grey" }} >{(data[id]).validity}</TableCell>
+                                <TableCell><Badge color='secondary'>{(data[id]).validity}</Badge></TableCell>
                             )}
 
                             {(data[id]).validity == "Due For Replacement" && (
-                                        //      <TableCell>
-                                        //      <Chip
-                                        //          avatar={
-                                        //              <Avatar style={{ backgroundColor: '#F4D03F', width: 30, height: 30 }} >
-                                        //                  <AlertIcon />
-                                        //              </Avatar>
-                                        //          }
-                                        //          label="Due For Replacement"
-                                        //          // color="default"
-                                        //          variant="outlined"
-                                        //      />
-                                        //  </TableCell>
-                                 <TableCell style={{ backgroundColor: "#FFE000" }} >{(data[id]).validity}</TableCell>
+                                //      <TableCell>
+                                //      <Chip
+                                //          avatar={
+                                //              <Avatar style={{ backgroundColor: '#F4D03F', width: 30, height: 30 }} >
+                                //                  <AlertIcon />
+                                //              </Avatar>
+                                //          }
+                                //          label="Due For Replacement"
+                                //          // color="default"
+                                //          variant="outlined"
+                                //      />
+                                //  </TableCell>
+                                // <TableCell style={{ backgroundColor: "#FFE000" }} >{(data[id]).validity}</TableCell>
+                                <TableCell><Badge color='warning'>{(data[id]).validity}</Badge></TableCell>
                             )}
                             {(data[id]).validity == "Expired" && (
-                                <TableCell style={{ backgroundColor: "red" }} >{(data[id]).validity}</TableCell>
+                                // <TableCell style={{ backgroundColor: "red" }} >{(data[id]).validity}</TableCell>
+                                <TableCell><Badge color='danger'>{(data[id]).validity}</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).validTill}</TableCell>
 
 
                             {(data[id]).partStatus == "Unauthorized" && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#D81B60', width: 30, height: 30 }} >
-                                                <BlockIcon />
-                                            </Avatar>
-                                        }
-                                        label=" Unauthorized "
-                                        // color="default"
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#D81B60', width: 30, height: 30 }} >
+                                //                 <BlockIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label=" Unauthorized "
+                                //         // color="default"
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='danger'>Unauthorized</Badge></TableCell>
                             )}
 
                             {(data[id]).partStatus == "Authorized" && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#81C784', width: 30, height: 30 }} >
-                                                <DoneIcon />
-                                            </Avatar>
-                                        }
-                                        label=" Authorized "
-                                        // color="default"
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#81C784', width: 30, height: 30 }} >
+                                //                 <DoneIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label=" Authorized "
+                                //         // color="default"
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
                                 // <TableCell style={{ backgroundColor: "#63D16C" }} >{(data[id]).partStatus}</TableCell>
+                                <TableCell><Badge color='success'>Authorized</Badge></TableCell>
                             )}
                             {/* <TableCell>{(data[id]).lastReported}</TableCell> */}
 
@@ -173,38 +179,57 @@ const listStyles = {
 
 //export const PartsDashboard = (props) => (
 export const PartsDashboard = ({ ...props }) => (
-    <Grid container spacing={24}>
-
-        <Grid item xs={4}>
+    <Container id="deviceContainer">
+        <Row>
+            <Col md={12}>
+                <h3 className='page-title'>Parts</h3>
+            </Col>
+        </Row>
+        <Row>
+            <br />
+        </Row>
+        <Row>
             <ValidityStatisticsContainer />
-        </Grid>
-
-        <Grid item xs={8}>
             <ValidityTrendContainer />
-        </Grid>
-        <Grid item xs={4}>
+        </Row>
+        <Row>
             <StatusStatisticsContainer />
-        </Grid>
-
-        <Grid item xs={8}>
             <StatusTrendContainer />
-        </Grid>
-
-        <Grid item xs={12}>
-            <Paper elevation={11}>
+        </Row>
+        <Row>
+            <Panel xs={12} md={12} lg={12} title="Device Status Details">
                 <List title="Parts Dashboard" filters={<PartsFilter />} {...props}>
                     <PartsDataGrid />
                 </List>
-            </Paper>
-        </Grid>
+            </Panel>
+        </Row>
+    </Container>
 
-    </Grid>
+    // <Grid container spacing={24}>
+    //     <Grid item xs={4}>
+    //         <ValidityStatisticsContainer />
+    //     </Grid>
 
+    //     <Grid item xs={8}>
+    //         <ValidityTrendContainer />
+    //     </Grid>
+    //     <Grid item xs={4}>
+    //         <StatusStatisticsContainer />
+    //     </Grid>
+
+    //     <Grid item xs={8}>
+    //         <StatusTrendContainer />
+    //     </Grid>
+
+    //     <Grid item xs={12}>
+    //         <Paper elevation={11}>
+    //             <List title="Parts Dashboard" filters={<PartsFilter />} {...props}>
+    //                 <PartsDataGrid />
+    //             </List>
+    //         </Paper>
+    //     </Grid>
+    // </Grid>
 )
-
-
-
-
 
 
 const PartsFilter = (props) => (

@@ -22,16 +22,16 @@ const getState = (props) => ({
     datasets: [{
         data: (props.value)?[props.value.validPartPercentage,props.value.expiredPartPercentage,props.value.dueForReplacementPartPercentage,props.value.invalidPartPercentage]:[0,0,0,0],
         backgroundColor: [
-            '#81C784',
-            '#D81B60',
-            '#F4D03F',
-            '#EAEDED'
+            '#4BC0C0',
+            '#FF6384',
+            '#FFCE56',
+            '#E7E9ED'
         ],
         hoverBackgroundColor: [
-            '#81C784',
-            '#D81B60',
-            '#F4D03F',
-            '#EAEDED'
+            '#4BC0C0',
+            '#FF6384',
+            '#FFCE56',
+            '#E7E9ED'
         ],
         borderColor: 'rgba(255,255,255,0.54)',
         borderWidth: 2,
@@ -49,8 +49,7 @@ class ValidityPieChart extends PureComponent {
         super(props);
         this.state = {
             props:props,
-            data: getState(props),
-            options: options
+            data: getState(props)
         };
     }
 
@@ -58,15 +57,13 @@ class ValidityPieChart extends PureComponent {
         //setInterval(() => {
             console.log(this.props)
         this.setState({data: getState(this.props)});
-        this.setState({ options: options });
-
         // }, 4000);
     }
 
     render() {
         return (
             <div>
-                <Doughnut options={this.state.options} data={this.state.data} />
+                <Doughnut height={310} data={this.state.data} />
             </div>
         )
     }
