@@ -16,8 +16,6 @@ import Grid from "@material-ui/core/Grid";
 import StatusStatisticsContainer from './StatusStatisticsContainer';
 import StatusTrendContainer from './StatusTrendContainer';
 import StatusTrendChart from './StatusTrendChart';
-import DynamiclyRefreshedDoughnut from './DynamiclyRefreshedDoughnut';
-import RandomAnimatedLine from './RandomAnimatedLine';
 import ShowDeviceTab from './ShowDeviceTab';
 import { Col, Container, Row, Badge } from 'reactstrap';
 import Panel from '../components/Panel';

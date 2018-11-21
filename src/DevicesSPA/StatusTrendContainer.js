@@ -19,13 +19,11 @@ import Refresh from '@material-ui/icons/Refresh';
 import Divider from '@material-ui/core/Divider';
 import AlertIcon from '@material-ui/icons/ErrorOutline';
 import AckIcon from '@material-ui/icons/ThumbUp';
-import StatusTrendChart from './StatusTrendChart'
 import { fetchEnd, fetchStart, required, Button, GET_LIST } from 'react-admin';
 import dataProvider from '../dataProvider'
 import Loader from '../Loader'
 import Panel from '../components/Panel';
-import RandomAnimatedLine from './RandomAnimatedLine';
-import SimpleLineChart from './SimpleLineChart';
+import StatusTrendChart from './StatusTrendChart';
 
 const styles = theme => ({
     card: {
@@ -127,7 +125,7 @@ class StatusTrendContainer extends React.Component {
             // </Card>
             <Panel xs={12} md={12} lg={8} title="Device Status Trend" subhead="Count of Assets with different Status">
                     {this.state.isRendering === true && (<Loader/>)}
-                    {this.state.isRendering ===false &&(<SimpleLineChart data ={this.state.Data} />)}
+                    {this.state.isRendering ===false &&(<StatusTrendChart data ={this.state.Data} />)}
             </Panel>
         );
     }

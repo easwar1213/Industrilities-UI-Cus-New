@@ -25,12 +25,9 @@ function createData(name, count, fat, carbs, protein) {
   return { id, name, count, fat, carbs, protein };
 }
 
-const rows = [
-  
+const rows = [  
   createData('Unavaiable', 1),
-  createData('Avaiable', 2),
-  
-
+  createData('Avaiable', 2)
 ];
 
 function ValidityDataTable(props) {
@@ -42,8 +39,7 @@ function ValidityDataTable(props) {
         <TableHead>
           <TableRow>
             <TableCell>Status</TableCell>
-            <TableCell numeric>Asset Count</TableCell>
-     
+            <TableCell numeric>Asset Count</TableCell>     
           </TableRow>
         </TableHead>
         <TableBody>

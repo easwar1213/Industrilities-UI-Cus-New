@@ -26,7 +26,7 @@ export const AssetList = (props) => (
         <Row>
             {/* <AssetDetails /> */}
             <Panel xs={12} md={12} lg={12} title="Asset Details">
-                <List title="Assets" {...props} filters={<AssetFilter />} className="TableResponsive" >
+                <List title="Assets" {...props} filters={<AssetFilter />}>
                     <Datagrid>
                         <TextField source="telematicsSerialNumber" />
                         <TextField source="make" />

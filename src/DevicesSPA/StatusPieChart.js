@@ -1,60 +1,55 @@
-import React, { PureComponent } from 'react';
 
+import React, { PureComponent } from 'react';
+import { Card, CardBody, Col } from 'reactstrap';
+import Panel from '../components/Panel';
 import { Doughnut } from 'react-chartjs-2';
-import Paper from "@material-ui/core/Paper";
 
 const getState = (props) => ({
-    labels: [
-        '% Unavailable',
-        '% Avaiable',
+  labels: [
+    '% Available',
+    '% UnAvaiable',
+  ],
+  datasets: [{
+    data: (props.value) ? [props.value.unavaiableDevicePercentage, props.value.availableDevicePercentage] : [0, 0],
+    backgroundColor: [
+      '#4ce1b6',
+      '#ff4861',
     ],
-    datasets: [{
-        data: (props.value)?[props.value.unavaiableDevicePercentage,props.value.availableDevicePercentage]:[0,0],
-        backgroundColor: [
-            '#D81B60',
-            '#81C784',
-        ],
-        hoverBackgroundColor: [
-            '#D81B60',
-            '#81C784',
-        ],
-        borderColor: 'rgba(255,255,255,0.54)',
-        borderWidth: 2,
-    }]
+    hoverBackgroundColor: [
+      '#4ce1b6',
+      '#ff4861',
+    ],
+    borderColor: 'rgba(255,255,255,0.54)'
+  }]
 });
 
-const options = {
-    legend: {
-        position: 'left'
-    }
-}
+
 class StatusPieChart extends PureComponent {
 
-    constructor(props) {
-        console.log("Cosn val");
-        console.log(props.value);
-        super(props);
-        this.state = {
-            props:props,
-            data: getState(props),
-            options:options
-        };
-    }
+  constructor(props) {
+    console.log("Cosn val");
+    console.log();
+    super(props);
+    this.state = {
+      props: props,
+      data: getState(props)
+    };
+  }
 
-    componentWillMount() {
-        //setInterval(() => {
-        this.setState({data: getState(this.props)});
-        this.setState({ options: options });
-        // }, 4000);
-    }
+  componentWillMount() {
+    this.setState({ data: getState(this.props) });
+  }
 
-    render() {
-        return (
-            <div>
-                <Doughnut options={this.state.options} data={this.state.data} />
-            </div>
-        )
-    }
+  render() {
+    return (
+      // <Panel xs={12} md={12} lg={6} title="Device Status Distribution">      
+      //   <Doughnut data={this.state.data} />        
+      // </Panel>
+      <div>
+        <Doughnut height={310} data={this.state.data} />
+      </div>     
+    )
+  }
 }
 
 export default (StatusPieChart);

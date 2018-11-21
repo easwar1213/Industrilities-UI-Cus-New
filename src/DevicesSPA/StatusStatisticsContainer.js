@@ -19,9 +19,8 @@ import Refresh from '@material-ui/icons/Refresh';
 import Divider from '@material-ui/core/Divider';
 import AlertIcon from '@material-ui/icons/ErrorOutline';
 import AckIcon from '@material-ui/icons/ThumbUp';
-import StatusPieChart from './StatusPieChart'
 import StatusDataTable from './StatusDataTable'
-import DynamiclyRefreshedDoughnut from './DynamiclyRefreshedDoughnut';
+import StatusPieChart from './StatusPieChart';
 
 import {fetchEnd,fetchStart,required,Button,GET_ONE} from 'react-admin';
 import dataProvider from '../dataProvider'
@@ -156,7 +155,7 @@ class StatusStatisticsContainer extends React.Component {
             // </Card>
             <Panel xs={12} md={12} lg={4} title="Device Status Details" subhead={"on " + new Date().toLocaleString()}>
                     {this.state.isRendering ===true &&(<Loader/>)}
-                    {this.state.isRendering ===false &&( <DynamiclyRefreshedDoughnut value ={this.state.pieChart}/>)}
+                    {this.state.isRendering ===false &&( <StatusPieChart value ={this.state.pieChart}/>)}
             </Panel>
         );
     }
