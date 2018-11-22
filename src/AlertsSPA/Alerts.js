@@ -219,11 +219,11 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 <TableCell>
                                     <Chip
                                         avatar={
-                                            <Avatar style={{ backgroundColor: '#D81B60', width: 30, height: 30 }} >
+                                            <Avatar style={{ backgroundColor: '#ff4861', width: 30, height: 30 }} >
                                                 <AlertIcon />
                                             </Avatar>
                                         }
-                                        label="High"
+                                        label={<Badge color='danger'>High</Badge>}
                                         variant="outlined"
                                     />
                                 </TableCell>
@@ -233,11 +233,11 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 <TableCell>
                                     <Chip
                                         avatar={
-                                            <Avatar style={{ backgroundColor: '#F4D03F', width: 30, height: 30 }} >
+                                            <Avatar style={{ backgroundColor: '#FFCE56', width: 30, height: 30 }} >
                                                 <AlertIcon />
                                             </Avatar>
                                         }
-                                        label="Medium"
+                                        label={<Badge color='warning'>Medium</Badge>}
                                         variant="outlined"
                                     />
                                 </TableCell>
@@ -247,11 +247,11 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 <TableCell>
                                     <Chip
                                         avatar={
-                                            <Avatar style={{ backgroundColor: '#EAEDED', width: 30, height: 30 }} >
+                                            <Avatar style={{ backgroundColor: '#E7E9ED', width: 30, height: 30 }} >
                                                 <AlertIcon />
                                             </Avatar>
                                         }
-                                        label="Low"
+                                        label={<Badge color='secondary'>Low</Badge>}
                                         variant="outlined"
                                     />
                                 </TableCell>
@@ -266,11 +266,11 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 <TableCell>
                                     <Chip
                                         avatar={
-                                            <Avatar style={{ backgroundColor: '#009688', width: 30, height: 30 }} >
+                                            <Avatar style={{ backgroundColor: '#4ce1b6', width: 30, height: 30 }} >
                                                 <AlertIcon />
                                             </Avatar>
                                         }
-                                        label="Active"
+                                        label={<Badge color='success'>Active</Badge>}
                                         variant="outlined"
                                     />
                                 </TableCell>
@@ -284,7 +284,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                                 <AckIcon />
                                             </Avatar>
                                         }
-                                        label="Acknowledged"
+                                        label={<Badge color='primary'>Acknowledged</Badge>}
                                         variant="outlined"
                                     />
                                 </TableCell>
@@ -294,17 +294,17 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 <TableCell>
                                     <Chip
                                         avatar={
-                                            <Avatar style={{ backgroundColor: "#C5CAE9", width: 30, height: 30 }} >
+                                            <Avatar style={{ backgroundColor: "#5bc0de", width: 30, height: 30 }} >
                                                 <UndoIcon />
                                             </Avatar>
                                         }
-                                        label="Returned"
+                                        label={<Badge color='info'>Returned</Badge>}
                                         variant="outlined"
                                     />
                                 </TableCell>
                             )}
                             <TableCell>{(data[id]).event} </TableCell>
-                            <TableCell > <AddCommentButton record={(data[id])} /> </TableCell>
+                            <TableCell > <Badge color='secondary'><AddCommentButton record={(data[id])} /></Badge> </TableCell>
                             <TableCell>  <AcknowledgeButton record={(data[id])} />  </TableCell>
 
                         </TableRow>

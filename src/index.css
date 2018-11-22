@@ -408,6 +408,11 @@ font-size: 0.9rem;
   background-color: #e7e2e2 !important;
 }
 
+.badge-info {
+  color: #fff;
+  background-color: #5bc0de !important;
+}
+
 .MuiInput-input-65 {
   padding: 6px 36px 8px 0px !important;
 }
@@ -813,9 +818,9 @@ table thead th, table thead th span{
   /* color:#646777 !important; */
 }
 
-.table-class-new {
+/* .table-class-new {
   float: left;
-}
+} */
 
 /* .table-bordered thead {
   background-color: #646777 !important;

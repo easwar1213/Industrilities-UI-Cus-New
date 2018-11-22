@@ -135,15 +135,15 @@ const DeviceDetailedView = ({ record }) => {
                 <h5 class="bold-text heading-txt">{"Device : " + record.model+" - "+record.telematicsSerialNumber}</h5>
                 <div class="card">
                     <div class="card-body">
-                        <Col md={6} lg={6} xs={12} className="table-class-new">
+                        <Col md={6} lg={6} xs={6}>
                             <h5>Device Details</h5>
-                            <Table responsive className='table-bordered'>
-                                <thead className="table-heading">
+                            <Table responsive className='table--bordered'>
+                                {/* <thead className="table-heading">
                                     <tr width="100%">
                                         <th width="50%">Field Name</th>
                                         <th width="50%">Values</th>
                                     </tr>
-                                </thead>
+                                </thead> */}
                                 <tbody>
                                     <tr>
                                         <td><strong>Telematics Serial Number</strong></td>
@@ -164,15 +164,15 @@ const DeviceDetailedView = ({ record }) => {
                                 </tbody>
                             </Table>
                         </Col>
-                        <Col md={6} lg={6} xs={12} className="table-class-new">
+                        <Col md={6} lg={6} xs={6}>
                             <h5>Asset Details</h5>
-                            <Table responsive className='table-bordered'>
-                                <thead className="table-heading">
+                            <Table responsive className='table--bordered'>
+                                {/* <thead className="table-heading">
                                     <tr width="100%">
                                         <th width="50%">Field Name</th>
                                         <th width="50%">Values</th>
                                     </tr>
-                                </thead>
+                                </thead> */}
                                 <tbody>
                                     <tr>
                                         <td><strong>Name</strong></td>

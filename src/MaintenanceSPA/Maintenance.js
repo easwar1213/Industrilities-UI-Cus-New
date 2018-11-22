@@ -61,7 +61,7 @@ export const Maintenance = (props) => (
     <Container id="deviceContainer">
         <Row>
             <Col md={12}>
-                <h3 className='page-title'>Maintenance</h3>
+                <h3 className='page-title'>Maintenance Dashboard</h3>
             </Col>
         </Row>
         <Row>
@@ -149,14 +149,14 @@ const MaintenanceGrid = ({ ids, data, basePath,classes }) => (
                                 <TableCell>
                                     <Chip
                                         avatar={
-                                            <Avatar style={{ backgroundColor: '#D81B60', width: 30, height: 30 }} >
+                                            <Avatar style={{ backgroundColor: '#36A2EB', width: 30, height: 30 }} >
                                                 <MaintenanceIcon />
                                             </Avatar>
                                         }
-                                        label="Due"
+                                        label={<Badge color='primary'>Due</Badge>}
                                         variant="outlined"
                                     />
-                                </TableCell>
+                                </TableCell>                                
                             )}
 
                             {(data[id]).status == 'upcoming' && (
@@ -167,7 +167,7 @@ const MaintenanceGrid = ({ ids, data, basePath,classes }) => (
                                                 <MaintenanceIcon />
                                             </Avatar>
                                         }
-                                        label="Upcoming"
+                                        label={<Badge color='warning'>Upcoming</Badge>}
                                         variant="outlined"
                                     />
                                 </TableCell>

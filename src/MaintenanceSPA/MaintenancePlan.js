@@ -8,7 +8,8 @@ import { ScheduleRule } from './ScheduleRuleInput';
 
 //import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { Card, CardBody, Col, Container, Row } from 'reactstrap';
+import { Col, Container, Row, Badge } from 'reactstrap';
+import Panel from '../components/Panel';
 
 const cardStyle = {
     width: 300,
@@ -25,14 +26,37 @@ const Title = ({ record }) => {
 };
 export const MaintenancePlanList = (props) => (
 
-    <List title="Plan" {...props} title={<Title/>}>
-        <Datagrid>
-            <TextField source="planName" />
-            <TextField source="description" />
-            <TextField source="tags" />
-            <ShowButton />
-        </Datagrid>
-    </List>
+    <Container id="deviceContainer">
+        <Row>
+            <Col md={12}>
+                <h3 className='page-title'>Maintenance Plan</h3>
+            </Col>
+        </Row>
+        <Row>
+            <br />
+        </Row>
+        <Row>
+            <Panel xs={12} md={12} lg={12} title="Plan Details">
+                <List title="Plan" {...props} title={<Title />}>
+                    <Datagrid>
+                        <TextField source="planName" />
+                        <TextField source="description" />
+                        <TextField source="tags" />
+                        <ShowButton label="Show" />
+                    </Datagrid>
+                </List>
+            </Panel>
+        </Row>
+    </Container>
+
+    // <List title="Plan" {...props} title={<Title/>}>
+    //     <Datagrid>
+    //         <TextField source="planName" />
+    //         <TextField source="description" />
+    //         <TextField source="tags" />
+    //         <ShowButton label="Show"/>
+    //     </Datagrid>
+    // </List>
 );
 
 const MyActions = ({ record }) => {

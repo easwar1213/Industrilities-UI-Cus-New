@@ -19,8 +19,8 @@ class StatusTrendChart extends PureComponent {
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="Active" stroke="#009688" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="Returned" stroke="#C5CAE9" />
+                <Line type="monotone" dataKey="Active" stroke="#4ce1b6" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="Returned" stroke="#5bc0de" />
                 <Line type="monotone" dataKey="Acknowledged" stroke="#90CAF9" />
                 {/* <Brush /> */}
             </LineChart>
