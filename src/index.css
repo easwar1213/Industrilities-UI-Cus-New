@@ -377,7 +377,7 @@ font-size: 0.9rem;
 
 .badge{
   color: #fff !important;
-    padding: 6px 20px !important;
+    padding: 2px 20px !important;
     border-radius: 15px !important;
     font-size: 12px !important;
     font-weight: 400 !important;
@@ -965,4 +965,7 @@ margin-left: 12px !important;
 }
 #analysisrep .dashboard.container .row > div > div table tbody :last-child{
   border-bottom:none !important;
+}
+td[class^="MuiTableCell"]{
+  padding:0px !important;
 }

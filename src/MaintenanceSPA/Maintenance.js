@@ -146,31 +146,33 @@ const MaintenanceGrid = ({ ids, data, basePath,classes }) => (
                             <TableCell>{new Date(parseInt((data[id]).lastService)).toLocaleString()}</TableCell>
 
                             {(data[id]).status == 'due' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#36A2EB', width: 30, height: 30 }} >
-                                                <MaintenanceIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='primary'>Due</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>                                
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#E7E9ED', width: 30, height: 30 }} >
+                                //                 <MaintenanceIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='primary'>Due</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>        
+                                <TableCell><Badge color='primary'><MaintenanceIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Due</Badge></TableCell>                        
                             )}
 
                             {(data[id]).status == 'upcoming' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#F4D03F', width: 30, height: 30 }} >
-                                                <MaintenanceIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='warning'>Upcoming</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#E7E9ED', width: 30, height: 30 }} >
+                                //                 <MaintenanceIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='warning'>Upcoming</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='warning'><MaintenanceIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Upcoming</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).assetName} </TableCell>
                             <TableCell > <Complete record={(data[id])} /> </TableCell>

@@ -216,95 +216,100 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
 
 
                             {(data[id]).alertPriority == 'high' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#ff4861', width: 30, height: 30 }} >
-                                                <AlertIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='danger'>High</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#ff4861', width: 30, height: 30 }} >
+                                //                 <AlertIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='danger'>High</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='danger'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>High</Badge></TableCell>
                             )}
 
                             {(data[id]).alertPriority == 'medium' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#FFCE56', width: 30, height: 30 }} >
-                                                <AlertIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='warning'>Medium</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#E7E9ED', width: 30, height: 30 }} >
+                                //                 <AlertIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='warning'>Medium</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='warning'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Medium</Badge></TableCell>
                             )}
 
                             {(data[id]).alertPriority == 'low' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#E7E9ED', width: 30, height: 30 }} >
-                                                <AlertIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='secondary'>Low</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#E7E9ED', width: 30, height: 30 }} >
+                                //                 <AlertIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='secondary'>Low</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='secondary'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Low</Badge></TableCell>
                             )}
 
                             <TableCell colSpan={1}>{(data[id]).assetName}</TableCell>
                             <TableCell>{new Date(parseInt((data[id]).timeStamp)).toLocaleString()}</TableCell>
                             {/* <TableCell>{(data[id]).alertStatus}</TableCell> */}
 
-
                             {(data[id]).alertStatus == 'active' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: '#4ce1b6', width: 30, height: 30 }} >
-                                                <AlertIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='success'>Active</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: '#4ce1b6', width: 30, height: 30 }} >
+                                //                 <AlertIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='success'>Active</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='success'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Active</Badge></TableCell>
                             )}
 
                             {(data[id]).alertStatus == 'acknowledged' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: "#90CAF9", width: 30, height: 30 }} >
-                                                <AckIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='primary'>Acknowledged</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: "#90CAF9", width: 30, height: 30 }} >
+                                //                 <AckIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='primary'><AckIcon style={{ width: 30, height: 30 }}/> Acknowledged</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='primary'><AckIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Acknowledged</Badge></TableCell>
                             )}
 
                             {(data[id]).alertStatus == 'returned' && (
-                                <TableCell>
-                                    <Chip
-                                        avatar={
-                                            <Avatar style={{ backgroundColor: "#5bc0de", width: 30, height: 30 }} >
-                                                <UndoIcon />
-                                            </Avatar>
-                                        }
-                                        label={<Badge color='info'>Returned</Badge>}
-                                        variant="outlined"
-                                    />
-                                </TableCell>
+                                // <TableCell>
+                                //     <Chip
+                                //         avatar={
+                                //             <Avatar style={{ backgroundColor: "#5bc0de", width: 30, height: 30 }} >
+                                //                 <UndoIcon />
+                                //             </Avatar>
+                                //         }
+                                //         label={<Badge color='info'>Returned</Badge>}
+                                //         variant="outlined"
+                                //     />
+                                // </TableCell>
+                                <TableCell><Badge color='info'><UndoIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Returned</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).event} </TableCell>
-                            <TableCell > <Badge color='secondary'><AddCommentButton record={(data[id])} /></Badge> </TableCell>
+                            <TableCell ><AddCommentButton record={(data[id])} /></TableCell>
                             <TableCell>  <AcknowledgeButton record={(data[id])} />  </TableCell>
 
                         </TableRow>
