@@ -417,12 +417,21 @@ font-size: 0.9rem;
   padding: 6px 36px 8px 0px !important;
 }
 
-.Login-main-1 {    
+/* .Login-main-1 {    
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
+} */
+#loginfrm{
+  height:0px !important;
+  background-size: 100% 100% !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-size: cover;
 }
-
 .collapse__title {
   background-color: #f2f4f7;
   border-bottom: solid 1px #dddddd;
@@ -968,4 +977,7 @@ margin-left: 12px !important;
 }
 td[class^="MuiTableCell"]{
   padding:0px !important;
+}
+#loginfrm div[class^="MuiInput-error"]::after{
+  border-bottom-color:#FFFFFF !important;
 }
