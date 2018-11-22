@@ -700,7 +700,7 @@ div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding-top: 4px !important;
 }
 div[class^="MuiModal"] > div[class^="MuiPaper"]{
-  max-width: 330px !important;
+  max-width: 352px !important;
 }
 .list-page div[class^="MuiPaper"]{
   box-shadow:none !important;
@@ -924,8 +924,8 @@ div[class^="Login"] form label{
 .ra-field-notify div[class^="MuiFormControl"]{
   margin-bottom: 0px !important;
 }
-div[class^="MuiDrawer"] div[class^="MuiPaper"] svg[class^="MuiSvgIcon"] {
-  fill: #dcc608 !important;}
+svg[class^="MuiSvgIcon"] {
+  fill: #FBCA00 !important;}
 .show-page div[class^="MuiCardContent"] label[class^="MuiFormLabel"] > span{
 color: #8696e8 !important;
 }
@@ -934,4 +934,7 @@ float: inherit !important;
 }
 div[class^="Layout"]{
   z-index: 9 !important;
+}
+div[class^="MuiDialogTitle"]{
+  padding: 20px 24px 0px !important;
 }
