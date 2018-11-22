@@ -23,6 +23,8 @@ import StatusTrendContainer from './StatusTrendContainer'
 import BlockIcon from '@material-ui/icons/Block';
 import DoneIcon from '@material-ui/icons/Done';
 import AlertIcon from '@material-ui/icons/ErrorOutline';
+import ClearIcon from '@material-ui/icons/Clear';
+import AckIcon from '@material-ui/icons/ThumbUp';
 import { Col, Container, Row, Badge } from 'reactstrap';
 import Panel from '../components/Panel';
 
@@ -89,11 +91,13 @@ const PartsDataGrid = (({ ids, data, basePath, classes }) => (
                                 //      />
                                 //  </TableCell>
                                 // <TableCell style={{ backgroundColor: "#63D16C" }} >{(data[id]).validity}</TableCell>
-                                <TableCell><Badge color='success'>{(data[id]).validity}</Badge></TableCell>
+                                // <TableCell><Badge color='success'>{(data[id]).validity}</Badge></TableCell>
+                                <TableCell><Badge color='success'><DoneIcon style={{ width: 25, height: 25,paddingRight:5 }}/>{(data[id]).validity}</Badge></TableCell>
                             )}
                             {(data[id]).validity == "NA" && (
                                 // <TableCell style={{ backgroundColor: "grey" }} >{(data[id]).validity}</TableCell>
-                                <TableCell><Badge color='secondary'>{(data[id]).validity}</Badge></TableCell>
+                                // <TableCell><Badge color='secondary'>{(data[id]).validity}</Badge></TableCell>
+                                <TableCell><Badge color='secondary'><BlockIcon style={{ width: 25, height: 25,paddingRight:5 }}/>{(data[id]).validity}</Badge></TableCell>
                             )}
 
                             {(data[id]).validity == "Due For Replacement" && (
@@ -110,11 +114,13 @@ const PartsDataGrid = (({ ids, data, basePath, classes }) => (
                                 //      />
                                 //  </TableCell>
                                 // <TableCell style={{ backgroundColor: "#FFE000" }} >{(data[id]).validity}</TableCell>
-                                <TableCell><Badge color='warning'>{(data[id]).validity}</Badge></TableCell>
+                                // <TableCell><Badge color='warning'>{(data[id]).validity}</Badge></TableCell>
+                                <TableCell><Badge color='warning'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>{(data[id]).validity}</Badge></TableCell>
                             )}
                             {(data[id]).validity == "Expired" && (
                                 // <TableCell style={{ backgroundColor: "red" }} >{(data[id]).validity}</TableCell>
-                                <TableCell><Badge color='danger'>{(data[id]).validity}</Badge></TableCell>
+                                // <TableCell><Badge color='danger'>{(data[id]).validity}</Badge></TableCell>
+                                <TableCell><Badge color='danger'><ClearIcon style={{ width: 25, height: 25,paddingRight:5 }}/>{(data[id]).validity}</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).validTill}</TableCell>
 
@@ -132,7 +138,8 @@ const PartsDataGrid = (({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='danger'>Unauthorized</Badge></TableCell>
+                                // <TableCell><Badge color='danger'>Unauthorized</Badge></TableCell>
+                                <TableCell><Badge color='danger'><BlockIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Unauthorized</Badge></TableCell>
                             )}
 
                             {(data[id]).partStatus == "Authorized" && (
@@ -149,7 +156,8 @@ const PartsDataGrid = (({ ids, data, basePath, classes }) => (
                                 //     />
                                 // </TableCell>
                                 // <TableCell style={{ backgroundColor: "#63D16C" }} >{(data[id]).partStatus}</TableCell>
-                                <TableCell><Badge color='success'>Authorized</Badge></TableCell>
+                                // <TableCell><Badge color='success'>Authorized</Badge></TableCell>
+                                <TableCell><Badge color='success'><AckIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Authorized</Badge></TableCell>
                             )}
                             {/* <TableCell>{(data[id]).lastReported}</TableCell> */}
 
