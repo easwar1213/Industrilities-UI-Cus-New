@@ -58,7 +58,7 @@ const styles = theme => ({
     },
     nested: {
         paddingLeft: theme.spacing.unit * 4,
-    },
+    },    
     item: {
         paddingLeft: theme.spacing.unit * 1,
     },
@@ -67,6 +67,12 @@ const styles = theme => ({
     },
     item3: {
         paddingLeft: theme.spacing.unit * 3,
+    },
+    itemsvg: {
+        paddingLeft: theme.spacing.unit * 2.5,
+    },
+    itemname: {
+        paddingLeft: theme.spacing.unit * 0,
     },
 });
 class Menu extends React.Component {
@@ -114,11 +120,11 @@ class Menu extends React.Component {
 
                     <div>
                         <List>
-                            <ListItem className={classes.item} button onClick={this.handleClick}>
-                                <ListItemIcon>
+                            <ListItem className={classes.itemsvg} button onClick={this.handleClick}>
+                                <ListItemIcon >
                                     <MaintenanceIcon />
                                 </ListItemIcon>
-                                <ListItemText className={classes.item}
+                                <ListItemText className={classes.itemname}
                                 disableTypography 
                                 primary={<Typography variant="subheading" color="textSecondary" >Maintenance</Typography>}
                                 />
@@ -150,11 +156,11 @@ class Menu extends React.Component {
 
                     <div>
                         <List>
-                            <ListItem className={classes.item} button onClick={this.handleClickAlert}>
+                            <ListItem className={classes.itemsvg} button onClick={this.handleClickAlert}>
                                 <ListItemIcon>
                                     <AlertDashboard />
                                 </ListItemIcon>
-                                <ListItemText className={classes.item}
+                                <ListItemText className={classes.itemname}
                                  disableTypography 
                                  primary={<Typography variant="subheading" color="textSecondary" >Alerts</Typography>}
                                 />
@@ -186,11 +192,11 @@ class Menu extends React.Component {
 
                     <div>
                         <List>
-                            <ListItem className={classes.item} button onClick={this.handleClickParts}>
+                            <ListItem className={classes.itemsvg} button onClick={this.handleClickParts}>
                                 <ListItemIcon>
                                     <PartsIcon />
                                 </ListItemIcon>
-                                <ListItemText className={classes.item}
+                                <ListItemText className={classes.itemname}
                                   disableTypography 
                                   primary={<Typography variant="subheading" color="textSecondary" >Parts</Typography>}
                                  />
@@ -241,7 +247,6 @@ class Menu extends React.Component {
                         <List>
                             <ListItem className={classes.item} button onClick ={this.changeRoute} >
                                 <ListItemIcon className={classes.item2} >
-
                                     <InfoIcon className={classes.item2}/>
                                 </ListItemIcon>
                                 <ListItemText className={classes.item2}
