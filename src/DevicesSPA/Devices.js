@@ -65,7 +65,7 @@ export const DeviceList = (props) => (
 
 
 const DeviceGrid = ({ ids, data, basePath }) => (
-    <div style={{ gridStyle }}>
+    <div id="device" style={{ gridStyle }}>
 
         <Table responsive style={{ tableLayout: 'auto' }}  >
             <TableHead>
@@ -85,11 +85,13 @@ const DeviceGrid = ({ ids, data, basePath }) => (
                             key={id}>
 
                             {(data[id]).avaiabilityStatus == 1 && (
-                                <TableCell><Badge color='success'>Available</Badge></TableCell>
+                                // <TableCell><Badge color='success'>Available</Badge></TableCell>
+                                <TableCell><Badge color='success'><DoneIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Available</Badge></TableCell>
                             )}
 
                             {(data[id]).avaiabilityStatus == 0 && (
-                                <TableCell><Badge color='danger'>Unavailable</Badge></TableCell>
+                                // <TableCell><Badge color='danger'>Unavailable</Badge></TableCell>
+                                <TableCell><Badge color='danger'><BlockIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Unavailable</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).telematicsSerialNumber}</TableCell>
                             <TableCell>{(data[id]).model}</TableCell>

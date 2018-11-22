@@ -13,6 +13,7 @@ import Grid from "@material-ui/core/Grid";
 import AlertIcon from '@material-ui/icons/ErrorOutline';
 import ClearIcon from '@material-ui/icons/Clear';
 import AckIcon from '@material-ui/icons/ThumbUp';
+import DoneIcon from '@material-ui/icons/Done';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -276,7 +277,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='success'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Active</Badge></TableCell>
+                                <TableCell><Badge color='success'><DoneIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Active</Badge></TableCell>
                             )}
 
                             {(data[id]).alertStatus == 'acknowledged' && (
