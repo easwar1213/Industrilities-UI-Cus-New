@@ -889,11 +889,11 @@ div[class^="Labeled"] table thead tr th{
 div[class^="Login"] form label{
   color: #FFFFFF !important;
 } */
-.ra-field-assets{float: left; width: 50% !important;background: #f2f4f7 !important;
-  box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
+.ra-field-assets{float: left; width: 50% !important;background: #f2f4f717 !important;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.11) !important;
   border-radius: 4px;}
-.ra-field-notify{float: left; width: 45% !important;background: #f2f4f7 !important;
-  box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
+.ra-field-notify{float: left; width: 45% !important;background: #f2f4f717 !important;
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,.11) !important;
   border-radius: 4px;}
 .ra-field-calendarBased{float: left; width: 100% !important;}
 .ra-field-documentLinks{float: left; width: 100% !important;}
@@ -937,4 +937,32 @@ div[class^="Layout"]{
 }
 div[class^="MuiDialogTitle"]{
   padding: 20px 24px 0px !important;
+}
+/* .row div[class^="MuiPaper"]{
+  width: 55% !important;
+} */
+.container .row b div{
+  color: #3f51b5 !important;
+  margin-bottom: 10px !important;
+}
+.row form div[class^="MuiInput"] div[class^="MuiSelect"]{
+  min-width: 60px;
+}
+.row #analysisrep div[class^="MuiPaper-root"]{
+width: 100% !important;
+}
+#analysisrep div[class^="MuiPaper"] table tr{
+  height: 20px !important;
+}
+#analysisrep div[class^="MuiPaper"]{
+  box-shadow:none !important;
+}
+#analysisrep div[class^="WSMachineSummaryContainer"]{
+margin-left: 12px !important;
+}
+#analysisrep .dashboard.container .row > div > div table{
+  border-right:none !important;
+}
+#analysisrep .dashboard.container .row > div > div table tbody :last-child{
+  border-bottom:none !important;
 }
