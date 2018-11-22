@@ -594,7 +594,7 @@ font-size: 0.9rem;
 }
 
 .Datagrid-headerCell-251 {
-  border: 1px solid #ccc !important;
+  /* border: 1px solid #ccc !important; */
   padding: 0 12px !important;
 }
 
@@ -763,7 +763,7 @@ table .datagrid-body td{border-bottom: 1px solid #ccc !important; border-top: 1p
 .datagrid-body td a{color: #646777 !important;}
 
 .ra-field-planName{float: left !important;}
-.ra-field-description{float: left !important;}
+.ra-field-description{margin-bottom:25px !important;}
 .ra-field-scheduleType{float: left !important;}
 .ra-field-meterBased{float: left !important;}
 .ra-field-c_DueEvery{float: left !important;}
@@ -889,3 +889,49 @@ div[class^="Labeled"] table thead tr th{
 div[class^="Login"] form label{
   color: #FFFFFF !important;
 } */
+.ra-field-assets{float: left; width: 50% !important;background: #f2f4f7 !important;
+  box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
+  border-radius: 4px;}
+.ra-field-notify{float: left; width: 45% !important;background: #f2f4f7 !important;
+  box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
+  border-radius: 4px;}
+.ra-field-calendarBased{float: left; width: 100% !important;}
+.ra-field-documentLinks{float: left; width: 100% !important;}
+.ra-field-tags{float: left; width: 100% !important;}
+.ra-field-scheduleType{float: left; width: 100% !important;}
+.ra-field-meterBased{float: left; width: 100% !important;}
+.ra-field-assets label span{
+  font-size: 22px !important;
+}
+.ra-field-assets label{
+  width: 125% !important; text-align: center !important;
+}
+.ra-field-notify label span{
+  font-size: 22px !important;
+}
+.ra-field-notify label{
+  width: 132% !important; text-align: center !important;
+}
+.ra-field-assets .datagrid-body tr:last-child td{
+  border-bottom:none !important;
+}
+.ra-field-notify .datagrid-body tr:last-child td{
+  border-bottom:none !important;
+}
+.ra-field-assets div[class^="MuiFormControl"]{
+  margin-bottom: 0px !important;
+}
+.ra-field-notify div[class^="MuiFormControl"]{
+  margin-bottom: 0px !important;
+}
+div[class^="MuiDrawer"] div[class^="MuiPaper"] svg[class^="MuiSvgIcon"] {
+  fill: #dcc608 !important;}
+.show-page div[class^="MuiCardContent"] label[class^="MuiFormLabel"] > span{
+color: #8696e8 !important;
+}
+div[class^="MuiCardContent"] span .ra-field.ra-field-undefined{ 
+float: inherit !important;
+}
+div[class^="Layout"]{
+  z-index: 9 !important;
+}
