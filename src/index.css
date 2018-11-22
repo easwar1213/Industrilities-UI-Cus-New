@@ -251,7 +251,6 @@ div[class^="MuiDrawer"] div[class^="MuiPaper"] {
     border-radius: none !important;
   }
 }
-/* gokul */
 
 .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div{
   border-radius:0px !important;
@@ -628,7 +627,6 @@ font-size: 0.9rem;
 }
 
 
-/*gokul edit*/
 div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"]{
   background-color: #646777 !important;
   min-height: 48px !important;
@@ -977,6 +975,9 @@ margin-left: 12px !important;
 }
 td[class^="MuiTableCell"]{
   padding:0px !important;
+}
+#device td[class^="MuiTableCell"]{
+  padding: 9px 28px 4px 24px !important;
 }
 #loginfrm div[class^="MuiInput-error"]::after{
   border-bottom-color:#FFFFFF !important;
