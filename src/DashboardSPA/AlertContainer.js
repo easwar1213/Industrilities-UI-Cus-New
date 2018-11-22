@@ -170,13 +170,7 @@ class AlertContainer extends React.Component {
       //       {this.state.isRendering ===false &&(<PriorityDataTable value ={this.state.dataTable}/>)}
       //     </CardContent>
       //   </Collapse>
-      // </Card>
-
-      // <Panel xs={12} md={12} lg={12} title="Device Status Details">
-      //   {this.state.isRendering === true && (<Loader />)}
-      //   {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
-      //   {this.state.isRendering === false && (<PriorityChart value={this.state.pieChart} />)}
-      // </Panel>
+      // </Card>     
 
       <Container id="deviceContainer">
         <Row>
