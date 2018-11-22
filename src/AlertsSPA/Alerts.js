@@ -88,7 +88,7 @@ export const Alerts = withStyles(listStyles)(({ classes, ...props }) => (
     <Container id="deviceContainer">
         <Row>
             <Col md={12}>
-                <h3 className='page-title'>Alerts</h3>
+                <h3 className='page-title'>Alerts Dashboard</h3>
             </Col>
         </Row>
         <Row>
@@ -104,7 +104,7 @@ export const Alerts = withStyles(listStyles)(({ classes, ...props }) => (
         </Row>
         <Row>
             <Panel xs={12} md={12} lg={12} title="Alerts Details">
-                <List title="Alerts" {...props} filters={<AlertFilter />} >
+                <List title="Alerts Dashboard" {...props} filters={<AlertFilter />} >
                     <AlertGrid />
                 </List>
             </Panel>

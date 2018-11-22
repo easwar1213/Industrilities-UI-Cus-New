@@ -700,7 +700,7 @@ div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding-top: 4px !important;
 }
 div[class^="MuiModal"] > div[class^="MuiPaper"]{
-  max-width: 400px !important;
+  max-width: 330px !important;
 }
 .list-page div[class^="MuiPaper"]{
   box-shadow:none !important;

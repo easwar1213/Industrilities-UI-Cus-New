@@ -8,8 +8,9 @@ import { ScheduleRule } from './ScheduleRuleInput';
 
 //import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import { Col, Container, Row, Badge } from 'reactstrap';
+import { Card,CardBody,Col, Container, Row, Badge } from 'reactstrap';
 import Panel from '../components/Panel';
+import Table from '../components/table/Table';
 
 const cardStyle = {
     width: 300,
@@ -67,8 +68,9 @@ const PostTitle = ({ record }) => {
     return <span>Maintenance Plan / {record ? `"${record.planName}"` : ''}</span>;
 };
 
+
 export const MaintenancePlanShow = (props) => (
-    <ShowController title={<PostTitle />} {...props}>
+    <ShowController title="Maintenance Plan" {...props}>
         {controllerProps =>
             <ShowView {...props} {...controllerProps}>
                 <SimpleShowLayout>
@@ -96,8 +98,8 @@ export const MaintenancePlanShow = (props) => (
                     <TextField label="Schedule Type" source="scheduleType" />
                     <BooleanField label="Meter Based Schedule Rule" source="meterBased" />
 
-                    {/* <Card style={cardStyle} >
-                      <CardContent>    */}
+                    <Card style={cardStyle} >
+                      <CardContent>   
                     <SimpleShowLayout>
                         {controllerProps.record && controllerProps.record.meterBased &&
                             <TextField label="Due Every" record={controllerProps.record.m_DueEvery} source="m_DueEvery" />
@@ -106,8 +108,8 @@ export const MaintenancePlanShow = (props) => (
                             <TextField label="Unit" source="m_unit" />
                         }
                     </SimpleShowLayout>
-                    {/* </CardContent>
-                      </Card> */}
+                    </CardContent>
+                      </Card>
                     <br />
                     <br />
 
@@ -129,10 +131,6 @@ export const MaintenancePlanShow = (props) => (
                         </Datagrid>
                     </ArrayField>
                     <TextField source="tags" />
-
-
-
-
                 </SimpleShowLayout>
             </ShowView>
         }

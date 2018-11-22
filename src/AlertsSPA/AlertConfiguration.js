@@ -1,21 +1,45 @@
 import React from 'react';
 
 import { ShowView, ShowController, BooleanField, ReferenceArrayField, NumberInput, FormDataConsumer, BooleanInput, Labeled, EmailField, ReferenceArrayInput, SelectArrayInput, ArrayInput, SimpleFormIterator, RichTextInput, DateInput, ArrayField, ShowButton, Show, Filter, List, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput, SimpleShowLayout } from 'react-admin';
-
 import { Field, reduxForm } from 'redux-form'
+import { Col, Container, Row, Badge } from 'reactstrap';
+import Panel from '../components/Panel';
 
 
 
 export const AlertConfiguration = (props) => (
 
-    <List title="Alert Configuration" {...props} >
-        <Datagrid>
-            <TextField source="alertConfigName" />
-            <TextField source="triggerCount" />
-            <TextField source="assetCount" />
-            <ShowButton />
-        </Datagrid>
-    </List>
+    <Container id="deviceContainer">
+        <Row>
+            <Col md={12}>
+                <h3 className='page-title'>Alerts Configuration</h3>
+            </Col>
+        </Row>
+        <Row>
+            <br />
+        </Row>
+        <Row>
+            <Panel xs={12} md={12} lg={12} title="Configuration Details">
+                <List title="Alert Configuration" {...props} >
+                    <Datagrid>
+                        <TextField source="alertConfigName" />
+                        <TextField source="triggerCount" />
+                        <TextField source="assetCount" />
+                        <ShowButton />
+                    </Datagrid>
+                </List>
+            </Panel>
+        </Row>
+    </Container>
+
+    // <List title="Alert Configuration" {...props} >
+    //     <Datagrid>
+    //         <TextField source="alertConfigName" />
+    //         <TextField source="triggerCount" />
+    //         <TextField source="assetCount" />
+    //         <ShowButton />
+    //     </Datagrid>
+    // </List>
 );
 
 
@@ -27,20 +51,20 @@ const PostTitle = ({ record }) => {
 
 
 export const showAlertConfiguration = (props) => (
-    <ShowController title={<PostTitle />} {...props}>
+    <ShowController title="Alert Coniguration" {...props}>
         {controllerProps =>
             <ShowView {...props} {...controllerProps}>
                 <SimpleShowLayout>
                     <TextField label="Alert Configuration Name" source="alertConfigName" />
-                    
-                    <br/>
+
+                    <br />
                     <ArrayField label="Notify" source="emails">
                         <Datagrid>
                             <TextField label="Emails" source="email" />
                         </Datagrid>
                     </ArrayField>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
 
                     <ReferenceArrayField label="Assets" source="assetsForRef" reference="getAssetListForReference" >
                         <Datagrid>
@@ -50,8 +74,8 @@ export const showAlertConfiguration = (props) => (
                         </Datagrid>
                     </ReferenceArrayField>
 
-                     <br/>
-                    <br/>
+                    <br />
+                    <br />
                     <ArrayField label="Triggers" source="triggers">
                         <Datagrid>
                             <TextField source="dataPoint" />
@@ -60,11 +84,11 @@ export const showAlertConfiguration = (props) => (
                             <TextField source="value" />
                             <TextField label="For" source="forTimePeriod" />
 
-                             <TextField source="unit" />
+                            <TextField source="unit" />
                             <TextField source="priority" />
 
                             <TextField source="autoClear" />
-                            <TextField label= "Notify On Return"source="notifyOnReturn" />
+                            <TextField label="Notify On Return" source="notifyOnReturn" />
 
                         </Datagrid>
                     </ArrayField>

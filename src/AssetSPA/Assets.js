@@ -6,7 +6,6 @@ import Map from './map';
 import SensorGroupTable from './SensorGroupTable';
 import Table from '../components/table/Table';
 import Panel from '../components/Panel';
-import AssetDetails from './AssetDetails';
 import { Card, CardBody } from 'reactstrap';
 import Collapse from '../components/Collapse';
 import { Badge } from 'reactstrap';
@@ -47,51 +46,7 @@ const AssetTitle = ({ record }) => {
 
 const AssetDetailsTab = ({ record }) => {
     return (
-        <div>
-            {/* <Panel xs={12} md={12} lg={12} title="Device Status Distribution">  */}
-            {/* <Card>
-            <CardBody>  */}
-            {/* <Collapse className="with-shadow" title="Asset Details "> */}
-            {/* <div class="card">
-                        <div class="card-body">
-                            <table width="100%">
-                                <tr width="100%">
-                                    <td width="50%">
-                                        <ul class="list-group">
-                                            <button class="active list-group-item-action list-group-item">Field Name</button>
-                                            <button class="list-group-item-action list-group-item"><strong>Name</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>Model</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>Make</strong></button>
-                                            <button class="disabled list-group-item-action list-group-item"><strong>Model Year</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>Compressor Controller</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>Compressor Type</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>Distributor Name</strong></button>
-                                            <button class="disabled list-group-item-action list-group-item"><strong>Motor HP</strong></button>
-                                            <button class="disabled list-group-item-action list-group-item"><strong>Nominal Package FlowRating</strong></button>
-                                        </ul>
-                                    </td>
-                                    <td width="50%">
-                                        <ul class="list-group">
-                                            <button class="active list-group-item-action list-group-item">Values</button>
-                                            <button class="list-group-item-action list-group-item"><strong>{record ? `${record.assetName}` : ''}</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>{record ? `${record.model}` : ''}</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>{record ? `${record.make}` : ''}</strong></button>
-                                            <button class="disabled list-group-item-action list-group-item"><strong>{record ? `${record.modelYear}` : ''}</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>{record ? `${record.compressorController}` : ''}</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>{record ? `${record.compressorType}` : ''}</strong></button>
-                                            <button class="list-group-item-action list-group-item"><strong>{record ? `${record.distributorName}` : ''}</strong></button>
-                                            <button class="disabled list-group-item-action list-group-item"><strong>{record ? `${record.motorHP}` : ''}</strong></button>
-                                            <button class="disabled list-group-item-action list-group-item"><strong>{record ? `${record.nominalPackageFlowRating}` : ''}</strong></button>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div> */}
-            {/* </Collapse> */}
-            {/* </CardBody>
-        </Card> */}
-            {/* </Panel> */}
+        <div>           
             <Col md={12} lg={12} xs={12} className="table-class-new">
                 <br />
                 <Col md={1} lg={1} className="table-class-new"></Col>
@@ -144,40 +99,7 @@ const AssetDetailsTab = ({ record }) => {
                     </Table>
                 </Col>
                 <Col md={1} lg={1} className="table-class-new"></Col>
-            </Col>
-            {/* <Col md={12} lg={12} xs={12} className="table-class-new">
-                <br/>
-                <Col md={12} lg={12} className="table-class-new">
-                    <Table responsive className='table-bordered'>
-                        <thead className="table-heading">
-                            <tr>
-                                <th>Asset Name</th>
-                                <th>Device Model</th>
-                                <th>Make</th>
-                                <th>Model Year</th>
-                                <th>Compressor Controller</th>
-                                <th>Compressor Type</th>
-                                <th>Distributor Name</th>
-                                <th>Motor HP</th>
-                                <th>Nominal Package FlowRating</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>{record ? `${record.assetName}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.model}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.Make}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.modelYear}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.compressorController}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.compressorType}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.distributorName}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.motorHP}` : ''}</strong></td>
-                                <td><strong>{record ? `${record.nominalPackageFlowRating}` : ''}</strong></td>
-                            </tr>
-                        </tbody>
-                    </Table>
-                </Col>
-            </Col> */}
+            </Col>           
         </div>
     );
 };
