@@ -409,6 +409,10 @@ font-size: 0.9rem;
   background-color: #f6da6e !important;
 }
 
+/* .badge-warning svg[class^="MuiSvgIcon"] {
+  fill: #ffffff !important; 
+} */
+
 .badge-primary {
   color: #fff;
   background-color: #70bbfd !important;
@@ -944,7 +948,7 @@ div[class^="Login"] form label{
   margin-bottom: 0px !important;
 }
 svg[class^="MuiSvgIcon"] {
-  fill: #FBCA00 !important;}
+  fill: #646777 !important;}
 .show-page div[class^="MuiCardContent"] label[class^="MuiFormLabel"] > span{
 color: #8696e8 !important;
 }

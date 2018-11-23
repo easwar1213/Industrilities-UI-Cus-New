@@ -248,7 +248,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='warning'><EqualizerIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Medium</Badge></TableCell>
+                                <TableCell><Badge color='warning'><CompareArrowsIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Medium</Badge></TableCell>
                             )}
 
                             {(data[id]).alertPriority == 'low' && (
@@ -316,7 +316,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                             )}
                             <TableCell>{(data[id]).event} </TableCell>
                             <TableCell ><AddCommentButton record={(data[id])} /></TableCell>
-                            <TableCell>  <AcknowledgeButton record={(data[id])} />  </TableCell>
+                            <TableCell>  <AcknowledgeButton record={(data[id])} /></TableCell>
 
                         </TableRow>
                     );
