@@ -797,15 +797,15 @@ main div[class^="Layout"]{
 } */
 
 div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"]{
-  background-color: #646777 !important;
+  /* background-color: #646777 !important; */
   min-height: 48px !important;
   margin-top: 4px;
-  border-bottom: 2px solid #3f51b5;
+  border-bottom: 2px solid rgba(224, 224, 224, 1);
 }
 div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"] > div[class^="EnhancedTableToolbar"]{
   width: 100% !important;
 }
-.dashboard.container .row > div > div > div #tableTitle{color:#fff !important;font-size: 14px;text-align: center;font-weight: bold;text-transform: uppercase;}
+.dashboard.container .row > div > div > div #tableTitle{color:rgba(0, 0, 0, 0.54) !important;font-size: 14px;text-align: center;font-weight: bold;text-transform: uppercase;}
 .dashboard.container .row > div > div table tbody tr th{padding: 0px !important;}
 .dashboard.container .row > div > div table{border-right: 2px solid #e0e0e0 !important;}
 .dashboard.container .row > div > div table tbody tr{border-bottom: 2px solid #e0e0e0 !important;}
@@ -824,17 +824,18 @@ div[class^="MuiGrid"] > div[class^="MuiGrid"] tbody tr td{
   height: 199px;
 }
 .dashboard.container div[class^="MuiGrid"] header{
-  background-color: #646777 !important;
+  background-color:transparent !important;
+  box-shadow: none !important;
 }
-.dashboard.container div[class^="MuiGrid"] header button span{
+/* .dashboard.container div[class^="MuiGrid"] header button span{
   color: #fff !important;
-}
+} */
 .dashboard.container hr[class^="MuiDivider"]{
   display: none !important; height: 0px !important;
 }
 div[class^="MuiTypography"] tbody tr td{
   border-bottom: 2px solid #e0e0e0 !important;
-  padding-top: 13px !important;
+  padding-top: 17px !important;
 }
 .simple-form .SelectFieldDiv div[class^="MuiSelect"]{
   min-width: 280px !important;
@@ -1141,9 +1142,9 @@ div[class^="MuiDialogActions"] button:nth-child(2):hover{
 .table--bordered.table tbody tr td:nth-child(2) strong{
   font-weight: normal !important;
 }
-div[class^="MuiPaper"]{
+/* div[class^="MuiPaper"]{
   box-shadow: none !important;
-}
+} */
 div[class^="MuiDialogContent"] .simple-form div[class^="MuiFormControl"]{
   margin-top: 0px !important;
 }
@@ -1180,16 +1181,44 @@ div[class^="MuiDialogContent"]{
 div[class^="MuiDialogActions"]{
   padding-bottom: 15px !important;
 }
-div[class^="MuiDrawer"] div[class^="MuiPaper"]{
+/* div[class^="MuiDrawer"] div[class^="MuiPaper"]{
   box-shadow: none !important;
-}
+} */
 .card-body .panel__title{
   margin-bottom: 0px !important;
 }
 .panel__content div[class^="MuiToolbar"]{
   min-height:0px !important;
 }
-.row div[class^="MuiPaper"]{
-  width: 54%;
-  margin: 0 auto;
+/* .row div[class^="MuiPaper"]{
+  width: 100%;  
+} */
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.chartjs-render-monitor{
+  height: 300px !important;
+  width: 85%;
+}
+.dashboard.container div[class^="MuiToolbar"]{
+background-color:transparent !important;
 }

@@ -48,7 +48,7 @@ class StatusPieChart extends PureComponent {
     render() {
         return (
             <div>
-                <Doughnut height={310} data={this.state.data} />
+                <Doughnut height="310px" data={this.state.data} />
             </div>
         )
     }
