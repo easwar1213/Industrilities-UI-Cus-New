@@ -792,9 +792,9 @@ main div[class^="Layout"]{
   overflow-y:scroll;  
 }
 
-.tbl-height th{
+/* .tbl-height th{
   color:white !important; 
-}
+} */
 
 div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"]{
   background-color: #646777 !important;
@@ -984,9 +984,9 @@ table thead th, table thead th span{
   /* color:#646777 !important; */
 }
 
-.table-bordered {
+/* .table-bordered {
   border: 1px solid #dee2e6 !important;
-}
+} */
 
 div[class^="Labeled"] table thead tr th{
   text-align: center !important;
@@ -1138,5 +1138,42 @@ div[class^="MuiDialogActions"] button:nth-child(2):hover{
   color: #646777;
   background: #d0c6c6 !important;
 }
-
-
+.table--bordered.table tbody tr td:nth-child(2) strong{
+  font-weight: normal !important;
+}
+div[class^="MuiPaper"]{
+  box-shadow: none !important;
+}
+div[class^="MuiDialogContent"] .simple-form div[class^="MuiFormControl"]{
+  margin-top: 0px !important;
+}
+div[class^="MuiDialogContent"] .simple-form div[class^="MuiCardContent"]{
+  padding-top: 0px !important;
+}
+.show-page .col-12.col-md-12.col-lg-12 form div[class^="MuiFormControl"]{
+  float: left !important;
+  width: inherit !important;
+  margin-right: 20px;
+}
+.table-bordered td, .table-bordered th{
+  border-top: none !important;
+  border-bottom: 1px solid #dee2e6 !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.table-bordered tr th{text-align: center !important;}
+.table-responsive tr th {
+  text-align: left !important;
+}
+.table-responsive tbody tr td:nth-child(2) strong{
+  font-weight: normal !important;
+}
+.col-12.col-md-12.col-lg-12{
+  margin-bottom: 30px !important;
+}
+.table-bordered{
+  border: none !important;
+}
+div[class^="MuiDialogContent"]{
+  padding: 0 24px 5px !important;
+}
