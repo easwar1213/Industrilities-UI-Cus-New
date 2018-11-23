@@ -65,12 +65,24 @@ div[class^="Login"] > div[class^="MuiPaper"] {
   box-shadow:none !important;
   border-radius:5px !important;
 }
-.layout div[class^="MuiDrawer"] svg[class^="MuiSvgIcon"]  { width: 20px !important; height: 20px !important;}
-.layout div[class^="MuiDrawer"] div[class^="Menu"]{ padding-top:15px;}
-.layout div[class^="MuiDrawer"] div[class^="Menu"] a{ padding-left:18px;}
-.layout div[class^="MuiDrawer"] div[class^="Menu"] a > span[class^="MenuItemLink"] { padding-right:17px !important; position:relative; top:-2px;}
-.layout div[class^="MuiDrawer"] div[class^="Menu"] a { font-size:15px; font-weight:400;}
-.dashboardContainer .row > div > div{  max-width:100% !important; border-radius: 4px !important;  min-height: 100%;}
+.layout div[class^="MuiDrawer"] svg[class^="MuiSvgIcon"]  { 
+  width: 20px !important; height: 20px !important;
+}
+.layout div[class^="MuiDrawer"] div[class^="Menu"]{ 
+  padding-top:15px;
+}
+.layout div[class^="MuiDrawer"] div[class^="Menu"] a{ 
+  padding-left:18px;
+}
+.layout div[class^="MuiDrawer"] div[class^="Menu"] a > span[class^="MenuItemLink"] { 
+  padding-right:17px !important; position:relative; top:-2px;
+}
+.layout div[class^="MuiDrawer"] div[class^="Menu"] a { 
+  font-size:15px; font-weight:400;
+}
+.dashboardContainer .row > div > div{  
+  max-width:100% !important; border-radius: 4px !important;  min-height: 100%;
+}
 
 .headroom button{
   margin:0px !important;

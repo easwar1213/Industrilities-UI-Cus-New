@@ -14,6 +14,10 @@ import AlertIcon from '@material-ui/icons/ErrorOutline';
 import ClearIcon from '@material-ui/icons/Clear';
 import AckIcon from '@material-ui/icons/ThumbUp';
 import DoneIcon from '@material-ui/icons/Done';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import EqualizerIcon from '@material-ui/icons/Equalizer';
+import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -40,6 +44,7 @@ import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/
 import PriorityTrendContainer from './PriorityTrendContainer'
 import { Col, Container, Row, Badge } from 'reactstrap';
 import Panel from '../components/Panel';
+import { EqualIcon } from 'mdi-react';
 
 
 const AlertFilter = (props) => (
@@ -228,7 +233,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='danger'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>High</Badge></TableCell>
+                                <TableCell><Badge color='danger'><ArrowUpwardIcon style={{ width: 25, height: 25,paddingRight:5 }}/>High</Badge></TableCell>
                             )}
 
                             {(data[id]).alertPriority == 'medium' && (
@@ -243,7 +248,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='warning'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Medium</Badge></TableCell>
+                                <TableCell><Badge color='warning'><EqualizerIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Medium</Badge></TableCell>
                             )}
 
                             {(data[id]).alertPriority == 'low' && (
@@ -258,7 +263,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='secondary'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Low</Badge></TableCell>
+                                <TableCell><Badge color='secondary'><ArrowDownwardIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Low</Badge></TableCell>
                             )}
 
                             <TableCell colSpan={1}>{(data[id]).assetName}</TableCell>
