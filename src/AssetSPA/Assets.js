@@ -46,18 +46,17 @@ const AssetTitle = ({ record }) => {
 
 const AssetDetailsTab = ({ record }) => {
     return (
-        <div>           
-            <Col md={12} lg={12} xs={12} className="table-class-new">
-                <br />
-                <Col md={1} lg={1} className="table-class-new"></Col>
-                <Col md={10} lg={10} className="table-class-new">
-                    <Table responsive className='table-bordered'>
-                        <thead className="table-heading">
+        <div class="card">
+            <div class="card-body">
+                <Col md={6} lg={6} xs={6}>
+                    <h5>Asset Details</h5>
+                    <Table responsive className='table--bordered'>
+                        {/* <thead className="table-heading">
                             <tr width="100%">
                                 <th width="50%">Field Name</th>
                                 <th width="50%">Values</th>
                             </tr>
-                        </thead>
+                        </thead> */}
                         <tbody>
                             <tr>
                                 <td><strong>Name</strong></td>
@@ -98,8 +97,7 @@ const AssetDetailsTab = ({ record }) => {
                         </tbody>
                     </Table>
                 </Col>
-                <Col md={1} lg={1} className="table-class-new"></Col>
-            </Col>           
+            </div>
         </div>
     );
 };
@@ -169,7 +167,7 @@ const AssetDetailsTab = ({ record }) => {
 
 export const showAsset = (props) => (
     <Show title="Assets" {...props}  >
-    
+
         <TabbedShowLayout >
 
             <Tab label="Location" >
@@ -181,20 +179,20 @@ export const showAsset = (props) => (
             </Tab>
 
 
-            <Tab label="Details">                
-                <AssetDetailsTab />              
+            <Tab label="Details">
+                <AssetDetailsTab />
             </Tab>
 
             <Tab label="Alerts" filters={<AlertFilter />}>
-            {/* <h5 class="bold-text heading-txt">Alert Details</h5> */}
-                <ReferenceManyField filters={<AlertFilter />}  {...props} label="" target="telematicsSerialNumber" source="telematicsSerialNumber" reference="getAssetAlerts" className="TableResponsive">                
+                {/* <h5 class="bold-text heading-txt">Alert Details</h5> */}
+                <ReferenceManyField filters={<AlertFilter />}  {...props} label="" target="telematicsSerialNumber" source="telematicsSerialNumber" reference="getAssetAlerts" className="TableResponsive">
                     {/* <List {...props}filters={<AlertFilter />} filter={{ telematicsSerialNumber:"telematicsSerialNumber"}} title="Alerts"> */}
                     <Datagrid>
                         <TextField source="assetName" />
                         <TextField label="Time Active" source="timeStamp" />
                         <TextField source="alertPriority" />
                         <TextField source="alertStatus" />
-                        <TextField source="event" className="LastChildClass"/>
+                        <TextField source="event" className="LastChildClass" />
                     </Datagrid>
                     {/* </List>  */}
                 </ReferenceManyField>

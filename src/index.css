@@ -843,9 +843,9 @@ div[class^="MuiTypography"] tbody tr td{
   min-width: 190px !important;
 }
 .simple-form div[class^="MuiFormControl"] .button-add{
-  min-width: 103px !important;
+  min-width: 80px !important;
   margin-top: 15px !important;
-  background: #3ea3fc !important;
+  background: #646777 !important;
   color: #FFFFFF !important;
 }
 .simple-form .button-add svg{
@@ -1120,4 +1120,23 @@ div[class^="MuiButtonBase"] a:hover{
 div[class^="MuiButtonBase"] a{
   color: #646777 !important;
 }
+.simple-form button[class^="MuiButton"]{
+  background-color: #70bbfd !important;
+  min-width: 80px !important;
+}
+div[class^="MuiDialogActions"] button:nth-child(1){
+  background-color: #70bbfd !important;
+}
+div[class^="MuiDialogActions"] button:nth-child(2){  
+  background-color: #e7e2e2;
+    border-color: #e7e2e2;
+    color: #646777;
+    padding: 11px 8px !important;
+}
+div[class^="MuiDialogActions"] button:nth-child(2):hover{  
+  border-color: #d0c6c6;
+  color: #646777;
+  background: #d0c6c6 !important;
+}
+
 
