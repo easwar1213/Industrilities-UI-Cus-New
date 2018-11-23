@@ -1078,9 +1078,9 @@ td[class^="MuiTableCell"]{
 #loginfrm div[class^="MuiInput-error"]::after{
   border-bottom-color:#FFFFFF !important;
 }
-span[class^="translate-Button"]{
+/* span[class^="translate-Button"]{
   color: #646777 !important;
-}
+} */
 #loginfrm div[class^="Login"]{
   background-color:transparent !important;
 }
@@ -1176,4 +1176,20 @@ div[class^="MuiDialogContent"] .simple-form div[class^="MuiCardContent"]{
 }
 div[class^="MuiDialogContent"]{
   padding: 0 24px 5px !important;
+}
+div[class^="MuiDialogActions"]{
+  padding-bottom: 15px !important;
+}
+div[class^="MuiDrawer"] div[class^="MuiPaper"]{
+  box-shadow: none !important;
+}
+.card-body .panel__title{
+  margin-bottom: 0px !important;
+}
+.panel__content div[class^="MuiToolbar"]{
+  min-height:0px !important;
+}
+.row div[class^="MuiPaper"]{
+  width: 54%;
+  margin: 0 auto;
 }
