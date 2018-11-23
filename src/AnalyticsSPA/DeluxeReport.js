@@ -81,135 +81,135 @@ class DeluxeReport extends React.Component {
 
     return (
       <div id="analysisrep" className={classes.root}>
-      <Paper>
-        <Tabs
-         fullWidth
-         centered
-          value={value}
-          onChange={this.handleChange}
-          classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
-        >
-          <Tab
-            classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-            label="Summary"
-           
-          />
-          <Tab
-            disableRipple
-            classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-            label={"PERIOD DATA - Thirteen Month History"}
-          />
-          
-      
-          <Tab
-            disableRipple
-            classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
-            label="PERIOD DATA ()"
-          />
-
-        </Tabs>
         <div>
-        {value === 0 && <TabContainer>
-            <DeluxeReportSummary/>
-        </TabContainer>}
-        
-        {value === 1 && <TabContainer>
+          <Tabs
+            fullWidth
+            centered
+            value={value}
+            onChange={this.handleChange}
+            classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}
+          >
+            <Tab
+              classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
+              label="Summary"
 
-            <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Pressure  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Temp(F)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Flow(ACFM)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Power(KW)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
+            />
+            <Tab
+              disableRipple
+              classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
+              label={"PERIOD DATA - Thirteen Month History"}
+            />
+
+
+            <Tab
+              disableRipple
+              classes={{ root: classes.tabRoot, selected: classes.tabSelected }}
+              label="PERIOD DATA ()"
+            />
+
+          </Tabs>
+          <div>
+            {value === 0 && <TabContainer>
+              <DeluxeReportSummary />
             </TabContainer>}
-        {value === 2 && <TabContainer>
-            <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Pressure  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Temp(F)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Flow(ACFM)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <Grid label="Bar" item xs={8}>
-                        <Paper>
-                            <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Power(KW)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
-                        </Paper>
-                    </Grid>
+
+            {value === 1 && <TabContainer>
+
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Pressure  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
+              <br />
+              <br />
+              <br />
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Temp(F)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
+              <br />
+              <br />
+              <br />
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Flow(ACFM)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
+              <br />
+              <br />
+              <br />
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Power(KW)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
             </TabContainer>}
+            {value === 2 && <TabContainer>
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Pressure  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
+              <br />
+              <br />
+              <br />
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Temp(F)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
+              <br />
+              <br />
+              <br />
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Flow(ACFM)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
+              <br />
+              <br />
+              <br />
+              <Grid label="Bar" item xs={8}>
+                <Paper>
+                  <br />
+                  <b> <div align="center"> &nbsp;&nbsp; Power(KW)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
+                  <br />
+                  <br />
+                  <WS_VSD_Charts />
+                </Paper>
+              </Grid>
+            </TabContainer>}
+          </div>
         </div>
-        </Paper>
       </div>
     );
   }

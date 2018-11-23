@@ -20,7 +20,6 @@ import {
 } from 'react-admin';
 import { push } from 'react-router-redux';
 import PropTypes from 'prop-types';
-import { Card, CardBody, Col, Container, Row } from 'reactstrap';
 import FormControl from '@material-ui/core/FormControl';
 import SpeakerNotes from '@material-ui/icons/SpeakerNotes';
 import ListIcon from '@material-ui/icons/List';
@@ -47,7 +46,10 @@ import Paper from "@material-ui/core/Paper";
 import UtilizationSummary from './UtilizationSummary';
 import FaultSummary from './FaultSummary';
 import WSReport from './WSReport'
-import DeluxeReport from './DeluxeReport'
+import DeluxeReport from './DeluxeReport';
+import { Card, CardBody, Col, Container, Row } from 'reactstrap';
+import Panel from '../components/Panel';
+
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -356,12 +358,12 @@ class ReportTypes extends Component {
         return (
             <Container>
                 <Row>
-                    <b> <div >{mainTitle + " / " + reportTitle}</div></b>
-                    <br />
+                    <Col md={12}>
+                        <h3 className='page-title'>{mainTitle + " / " + reportTitle}</h3>
+                    </Col>
                 </Row>
-
                 <Row>
-                    <Paper>
+                    <Panel xs={12} md={12} lg={12} title="Analytics Details">
                         <b> <div align="right"><Button label="List Reports" onClick={this.handleBackToList}><ListIcon /></Button></div></b>
                         <form >
                             &nbsp;&nbsp;&nbsp;&nbsp;  Select Date Range: &nbsp;&nbsp; <FormControl >
@@ -439,11 +441,8 @@ class ReportTypes extends Component {
                         </form>
                         <br />
                         <br />
-                    </Paper>
+                    </Panel>
                 </Row>
-                <br />
-                <br />
-
                 {/*   *** Do Not Remove ***
                  <Row>
                     <Grid label="Bar" item xs={8}>
@@ -452,53 +451,51 @@ class ReportTypes extends Component {
                         )}
                     </Grid>
                 </Row> */}
-                <br />
-                <br />
                 <Row>
+                    <Panel xs={12} md={12} lg={12} title="Analystics Reports Display" >
+                        {this.state.showDailyAssetRunTable && (
+                            // <CustomizedTable value={maintenanceValues} />
+                            <DynamicTable value={this.state.reportData} />
+                        )}
 
-                    {this.state.showDailyAssetRunTable && (
-                        // <CustomizedTable value={maintenanceValues} />
-                        <DynamicTable value={this.state.reportData} />
-                    )}
+                        {this.state.showAssetFaultDataReport && (
+                            // <CustomizedTable value={maintenanceValues} />
+                            <DynamicTable value={this.state} />
+                        )}
 
-                    {this.state.showAssetFaultDataReport && (
-                        // <CustomizedTable value={maintenanceValues} />
-                        <DynamicTable value={this.state} />
-                    )}
+                        {this.state.showDetailedAssetRunTable && (
+                            // <CustomizedTable value={maintenanceValues} />
+                            <DynamicTable value={this.state} />
+                        )}
 
-                    {this.state.showDetailedAssetRunTable && (
-                        // <CustomizedTable value={maintenanceValues} />
-                        <DynamicTable value={this.state} />
-                    )}
+                        {this.state.showAssetRunSummaryReport && (
+                            // <CustomizedTable value={maintenanceValues} />
+                            <UtilizationSummary value={this.state.summaryReportData} />
+                            // <UtilizationSummary  />
 
-                    {this.state.showAssetRunSummaryReport && (
-                        // <CustomizedTable value={maintenanceValues} />
-                        <UtilizationSummary value={this.state.summaryReportData} />
-                        // <UtilizationSummary  />
+                        )}
 
-                    )}
+                        {this.state.showAssetFaultSummary && (
+                            // <CustomizedTable value={maintenanceValues} />
+                            <FaultSummary />
+                            // <UtilizationSummary  />
 
-                    {this.state.showAssetFaultSummary && (
-                        // <CustomizedTable value={maintenanceValues} />
-                        <FaultSummary />
-                        // <UtilizationSummary  />
+                        )}
 
-                    )}
+                        {this.state.showWSServiceReport && (
+                            // <CustomizedTable value={maintenanceValues} />
+                            <WSReport />
+                            // <UtilizationSummary  />
 
-                    {this.state.showWSServiceReport && (
-                        // <CustomizedTable value={maintenanceValues} />
-                        <WSReport />
-                        // <UtilizationSummary  />
+                        )}
 
-                    )}
+                        {this.state.showDeluxeStationaryReport && (
+                            // <CustomizedTable value={maintenanceValues} />
+                            <DeluxeReport />
+                            // <UtilizationSummary  />
 
-                    {this.state.showDeluxeStationaryReport && (
-                        // <CustomizedTable value={maintenanceValues} />
-                        <DeluxeReport />
-                        // <UtilizationSummary  />
-
-                    )}
-
+                        )}
+                    </Panel>
                 </Row>
             </Container>
         );
