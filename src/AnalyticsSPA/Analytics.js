@@ -7,6 +7,7 @@ import Paper from "@material-ui/core/Paper";
 import AnalyticsTab from './AnalyticsTabs'
 import ReportTypes from './ReportTypes'
 import UtilizationSummary from './UtilizationSummary';
+import Panel from '../components/Panel';
 
 const Health = "Health";
 const styles = {
@@ -14,19 +15,32 @@ const styles = {
 };
 
 const ReportTitle = ({ record }) => {
-    return <span>Assets / {record.reportType ? `${record.subReportType}` : ''}</span>;
+    return <span>Analytics / {record.reportType ? `${record.subReportType}` : ''}</span>;
 };
 
 export const AnalyticsView = (props) => (
-    <List title="Analytics" {...props}   >
-        <Datagrid >
-        <TextField label="Category" source="reportType" />
-           <TextField label="Report" source="subReportType" />
-            <TextField label="Description" source="description" />
-            <ShowButton />
-        </Datagrid>
-    </List>
-
+    <Container id="deviceContainer">
+        <Row>
+            <Col md={12}>
+                <h3 className='page-title'>Analytics</h3>
+            </Col>
+        </Row>
+        <Row>
+            <br />
+        </Row>        
+        <Row>
+            <Panel xs={12} md={12} lg={12} title="Analytics Details">
+                <List title="Analytics" {...props}   >
+                    <Datagrid >
+                        <TextField label="Category" source="reportType" />
+                        <TextField label="Report" source="subReportType" />
+                        <TextField label="Description" source="description" />
+                        <ShowButton label="Show"/>
+                    </Datagrid>
+                </List>
+            </Panel>
+        </Row>
+    </Container>
 );
 
 const MyActions = ({ record }) => {
@@ -35,11 +49,11 @@ const MyActions = ({ record }) => {
 
 export const ShowReport = (props) => (
 
-         <ReportTypes type={props}/>
+    <ReportTypes type={props} />
 
-        // <UtilizationSummary type ={props}/> 
-    
-   
+    // <UtilizationSummary type ={props}/> 
+
+
 )
 
 //filter={{ type: "Utilization" }}
