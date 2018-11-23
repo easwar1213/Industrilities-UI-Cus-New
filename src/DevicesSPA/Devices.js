@@ -46,9 +46,9 @@ export const DeviceList = (props) => (
                 <h3 className='page-title'>Device</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             <StatusStatisticsContainer />
             <StatusTrendContainer />

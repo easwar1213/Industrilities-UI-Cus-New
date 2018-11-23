@@ -17,9 +17,9 @@ export const MapView = (props) => (
                 <h3 className='page-title'>Map</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             <Panel xs={12} md={12} lg={12} title="Map Details">
                 <ClusterMapInfo />

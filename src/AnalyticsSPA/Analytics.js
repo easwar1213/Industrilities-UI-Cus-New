@@ -25,9 +25,9 @@ export const AnalyticsView = (props) => (
                 <h3 className='page-title'>Analytics</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>        
+        </Row>         */}
         <Row>
             <Panel xs={12} md={12} lg={12} title="Analytics Details">
                 <List title="Analytics" {...props}   >

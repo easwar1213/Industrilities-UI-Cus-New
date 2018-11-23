@@ -64,9 +64,9 @@ export const Maintenance = (props) => (
                 <h3 className='page-title'>Maintenance Dashboard</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             <StatusStatisticsContainer/>
             <StatusTrendContainer/> 

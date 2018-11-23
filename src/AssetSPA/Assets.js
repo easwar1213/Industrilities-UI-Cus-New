@@ -19,9 +19,9 @@ export const AssetList = (props) => (
                 <h3 className='page-title'>Assets</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             {/* <AssetDetails /> */}
             <Panel xs={12} md={12} lg={12} title="Asset Details">

@@ -749,6 +749,7 @@ main div[class^="Layout"]{
   color: #646777 !important;
   font-weight: 500;
   text-transform: capitalize;
+  padding-bottom: 10px;
 }
 
 .info-title-span {

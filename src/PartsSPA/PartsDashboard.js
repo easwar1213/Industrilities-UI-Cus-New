@@ -193,9 +193,9 @@ export const PartsDashboard = ({ ...props }) => (
                 <h3 className='page-title'>Parts</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             <ValidityStatisticsContainer />
             <ValidityTrendContainer />

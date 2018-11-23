@@ -33,9 +33,9 @@ export const MaintenancePlanList = (props) => (
                 <h3 className='page-title'>Maintenance Plan</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             <Panel xs={12} md={12} lg={12} title="Plan Details">
                 <List title="Plan" {...props} title={<Title />}>

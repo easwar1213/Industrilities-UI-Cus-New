@@ -178,9 +178,9 @@ class AlertContainer extends React.Component {
             <h3 className='page-title'>Dashboard</h3>
           </Col>
         </Row>
-        <Row>
+        {/* <Row>
           <br />
-        </Row>
+        </Row> */}
         <Row>
           <Panel xs={12} md={12} lg={12} title="Alert Priority Statistics" subhead={"on " + new Date().toLocaleString()}>
           <Row>

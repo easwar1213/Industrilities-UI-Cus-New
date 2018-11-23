@@ -48,9 +48,9 @@ export const AlertsHistory = (props) => (
                 <h3 className='page-title'>Alerts History</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>       
+        </Row>        */}
         <Row>
             <Panel xs={12} md={12} lg={12} title="Historical Details">
                 <List title="Historical Alerts" {...props} filters={<AlertFilter />} perPage={10}>

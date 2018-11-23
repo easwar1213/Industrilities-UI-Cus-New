@@ -439,8 +439,6 @@ class ReportTypes extends Component {
                                 {/* View Report */}
                             </Button>
                         </form>
-                        <br />
-                        <br />
                     </Panel>
                 </Row>
                 {/*   *** Do Not Remove ***

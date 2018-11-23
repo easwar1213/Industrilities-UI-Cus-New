@@ -15,9 +15,9 @@ export const AlertConfiguration = (props) => (
                 <h3 className='page-title'>Alerts Configuration</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             <Panel xs={12} md={12} lg={12} title="Configuration Details">
                 <List title="Alert Configuration" {...props} >

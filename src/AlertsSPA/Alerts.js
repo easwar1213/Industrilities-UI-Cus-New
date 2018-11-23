@@ -97,9 +97,9 @@ export const Alerts = withStyles(listStyles)(({ classes, ...props }) => (
                 <h3 className='page-title'>Alerts Dashboard</h3>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <br />
-        </Row>
+        </Row> */}
         <Row>
             <PriorityStatisticsContainer />
             <PriorityTrendContainer />
