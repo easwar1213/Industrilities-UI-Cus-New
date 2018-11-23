@@ -3,9 +3,376 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto,sans-serif !important;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
 }
 
+/*********************************************************************************************************************************************************************************/
+/* Commented Style */
+
+/* .MuiButton-containedPrimary-84 {
+  background-color: #fbca00 !important;
+  color: #646777 !important;
+  font-weight: 600;
+} */
+
+ /* .MuiPaper-rounded-116{
+  border-radius:0px !important;
+} */
+
+/* .MuiPaper-elevation11-128{
+  -webkit-box-shadow:0 1px 30px 1px rgba(0, 0, 0, 0.11) !important;
+  box-shadow:0 1px 30px 1px rgba(0, 0, 0, 0.11) !important;
+} */
+
+/* .MuiButton-label-164 svg[class^="MuiSvgIcon"]{
+  fill:#70bbfd !important;
+} */
+
+/* .Menu-root-328{ 
+  position:fixed !important;
+} */
+
+/* .layout div[class^="MuiDrawer"] > div > div{ 
+  position:fixed; width:240px;
+} */
+
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div a:hover{
+  background: linear-gradient(to right, #FF5722, #FBCA00) !important;
+  background-color: #FBCA00 !important;
+  background-color: #f2f4f7 !important;
+  color: #0F263A !important;
+  font-weight: bold;
+} */
+
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 svg[class^="MuiSvgIcon"]{
+  fill: #fff !important;
+} */
+
+/* .panel{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
+} */
+
+/* 
+table tbody td{
+	color: #0F263A !important;
+} */
+
+/* .list-page{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
+} */
+
+/* .show-page{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
+} */
+
+/* .show-page a:active{
+	border-bottom: none !important;
+	border-left: 2px solid #f2f4f7 !important;
+	border-right: 2px solid #f2f4f7 !important;
+  border-top: 2px solid #f2f4f7 !important;
+  background: linear-gradient(to right, #FF5722, #FBCA00) !important;
+  background-color: #f2f4f7 !important;
+} */
+
+/* .show-page a:focus{
+	border-bottom: none !important;
+	border-left: 2px solid #f2f4f7 !important;
+	border-right: 2px solid #f2f4f7 !important;
+  border-top: 2px solid #f2f4f7 !important;
+  background: linear-gradient(to right, #FF5722, #FBCA00) !important;
+  background-color: #f2f4f7 !important;
+} */
+
+/* .show-page > div > div > div > div > div > span {
+  background:#fff !important;
+  display: none !important;
+} */
+
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul:hover h3{
+  color: #0F263A !important;
+  font-weight: 600;
+} */
+
+/* .badge-warning svg[class^="MuiSvgIcon"] {
+  fill: #ffffff !important; 
+} */
+
+/* .Login-main-1 {    
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+} */
+
+/* .MuiTableCell-numeric-270 {
+  text-align: left !important;
+  flex-direction: row-reverse;
+}
+
+.MuiTableCell-root,.MuiTableCell-body,.MuiTableCell-numeric{
+  text-align: left !important;
+}
+
+.MuiTableCell-root-66 {
+  border-bottom-color: #eff1f5 !important;
+} */
+
+/* .MuiButton-label-165 svg[class^="MuiSvgIcon"] {
+  fill: #70bbfd !important;
+} */
+
+/* MuiButton Customization*/
+
+/* .list-page span[class^="MuiButton"]{ 
+  color:#70bbfd;
+}*/
+
+/*.list-page span[class^="MuiButton"] span{ 
+  text-transform:capitalize !important; font-weight: 600; } */
+
+/* Table Customization*/
+
+/*Bootstrap Table*/
+
+/* .table-class-new {
+  float: left;
+} */
+
+/* .table-bordered thead {
+  background-color: #646777 !important;
+} */
+
+/* .TableResponsive thead {
+  background-color: #646777 !important;
+  color: #fff !important;
+  border: 1px solid #ccc !important;
+} */
+
+  /* div[class^="Labeled"] table thead{
+  background: #646777 !important;
+} */
+
+ /* .table-heading th{
+  color: #fff !important;
+} */
+
+/* .TableResponsive thead span{
+  color: #fff !important;
+} */
+
+/* table tbody td{
+  font-size:13px !important;
+  color:#646777 !important;
+} */
+
+/*MUI Table*/
+
+/* .list-page table thead tr th{
+  color: #FFFFFF !important;
+} */
+
+/* .list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"]{
+  background: #646777 !important;
+} */
+
+/* .list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] tr th span span{
+  color: #FFFFFF !important;
+}
+.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] svg{
+  fill: #ffffff !important;
+}  */
+
+/* .Datagrid-table-249 td, .datagrid-body td, .Datagrid-table-71 th, .TableResponsive th {
+  border: 1px solid #ccc;
+  padding: 0px 12px !important;
+} */
+
+/*Login Page*/
+
+/* div[class^="MuiInput"]{
+  color: #FFFFFF !important;
+}*/
+
+/*div[class^="Login"] form label{
+  color: #FFFFFF !important;
+} */
+
+/* .row div[class^="MuiPaper"]{
+  width: 55% !important;
+} */
+
+/* div[class^="MuiDrawer"] div[class^="MuiPaper"] div[class^="Menu"] ul {
+  position: absolute;    bottom: 0px;
+} */
+
+/* .layout div[class^="MuiDrawer"] div[class^="Menu"] a { 
+  font-size:15px; font-weight:400;
+} */
+
+/* div[class^="MuiGrid"] > div[class^="MuiPaper"]{
+  margin-top: 8px !important;
+} */
+
+/* div[class^="MuiDrawer"] div[class^="MuiPaper"] { 
+  width:100%;
+} */
+
+/* div[class^="MuiDrawer"] div[class^="MuiPaper"] {
+  -webkit-box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
+  box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
+} */
+
+/* .headroom-wrapper .headroom header{     
+  padding: 6px 4px !important;
+} */
+
+/* .Menu-root-131{
+padding-top: 0px !important;
+}   */
+
+/* .SensorListDataGraphTabs-root-353 {
+  width: 100% !important;
+} 
+.EnhancedTable-root-319 {
+  margin-top: 8px !important;
+}
+.MuiPaper-elevation4-20 {
+  box-shadow: none !important;
+}
+.EnhancedTable-table-320 {
+  border-right: 3px solid #000;
+}
+.MuiInput-root-57 {
+  color: #ccc !important;
+} */
+
+/* Number Style Commented*/
+
+/* .headroom-wrapper .MuiButtonBase-root-182,.headroom-wrapper div[class^="MuiButtonBase"]{
+  margin:0px !important;
+} */
+
+/* .headroom-wrapper  .WithTheme-WithWidth-AppBar---title-9{
+   color:#000000 !important;
+  } */
+
+/* .Menu-root-328{ 
+  max-width:225px !important
+} */
+
+/* @media (max-width: 599px){
+  .MuiPaper-elevation11-52, .MuiPaper-rounded-40, .MuiPaper-root-39 {
+    box-shadow: none !important;
+    border-radius: none !important;
+  }
+  div[class^="MuiDrawer"] div[class^="MuiPaper"] {
+    box-shadow: none !important;
+    border-radius: none !important;
+  }
+} */
+
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div{
+  border-radius:0px !important;
+  background: #0F263A;
+} */
+
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div{
+  background: #fff !important;
+  width: 100% !important;
+} */
+
+/* .Menu-root-131{
+  width: 100% !important;
+} */
+
+/* .MuiDrawer-docked-120 .WithTheme-WithWidth-Sidebar---drawerPaper-10{
+  padding-right: 20px !important;
+} */
+
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10{
+  margin-top: 0px !important;
+  padding-right: 25px !important;
+  padding: 0px !important;
+} */
+
+/* .Layout-contentWithSidebar-3 .WithTheme-WithWidth-Sidebar---drawerPaper-10{
+  padding: 0px !important;
+} */
+
+/* .Layout-appFrame-2 .headroom-wrapper .headroom header{
+  background-color: #fff !important;
+} */
+
+/* .MenuItemLink-icon-138 svg[class^="MuiSvgIcon"] {
+  fill: #0F263A !important;
+} */
+
+/* .MuiButtonBase-root-66 svg[class^="MuiSvgIcon"] {
+  fill: #b1c3c8 !important;
+} */
+
+/* .MuiIconButton-label-65 svg[class^="MuiSvgIcon"] {
+  fill: #fff !important;
+} */
+
+/* .datagrid-body tr .MuiButton-textPrimary-167:hover{
+	background:#ff572287 !important;
+} */
+
+/* .MuiIconButton-label-65 svg[class^="MuiSvgIcon"] {
+  fill: #b1c3c8 !important;
+} */
+
+/* .MuiInput-input-65 {
+  padding: 6px 36px 8px 0px !important;
+} */
+
+/* .Datagrid-rowCell-79:last-child {
+  padding: 0px !important;
+} */
+
+/* .MuiPaper-rounded-15 {
+  border-radius: 0px !important;
+} */
+
+/* .MuiPaper-elevation1-17, .MuiPaper-elevation1-20,.MuiPaper-elevation1-22{
+  box-shadow: none !important;
+} */
+
+/* .MuiPaper-elevation1-42, .MuiPaper-elevation1-165 {
+  box-shadow: none !important;
+} */
+
+/* .TableResponsive, .Datagrid-table-71 {
+  width: 100% !important;
+  overflow-x: auto;
+  margin-top: -8px;
+} */
+
+/* .MuiFormLabel-root-50 {
+  color: white !important;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1;
+} */
+
+/* .Datagrid-headerCell-251 {
+  border: 1px solid #ccc !important;
+  padding: 0 12px !important;
+} */
+
+/* .Datagrid-headerCell-73, .MuiTableCell-root-490:last-child {
+  padding: 0 12px !important;
+} */
+
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul:hover{ 
+  background-color: #f2f4f7 !important;
+} */
+
+
+/*********************************************************************************************************************************************************************************/
+/* Using Number / Ids Style */
 
 /* Login Page Background Image Style */
 .Login-main-1 {    
@@ -18,14 +385,31 @@ body {
   background-color: transparent !important;
 }
 
-.MuiButton-containedPrimary-84 {
-  background-color: #fbca00 !important;
-  /* color: #646777 !important;
-  font-weight: 600; */
+.MuiInput-underline-61:before {
+  border-bottom: 1px solid #ccc !important; 
 }
 
-.MuiInput-underline-61:before {
-  border-bottom: 1px solid #ccc !important;
+.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div a{
+  color:#646777 !important;
+  border-bottom: 1px solid #eff1f5 !important;
+}
+
+.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul h3{
+  color: #646777 !important;
+  font-size: 0.9rem;
+  }
+
+.MuiPaper-elevation4-121, .headroom-wrapper .headroom header{
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+
+/*********************************************************************************************************************************************************************************/
+/* Without Using Any Number Generic Style */
+
+main[class^="Layout"]{ 
+  background-color:#f2f4f7 !important; min-height: calc(100vh - 60px) !important; margin-top:60px !important;
 }
 
 /* Login Form Style */
@@ -46,8 +430,13 @@ div[class^="Login"] > div[class^="MuiPaper"] {
 .show-page table{
   min-width:100% !important;
 }
-.show-page #map .container{ padding:0px !important;}
-[class^="MuiCardContent"]{padding:10px 15px !important;}
+.show-page #map .container{ 
+  padding:0px !important;
+}
+
+[class^="MuiCardContent"]{
+  padding:10px 15px !important;
+}
 .ra-field form{ width:100%; padding:15px;}
 
 .deviceTable{
@@ -73,17 +462,16 @@ div[class^="Login"] > div[class^="MuiPaper"] {
 }
 .layout div[class^="MuiDrawer"] div[class^="Menu"] a{ 
   padding-left:18px;
+  font-size:15px; 
+  font-weight:400;
 }
 .layout div[class^="MuiDrawer"] div[class^="Menu"] a > span[class^="MenuItemLink"] { 
   padding-right:17px !important; position:relative; top:-2px;
 }
-.layout div[class^="MuiDrawer"] div[class^="Menu"] a { 
-  font-size:15px; font-weight:400;
-}
+
 .dashboardContainer .row > div > div{  
   max-width:100% !important; border-radius: 4px !important;  min-height: 100%;
 }
-
 .headroom button{
   margin:0px !important;
 }
@@ -99,52 +487,27 @@ div[class^="MuiDrawer"] > div {
     border: none;
     margin-top: 0px !important; 
 }
-.MuiPaper-rounded-116{
-  border-radius:0px !important;
-}
-.MuiPaper-elevation11-128{
-  -webkit-box-shadow:0 1px 30px 1px rgba(0, 0, 0, 0.11) !important;
-  box-shadow:0 1px 30px 1px rgba(0, 0, 0, 0.11) !important;
-}
- div[class^="MuiGrid"] > div[class^="MuiPaper"]{
+
+div[class^="MuiGrid"] > div[class^="MuiPaper"]{
+   margin-top: 8px !important;
    max-width:100% !important;
    border-radius: 4px !important;
  }
-svg[class^="MuiSvgIcon"]{
-  fill:#0F263A !important;
-}
-.MuiButton-label-164 svg[class^="MuiSvgIcon"]{
-  fill:#70bbfd !important;
-}
+
 h2[class^="MuiTypography"]{
   color:#000000 !important;
 }
 
-.headroom-wrapper .headroom  header {
+.headroom-wrapper .headroom header {
   background-color:#FFFFFF !important;
-  padding:6px 0px;
+  padding: 6px 4px !important;
   position: fixed !important;
 }
-.headroom-wrapper .headroom header{     padding: 6px 4px !important;}
-.MuiPaper-elevation4-121, .headroom-wrapper .headroom header{
-  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
-  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
-}
-.headroom-wrapper .MuiButtonBase-root-182,.headroom-wrapper div[class^="MuiButtonBase"]{
-  margin:0px !important;
-}
-.headroom-wrapper  .WithTheme-WithWidth-AppBar---title-9{ color:#000000 !important;}
- main[class^="Layout"]{ background-color:#f2f4f7 !important; min-height: calc(100vh - 60px) !important; margin-top:60px !important;}
-/* .Menu-root-328{ position:fixed !important;} */
-.Menu-root-328{ max-width:225px !important}
 
 div[class^="MuiDrawer"] div[class^="MuiPaper"] div[class^="Menu"]{
-  width:100% !important;
- 
+  width:100% !important; 
 } 
-div[class^="MuiDrawer"] div[class^="MuiPaper"] div[class^="Menu"] ul {
-  position: absolute;    bottom: 0px;
-}
+
 div[class^="MuiDrawer"] div[class^="MuiPaper"] div[class^="Menu"] ul > div{
   padding-left: 16px;
  
@@ -160,19 +523,16 @@ div[class^="MuiDrawer"] div[class^="MuiPaper"] div[class^="Menu"] ul{
     overflow: hidden;
 }
 div[class^="MuiDrawer"] div[class^="MuiPaper"]{
-
   min-height: calc(100vh - 60px) !important;
   border-radius: 0px !important;
+  width:100%;
+  -webkit-box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
+  box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
 } 
 .layout div[class^="MuiDrawer"]{
   overflow:hidden;
   background-color:#FFFFFF;
 }
-div[class^="MuiDrawer"] div[class^="MuiPaper"] {
-  -webkit-box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
-  box-shadow: 0 1px 30px 1px rgba(0,0,0,.11) !important;
-}
-/* .layout div[class^="MuiDrawer"] > div > div{ position:fixed; width:240px;} */
 
 .show-page span[class^="MuiTab"], .show-page a{
   font-weight: bold;
@@ -188,7 +548,9 @@ form div[class^="MuiFormControl"]{display:inline-block !important;}
 
 .recharts-wrapper, .recharts-wrapper svg{ width:100% !important;}
 
-.layout, div[class^="Layout"] { max-width:100% !important;   min-width:auto !important; background: #f2f4f7 !important;}
+.layout, div[class^="Layout"] { 
+  max-width:100% !important;   min-width:auto !important; background: #f2f4f7 !important;
+}
 
 .card-body .panel__btns{
   position:absolute;
@@ -229,11 +591,7 @@ button, * {
 main div[class^="Layout"]{
   padding: 24px !important;
 }
-div[class^="MuiDrawer"] div[class^="MuiPaper"] { 
-  width:100%;
-}
-
-    .layout .panel{margin-bottom:25px;}
+.layout .panel{margin-bottom:25px;}
 
 @media (min-width: 1200px){
   .container {
@@ -252,136 +610,21 @@ div[class^="MuiDrawer"] div[class^="MuiPaper"] {
     padding:0px;
   }
 }
-
-@media (max-width: 599px){
-  .MuiPaper-elevation11-52, .MuiPaper-rounded-40, .MuiPaper-root-39 {
-    box-shadow: none !important;
-    border-radius: none !important;
-  }
-  div[class^="MuiDrawer"] div[class^="MuiPaper"] {
-    box-shadow: none !important;
-    border-radius: none !important;
-  }
-}
-
-.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div{
-  border-radius:0px !important;
-  background: #0F263A;
-}
-.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div{
-  background: #fff !important;
-  width: 100% !important;
-}
-.Menu-root-131{width: 100% !important;}
-.MuiDrawer-docked-120 .WithTheme-WithWidth-Sidebar---drawerPaper-10{
-  padding-right: 20px !important;
-}
-.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div a{
-  color:#646777 !important;border-bottom: 1px solid #eff1f5 !important;}
-
-/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div a:hover{
-  background: linear-gradient(to right, #FF5722, #FBCA00) !important;
-  background-color: #FBCA00 !important;
-  background-color: #f2f4f7 !important;
-  color: #0F263A !important;
-  font-weight: bold;
-} */
-
-.WithTheme-WithWidth-Sidebar---drawerPaper-10{
-  margin-top: 0px !important;
-  padding-right: 25px !important;
-  padding: 0px !important;
-}
-
-.Layout-contentWithSidebar-3 .WithTheme-WithWidth-Sidebar---drawerPaper-10{
-  padding: 0px !important;
-}
-
-.Layout-appFrame-2 .headroom-wrapper .headroom header{
-  background-color: #fff !important;
-}
-
-.Menu-root-131{
-padding-top: 0px !important;
-}
-
-/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 svg[class^="MuiSvgIcon"]{
-  fill: #fff !important;
-} */
-
-/* .panel{
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
-} */
-/* 
-table tbody td{
-	color: #0F263A !important;
-} */
+ 
 .datagrid-body tr:hover{
-/* background: linear-gradient(to right, #FF5722, #FBCA00) !important; */
-/* background-color: #FBCA00 !important; */
-background-color: #f2f4f7 !important;
-}
-.datagrid-body tr:hover svg[class^="MuiSvgIcon"]{
-  fill: #fff !important;
-}
-.MenuItemLink-icon-138 svg[class^="MuiSvgIcon"] {
-  fill: #0F263A !important;
-}
-.MuiButtonBase-root-66 svg[class^="MuiSvgIcon"] {
-  fill: #b1c3c8 !important;
-}
-.MuiIconButton-label-65 svg[class^="MuiSvgIcon"] {
-  fill: #fff !important;
-}
-.datagrid-body tr .MuiButton-textPrimary-167:hover{
-	background:#ff572287 !important;
-}
-/* .list-page{
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
-} */
-/* .show-page{
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
-} */
+  /* background: linear-gradient(to right, #FF5722, #FBCA00) !important; */
+  /* background-color: #FBCA00 !important; */
+  background-color: #f2f4f7 !important;
+  }
+  .datagrid-body tr:hover svg[class^="MuiSvgIcon"]{
+    fill: #fff !important;
+  }
+
 #react-admin-title span{
 	color:#646777 !important;
 }
 .show-page a{border-bottom: 2px solid #f2f4f7 !important;}
-/* .show-page a:active{
-	border-bottom: none !important;
-	border-left: 2px solid #f2f4f7 !important;
-	border-right: 2px solid #f2f4f7 !important;
-  border-top: 2px solid #f2f4f7 !important;
-  background: linear-gradient(to right, #FF5722, #FBCA00) !important;
-  background-color: #f2f4f7 !important;
-} */
-/* .show-page a:focus{
-	border-bottom: none !important;
-	border-left: 2px solid #f2f4f7 !important;
-	border-right: 2px solid #f2f4f7 !important;
-  border-top: 2px solid #f2f4f7 !important;
-  background: linear-gradient(to right, #FF5722, #FBCA00) !important;
-  background-color: #f2f4f7 !important;
-} */
-/* .show-page > div > div > div > div > div > span {
-  background:#fff !important;
-  display: none !important;
-} */
-.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul:hover{
-  /* background: linear-gradient(to right, #FF5722, #FBCA00) !important; */
-  /* background-color: #FBCA00 !important; */
-  background-color: #f2f4f7 !important;
-}
-.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul h3{
-color: #646777 !important;
-font-size: 0.9rem;
-}
-/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul:hover h3{
-  color: #0F263A !important;
-  font-weight: 600;
-} */
-.MuiIconButton-label-65 svg[class^="MuiSvgIcon"] {
-  fill: #b1c3c8 !important;
-}
+
 .card {
   border: none !important;
 }
@@ -409,10 +652,6 @@ font-size: 0.9rem;
   background-color: #f6da6e !important;
 }
 
-/* .badge-warning svg[class^="MuiSvgIcon"] {
-  fill: #ffffff !important; 
-} */
-
 .badge-primary {
   color: #fff;
   background-color: #70bbfd !important;
@@ -428,15 +667,6 @@ font-size: 0.9rem;
   background-color: #5bc0de !important;
 }
 
-.MuiInput-input-65 {
-  padding: 6px 36px 8px 0px !important;
-}
-
-/* .Login-main-1 {    
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-} */
 #loginfrm{
   height:0px !important;
   background-size: 100% 100% !important;
@@ -447,6 +677,9 @@ font-size: 0.9rem;
   align-items: center;
   background-size: cover;
 }
+
+/* Collpse Start Style */
+
 .collapse__title {
   background-color: #f2f4f7;
   border-bottom: solid 1px #dddddd;
@@ -504,7 +737,6 @@ font-size: 0.9rem;
   font-size: 13px !important;
 }
 
-/* Collpse Style */
 .list-group-item.active {  
   background-color: lightseagreen!important;
   border-color: lightseagreen!important;
@@ -515,28 +747,13 @@ font-size: 0.9rem;
   background-color: #4570b1 !important; 
 }
 
+/* Collpse End Style */
+
 .page-title {  
   font-size: 20px;
   color: #646777 !important;
   font-weight: 500;
   text-transform: capitalize;
-}
-
-.MuiTableCell-numeric-270 {
-  text-align: left !important;
-  flex-direction: row-reverse;
-}
-
-.MuiTableCell-root,.MuiTableCell-body,.MuiTableCell-numeric{
-  text-align: left !important;
-}
-
-.MuiTableCell-root-66 {
-  border-bottom-color: #eff1f5 !important;
-}
-
-.MuiButton-label-165 svg[class^="MuiSvgIcon"] {
-  fill: #70bbfd !important;
 }
 
 .info-title-span {
@@ -547,22 +764,6 @@ font-size: 0.9rem;
 }
 .list-group-item-action {
   font-size: 14px !important;
-}
-
-.Datagrid-rowCell-79:last-child {
-  padding: 0px !important;
-}
-
-.MuiPaper-rounded-15 {
-  border-radius: 0px !important;
-}
-
-.MuiPaper-elevation1-17, .MuiPaper-elevation1-20,.MuiPaper-elevation1-22{
-  box-shadow: none !important;
-}
-
-.MuiPaper-elevation1-42, .MuiPaper-elevation1-165 {
-  box-shadow: none !important;
 }
 
 .panel__refresh svg {
@@ -577,27 +778,10 @@ font-size: 0.9rem;
   left: calc(50% - 24px);
 }
 
-
-
 .heading-txt {
   border-left: 3px solid #646777;
   background-color: #f1f1f1;
   padding: 8px;
-}
-
-.TableResponsive, .Datagrid-table-71 {
-  width: 100% !important;
-  overflow-x: auto;
-  margin-top: -8px;
-}
-
-.MuiFormLabel-root-50 {
-  color: white !important;
-  padding: 0;
-  font-size: 1rem;
-  /* font-weight: bold; */
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  line-height: 1;
 }
 
 .panel__title .subhead {
@@ -616,32 +800,6 @@ font-size: 0.9rem;
 .tbl-height th{
   color:white !important; 
 }
-
-.Datagrid-headerCell-251 {
-  /* border: 1px solid #ccc !important; */
-  padding: 0 12px !important;
-}
-
-.Datagrid-headerCell-73, .MuiTableCell-root-490:last-child {
-  padding: 0 12px !important;
-}
-
-.SensorListDataGraphTabs-root-353 {
-  width: 100% !important;
-}
-.EnhancedTable-root-319 {
-  margin-top: 8px !important;
-}
-.MuiPaper-elevation4-20 {
-  box-shadow: none !important;
-}
-.EnhancedTable-table-320 {
-  border-right: 3px solid #000;
-}
-.MuiInput-root-57 {
-  color: #ccc !important;
-}
-
 
 div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"]{
   background-color: #646777 !important;
@@ -716,9 +874,7 @@ div[class^="MuiDialogActions"]{
 div[class^="MuiDialogActions"] svg{
   fill: #FFFFFF !important;
 }
-div[class^="MuiGrid"] > div[class^="MuiPaper"]{
-  margin-top: 8px !important;
-}
+
 div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding-top: 4px !important;
 }
@@ -827,91 +983,22 @@ div[class^="MuiCardActions"]{
   padding: 4px 15px 4px 15px !important;
 }
 
-/* MuiButton Customization*/
-
-/* .list-page span[class^="MuiButton"]{ color:#70bbfd;}
-.list-page span[class^="MuiButton"] span{ text-transform:capitalize !important; font-weight: 600; } */
-
-/* Table Customization*/
-
-/*Bootstrap Table*/
 table thead th, table thead th span{
   font-size:14px !important;
   font-weight:600 !important;
   /* color:#646777 !important; */
 }
 
-/* .table-class-new {
-  float: left;
-} */
-
-/* .table-bordered thead {
-  background-color: #646777 !important;
-} */
-
-/* .TableResponsive thead {
-  background-color: #646777 !important;
-  color: #fff !important;
-  border: 1px solid #ccc !important;
-} */
-
-div[class^="Labeled"] table thead tr th{
-  text-align: center !important;
-}
-  /* div[class^="Labeled"] table thead{
-  background: #646777 !important;
-} */
-  div[class^="Labeled"] table thead tr th span span{
-    color: #646777  !important;
- }
-
- /* .table-heading th{
-  color: #fff !important;
-} */
-
-/* .TableResponsive thead span{
-  color: #fff !important;
-} */
-
 .table-bordered {
   border: 1px solid #dee2e6 !important;
 }
 
-/* table tbody td{
-  font-size:13px !important;
-  color:#646777 !important;
-} */
-
-/*MUI Table*/
-
-/* .list-page table thead tr th{
-  color: #FFFFFF !important;
-} */
-
-/* .list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"]{
-  background: #646777 !important;
-} */
-
-/* .list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] tr th span span{
-  color: #FFFFFF !important;
+div[class^="Labeled"] table thead tr th{
+  text-align: center !important;
 }
-.list-page table[class^="MuiTable"] > thead[class^="MuiTableHead"] svg{
-  fill: #ffffff !important;
-}  */
-
-/* .Datagrid-table-249 td, .datagrid-body td, .Datagrid-table-71 th, .TableResponsive th {
-  border: 1px solid #ccc;
-  padding: 0px 12px !important;
-} */
-
-/*Login Page*/
-
-/* div[class^="MuiInput"]{
-  color: #FFFFFF !important;
-}
-div[class^="Login"] form label{
-  color: #FFFFFF !important;
-} */
+  div[class^="Labeled"] table thead tr th span span{
+    color: #646777  !important;
+ }
 .ra-field-assets{float: left; width: 50% !important;background: #f2f4f717 !important;
   box-shadow: 0 1px 5px 1px rgba(0,0,0,.11) !important;
   border-radius: 4px;}
@@ -948,7 +1035,8 @@ div[class^="Login"] form label{
   margin-bottom: 0px !important;
 }
 svg[class^="MuiSvgIcon"] {
-  fill: #646777 !important;}
+  fill: #646777 !important;
+}  
 .show-page div[class^="MuiCardContent"] label[class^="MuiFormLabel"] > span{
 color: #8696e8 !important;
 }
@@ -961,9 +1049,6 @@ div[class^="Layout"]{
 div[class^="MuiDialogTitle"]{
   padding: 20px 24px 0px !important;
 }
-/* .row div[class^="MuiPaper"]{
-  width: 55% !important;
-} */
 .container .row b div{
   color: #3f51b5 !important;
   margin-bottom: 10px !important;
@@ -998,3 +1083,7 @@ td[class^="MuiTableCell"]{
 #loginfrm div[class^="MuiInput-error"]::after{
   border-bottom-color:#FFFFFF !important;
 }
+span[class^="translate-Button"]{
+  color: #646777 !important;
+}
+
