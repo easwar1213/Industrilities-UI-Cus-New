@@ -370,43 +370,38 @@ padding-top: 0px !important;
   background-color: #f2f4f7 !important;
 } */
 
-
-/*********************************************************************************************************************************************************************************/
-/* Using Number / Ids Style */
-
 /* Login Page Background Image Style */
-.Login-main-1 {    
+/* .Login-main-1 {    
   background-position: center top !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
-}
+} */
 
-.Login-avatar-3 {
+/* .Login-avatar-3 {
   background-color: transparent !important;
-}
+} */
 
-.MuiInput-underline-61:before {
+/* .MuiInput-underline-61:before {
   border-bottom: 1px solid #ccc !important; 
-}
+} */
 
-.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div a{
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div a{
   color:#646777 !important;
   border-bottom: 1px solid #eff1f5 !important;
-}
+} */
 
-.WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul h3{
+/* .WithTheme-WithWidth-Sidebar---drawerPaper-10 > div > div > div > ul h3{
   color: #646777 !important;
   font-size: 0.9rem;
-  }
-
-.MuiPaper-elevation4-121, .headroom-wrapper .headroom header{
-  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
-  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
-}
-
+  } */
 
 /*********************************************************************************************************************************************************************************/
 /* Without Using Any Number Generic Style */
+
+div[class^="MuiPaper"], .headroom-wrapper .headroom header{
+  -webkit-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.05) !important;
+}
 
 main[class^="Layout"]{ 
   background-color:#f2f4f7 !important; min-height: calc(100vh - 60px) !important; margin-top:60px !important;
@@ -1084,6 +1079,45 @@ td[class^="MuiTableCell"]{
   border-bottom-color:#FFFFFF !important;
 }
 span[class^="translate-Button"]{
+  color: #646777 !important;
+}
+#loginfrm div[class^="Login"]{
+  background-color:transparent !important;
+}
+#loginfrm label{
+  color: #fff !important;
+}
+#loginfrm button{
+  background-color:#fbca00 !important;
+}
+#loginfrm input{
+  color: #FFFFFF !important;
+}
+div[class^="Menu-root"] a{
+  color:#646777 !important;border-bottom: 1px solid #eff1f5 !important;
+}
+ul[class^="MuiList"] h3{
+  color:#646777 !important;
+  font-size: 0.9rem;
+}
+ul[class^="MuiList"] li a:hover{
+  background-color:transparent !important;
+  color: #646777 !important;
+}
+ul[class^="MuiList"]{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+ul[class^="MuiList"] li:hover{
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+ul[class^="MuiList"] li a{
+  color: #646777 !important;
+}
+div[class^="MuiButtonBase"] a:hover{
+  background-color:transparent !important;
+}
+div[class^="MuiButtonBase"] a{
   color: #646777 !important;
 }
 
