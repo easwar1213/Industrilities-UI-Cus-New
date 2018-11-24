@@ -147,9 +147,9 @@ const DeviceDetailedView = ({ record }) => {
                                     </tr>
                                 </thead> */}
                                 <tbody>
-                                    <tr>
-                                        <td><strong>Telematics Serial Number</strong></td>
-                                        <td><strong>{record ? `${record.telematicsSerialNumber}` : ''}</strong></td>
+                                    <tr width="100%">
+                                        <td width="50%"><strong>Telematics Serial Number</strong></td>
+                                        <td width="50%"><strong>{record ? `${record.telematicsSerialNumber}` : ''}</strong></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Device Model</strong></td>
@@ -176,9 +176,9 @@ const DeviceDetailedView = ({ record }) => {
                                     </tr>
                                 </thead> */}
                                 <tbody>
-                                    <tr>
-                                        <td><strong>Name</strong></td>
-                                        <td><strong>{record ? `${record.assetName}` : ''}</strong></td>
+                                    <tr width="100%">
+                                        <td width="50%"><strong>Asset Name</strong></td>
+                                        <td width="50%"><strong>{record ? `${record.assetName}` : ''}</strong></td>
                                     </tr>
                                     <tr>
                                         <td><strong>Device Model</strong></td>
