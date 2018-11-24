@@ -211,6 +211,7 @@ class FilterButton extends Component {
                                     ))}
                                 </Select>
                             </FormControl>
+                            <br/>
                             <ArrayInput label="Add Attribute Filter" source="attributes" >
                                 <SimpleFormIterator>
                                     <ReferenceInput label="Attribute" source="dataPoint" reference="getListOfAttributes">

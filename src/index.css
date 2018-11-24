@@ -440,6 +440,7 @@ div[class^="Login"] > div[class^="MuiPaper"] {
 
 .list-page [class^="MuiToolbar"] {
   padding:0px !important;
+  padding-top: 9px !important;
 }
 .list-page [class^="MuiToolbar"] [class^="MuiFormLabel"], .list-page [class^="MuiToolbar"] [class^="MuiInput"]{
   min-width: 140px;
