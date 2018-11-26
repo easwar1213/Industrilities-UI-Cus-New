@@ -190,7 +190,7 @@ export const PartsDashboard = ({ ...props }) => (
     <Container id="deviceContainer">
         <Row>
             <Col md={12}>
-                <h3 className='page-title'>Parts</h3>
+                <h3 className='page-title'>Parts Dashboard</h3>
             </Col>
         </Row>
         {/* <Row>

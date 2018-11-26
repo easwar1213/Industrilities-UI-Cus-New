@@ -157,7 +157,7 @@ class StatusStatisticsContainer extends React.Component {
             //     </Collapse>
             // </Card>
             
-            <Panel xs={12} md={12} lg={4} title="Maintenance Status Statistics" subhead={"on " + new Date().toLocaleString()}>
+            <Panel xs={12} md={12} lg={4} title="Maintenance Statistics" subhead={"on " + new Date().toLocaleString()}>
                 {this.state.isRendering === true && (<Loader />)}
                 {this.state.isRendering === false && (<StatusPieChart value={this.state.pieChart} />)}
             </Panel>

@@ -175,9 +175,7 @@ const MaintenanceGrid = ({ ids, data, basePath,classes }) => (
                                 <TableCell><Badge color='warning'><MaintenanceIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Upcoming</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).assetName} </TableCell>
-                            <TableCell > <Complete record={(data[id])} /> </TableCell>
-                            
-
+                            <TableCell > <Complete record={(data[id])} /> </TableCell>  
                         </TableRow>
                     );
                 })}

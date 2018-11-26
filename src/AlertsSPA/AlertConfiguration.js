@@ -51,10 +51,11 @@ const PostTitle = ({ record }) => {
 
 
 export const showAlertConfiguration = (props) => (
-    <ShowController title="Alert Coniguration" {...props}>
+    <ShowController title="Alerts" {...props}>
         {controllerProps =>
-            <ShowView {...props} {...controllerProps}>
+            <ShowView {...props} {...controllerProps}>            
                 <SimpleShowLayout>
+                <h3 className='page-title'>Show Alert Configuration Details</h3>
                     <TextField label="Alert Configuration Name" source="alertConfigName" />
 
                     <br />
@@ -100,8 +101,9 @@ export const showAlertConfiguration = (props) => (
 
 
 export const createAlertConfiguration = (props) => (
-    <Create title="Create Alert Configuration" {...props}>
+    <Create title="Alerts" {...props}>    
         <SimpleForm redirect="show">
+        <h3 className='page-title'>create Alert Configuration</h3>
             <TextInput label="Alert Configuration Name" source="alertConfigName" />
             <br />
             <ArrayInput label="Notify (Max 10 emails)" source="emails" >
@@ -172,8 +174,9 @@ export const createAlertConfiguration = (props) => (
 
 
 export const editAlertConfiguration = (props) => (
-    <Edit title="Create Alert Configuration" {...props}>
+    <Edit title="Alerts" {...props}>    
         <SimpleForm redirect="show">
+        <h3 className='page-title'>Edit Alert Configuration </h3>
             <TextInput label="Alert Configuration Name" source="alertConfigName" />
             <br />
             <ArrayInput label="Notify (Max 10 emails)" source="emails" >

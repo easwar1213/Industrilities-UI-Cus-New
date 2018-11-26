@@ -70,37 +70,17 @@ const PostTitle = ({ record }) => {
 
 
 export const MaintenancePlanShow = (props) => (
-    <ShowController title="Maintenance Plan" {...props}>
+    <ShowController title="Maintenance" {...props}>
         {controllerProps =>
             <ShowView {...props} {...controllerProps}>
                 <SimpleShowLayout>
-                    <TextField source="planName" />
-                    <TextField source="description" />
-
-                    <ReferenceArrayField label="Assets" source="assets" reference="getAssetListForReference" >
-                        <Datagrid>
-                            <TextField source="assetName" />
-                            <TextField source="model" />
-                            <TextField source="telematicsSerialNumber" />
-                        </Datagrid>
-                    </ReferenceArrayField>
-
-                    <br />
-                    <br />
-                    <ArrayField label="Notify" source="notify">
-                        <Datagrid>
-                            <TextField source="email" />
-                        </Datagrid>
-                    </ArrayField>
-                    <br />
-                    <br />
-                    <br />
-                    <TextField label="Schedule Type" source="scheduleType" />
-                    <BooleanField label="Meter Based Schedule Rule" source="meterBased" />
-
-                    <Card style={cardStyle} >
-                      <CardContent>   
-                    <SimpleShowLayout>
+                    <h3 className='page-title'>Show Maintenance Plan Details</h3>
+                    <TextField source="planName" className="Cols-width"/>
+                    <TextField source="description" className="Cols-width"/>
+                    <TextField label="Schedule Type" source="scheduleType" className="Cols-width"/>
+                    <BooleanField label="Calendar Based Schedule Rule" source="calendarBased" className="Cols-width"/>
+                    <TextField source="tags" className="Cols-width"/>
+                    <SimpleShowLayout className="Cols-width">
                         {controllerProps.record && controllerProps.record.meterBased &&
                             <TextField label="Due Every" record={controllerProps.record.m_DueEvery} source="m_DueEvery" />
                         }
@@ -108,13 +88,8 @@ export const MaintenancePlanShow = (props) => (
                             <TextField label="Unit" source="m_unit" />
                         }
                     </SimpleShowLayout>
-                    </CardContent>
-                      </Card>
-                    <br />
-                    <br />
-
-                    <BooleanField label="Calendar Based Schedule Rule" source="calendarBased" />
-                    <SimpleShowLayout>
+                    
+                    <SimpleShowLayout className="Cols-width">
                         {controllerProps.record && controllerProps.record.calendarBased &&
                             <TextField label="Due Every" source="c_DueEvery" />
                         }
@@ -123,14 +98,32 @@ export const MaintenancePlanShow = (props) => (
                         }
                     </SimpleShowLayout>
 
-                    <ArrayField source="documentLinks">
-                        <Datagrid>
-                            <TextField source="name" />
-                            <TextField source="description" />
-                            <TextField source="url" />
-                        </Datagrid>
-                    </ArrayField>
-                    <TextField source="tags" />
+                    {/* <div class="Common-div"> */}
+                    
+                        <ReferenceArrayField label="Assets" source="assets" reference="getAssetListForReference" className="Cols-div-width">
+                            <Datagrid>
+                                <TextField source="assetName" />
+                                <TextField source="model" />
+                                <TextField source="telematicsSerialNumber" />
+                            </Datagrid>
+                        </ReferenceArrayField>
+
+                         <ArrayField label="Notify" source="notify" className="Cols-div-width">
+                            <Datagrid>
+                                <TextField source="email" />
+                            </Datagrid>
+                        </ArrayField>
+
+                        <ArrayField source="documentLinks" className="Cols-div-width">
+                            <Datagrid>
+                                <TextField source="name" />
+                                <TextField source="description" />
+                                <TextField source="url" />
+                            </Datagrid>
+                        </ArrayField>
+
+                    {/* </div> */}
+                    
                 </SimpleShowLayout>
             </ShowView>
         }
@@ -138,8 +131,9 @@ export const MaintenancePlanShow = (props) => (
 );
 
 export const MaintenancePlanEdit = props => (
-    <Edit title={<PostTitle />} {...props}>
+    <Edit title="Maintenance" {...props}>
         <SimpleForm redirect="show" >
+            <h3 className='page-title'>Edit Maintenance Plan</h3>
             <DisabledInput label="Plan Name *" source="planName" />
             <br />
             <ArrayInput label="Notify (Max 10 emails)" source="notify" >
@@ -217,8 +211,9 @@ export const MaintenancePlanEdit = props => (
 );
 
 export const MaintenancePlanCreate = (props) => (
-    <Create title="Create New Plan" {...props}>
+    <Create title="Maintenance" {...props}>
         <SimpleForm redirect="show">
+            <h3 className='page-title'>Create Maintenance Plan</h3>
             <TextInput label="Plan Name *" source="planName" />
             <br />
             <ArrayInput label="Notify (Max 10 emails)" source="notify" >

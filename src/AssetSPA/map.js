@@ -171,8 +171,7 @@ export default class Map extends React.Component {
                                         shrink: true,
                                     }}
                                 />
-
-                                &nbsp;&nbsp;&nbsp;&nbsp;
+                               
                               <Button variant="contained" color="primary" label="Acknowledge" onClick={this.handleClickSubmit}>
                                     Submit
                      </Button>

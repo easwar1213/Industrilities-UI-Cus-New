@@ -53,7 +53,7 @@ export const AlertsHistory = (props) => (
         </Row>        */}
         <Row>
             <Panel xs={12} md={12} lg={12} title="Historical Details">
-                <List title="Historical Alerts" {...props} filters={<AlertFilter />} perPage={10}>
+                <List title="Alerts History" {...props} filters={<AlertFilter />} perPage={10}>
                     <Datagrid>
                         <TextField source="assetName" />
                         <TextField label="Time Active" source="timeStamp" />
