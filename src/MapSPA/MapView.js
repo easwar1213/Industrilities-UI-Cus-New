@@ -11,10 +11,11 @@ import Panel from '../components/Panel';
 
 
 export const MapView = (props) => (
-    <Container id="deviceContainer">
+    <Container id="map">
         <Row>
             <Col md={12}>
-                <h3 className='page-title'>Map</h3>
+                {/* <h2 className='heade_title'>Map</h2> */}
+                <h3 className='page-title'>Map</h3> 
             </Col>
         </Row>
         {/* <Row>

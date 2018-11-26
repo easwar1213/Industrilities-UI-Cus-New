@@ -612,9 +612,9 @@ main div[class^="Layout"]{
   /* background-color: #FBCA00 !important; */
   background-color: #f2f4f7 !important;
   }
-  .datagrid-body tr:hover svg[class^="MuiSvgIcon"]{
+  /* .datagrid-body tr:hover svg[class^="MuiSvgIcon"]{
     fill: #fff !important;
-  }
+  } */
 
 #react-admin-title span{
 	color:#646777 !important;
@@ -877,7 +877,7 @@ div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding-top: 4px !important;
 }
 div[class^="MuiModal"] > div[class^="MuiPaper"]{
-  max-width: 352px !important;
+  max-width: 422px !important;
 }
 .list-page div[class^="MuiPaper"]{
   box-shadow:none !important;
@@ -934,7 +934,7 @@ div[class^="SaveButton"] > button[class^="SaveButton"]{
 table .datagrid-body td{border-bottom: 1px solid #ccc !important; border-top: 1px solid #ccc !important;border-left: none !important; border-right:none !important;}
 
 .datagrid-body td a:hover{
-  background: #646777 !important;
+  /* background: #646777 !important; */
   color: #fff !important;
 }
 .datagrid-body td a{color: #646777 !important;}
@@ -1124,9 +1124,14 @@ div[class^="MuiButtonBase"] a{
   color: #646777 !important;
 }
 .simple-form button[class^="MuiButton"]{
-  background-color: #70bbfd !important;
+  background-color:#646777 !important;
+  color: #FFFFFF !important;
   min-width: 80px !important;
 }
+.simple-form button[class^="MuiButton"] svg{
+  fill: #ffffff !important;
+}
+
 div[class^="MuiDialogActions"] button:nth-child(1){
   background-color: #70bbfd !important;
 }
@@ -1199,7 +1204,8 @@ div[class^="MuiDialogActions"]{
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  height: 7px;              /* height of horizontal scrollbar ← You're missing this */
+  width: 7px;               /* width of vertical scrollbar */
 }
 
 /* Track */
@@ -1217,10 +1223,71 @@ div[class^="MuiDialogActions"]{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+
 .chartjs-render-monitor{
   height: 300px !important;
   width: 85%;
 }
 .dashboard.container div[class^="MuiToolbar"]{
 background-color:transparent !important;
+}
+
+/* .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+div[class^="MuiButtonBase"]:hover .tooltiptext{
+  visibility: visible;
+} */
+
+.SimpleFormIterator{
+  border-bottom: none !important;
+}
+span[class^="translate"]{
+  color:#646777 !important;
+}
+div[class^="MuiModal"] div[class^="MuiPaper"] div[class^="MuiPaper"]{
+  width: 100% !important;
+  box-shadow: none !important;
+}
+div[class^="MuiModal"] div[class^="MuiPaper"] div[class^="MuiPaper"] ul > div{
+  padding-left: 9px !important;
+}
+div[class^="MuiModal"] div[class^="MuiPaper"] {
+  background: #ffffff !important;
+}
+div[class^="MuiModal"] div[class^="MuiPaper"] div[class^="MuiPaper"] div[class^="Menu"]{
+  width: 100% !important;
+}
+div[class^="MuiModal"] div[class^="MuiPaper"] div[class^="MuiPaper"] div[class^="Menu"] a{
+  font-size: 15px !important;
 }

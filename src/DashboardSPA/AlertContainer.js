@@ -172,9 +172,10 @@ class AlertContainer extends React.Component {
       //   </Collapse>
       // </Card>     
 
-      <Container id="deviceContainer">
+      <Container id="dashboard">
         <Row>
           <Col md={12}>
+          {/* <h2 className='heade_title'>Dashboard</h2> */}
             <h3 className='page-title'>Dashboard</h3>
           </Col>
         </Row>

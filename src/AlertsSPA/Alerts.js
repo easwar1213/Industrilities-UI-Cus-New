@@ -233,7 +233,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='danger'><ArrowUpwardIcon style={{ width: 25, height: 25,paddingRight:5 }}/>High</Badge></TableCell>
+                                <TableCell><Badge color='danger'><ArrowUpwardIcon style={{ width: 25, height: 25, paddingRight: 5 }} />High</Badge></TableCell>
                             )}
 
                             {(data[id]).alertPriority == 'medium' && (
@@ -248,7 +248,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='warning'><CompareArrowsIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Medium</Badge></TableCell>
+                                <TableCell><Badge color='warning'><CompareArrowsIcon style={{ width: 25, height: 25, paddingRight: 5 }} />Medium</Badge></TableCell>
                             )}
 
                             {(data[id]).alertPriority == 'low' && (
@@ -263,7 +263,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='secondary'><ArrowDownwardIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Low</Badge></TableCell>
+                                <TableCell><Badge color='secondary'><ArrowDownwardIcon style={{ width: 25, height: 25, paddingRight: 5 }} />Low</Badge></TableCell>
                             )}
 
                             <TableCell colSpan={1}>{(data[id]).assetName}</TableCell>
@@ -282,7 +282,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='success'><DoneIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Active</Badge></TableCell>
+                                <TableCell><Badge color='success'><DoneIcon style={{ width: 25, height: 25, paddingRight: 5 }} />Active</Badge></TableCell>
                             )}
 
                             {(data[id]).alertStatus == 'acknowledged' && (
@@ -297,7 +297,7 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='primary'><AckIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Acknowledged</Badge></TableCell>
+                                <TableCell><Badge color='primary'><AckIcon style={{ width: 25, height: 25, paddingRight: 5 }} />Acknowledged</Badge></TableCell>
                             )}
 
                             {(data[id]).alertStatus == 'returned' && (
@@ -312,12 +312,11 @@ const AlertGrid = ({ ids, data, basePath, classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='info'><UndoIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Returned</Badge></TableCell>
+                                <TableCell><Badge color='info'><UndoIcon style={{ width: 25, height: 25, paddingRight: 5 }} />Returned</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).event} </TableCell>
                             <TableCell ><AddCommentButton record={(data[id])} /></TableCell>
-                            <TableCell>  <AcknowledgeButton record={(data[id])} /></TableCell>
-
+                            <TableCell><AcknowledgeButton record={(data[id])} /></TableCell>                            
                         </TableRow>
                     );
                 })}
