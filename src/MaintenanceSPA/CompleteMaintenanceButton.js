@@ -112,7 +112,7 @@ class Complete extends Component {
                     <MaintenanceIcon />
                 </Button>
                 </MuiThemeProvider>
-                <Dialog
+                <Dialog id="mainDialog"
                     fullWidth
                     open={showDialog}
                     onClose={this.handleCloseClick}

@@ -153,7 +153,7 @@ class FilterButton extends Component {
                 <Button label="Filter" onClick={this.handleClick} >
                     <FilterList />
                 </Button>
-                <Dialog
+                <Dialog id= "mapDialog"
                     fullWidth
                     open={showDialog}
                     onClose={this.handleCloseClick}

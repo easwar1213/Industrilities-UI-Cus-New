@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif !important; */
 }
 
 /*********************************************************************************************************************************************************************************/
@@ -1335,4 +1335,83 @@ div[class^="MuiCardContent"] .ra-field-tags{
 
 #loginfrm div[class^="MuiInput"]::before {
   border-bottom: 1px solid #ccc !important; 
+}
+#mainDialog div[class^="MuiPaper"]{
+  max-width: 335px !important;
+}
+label[class^="MuiFormLabel"] span{
+  font-size: 1rem !important;
+  font-weight: normal !important;
+}
+div[class^="MuiDialogTitle"] h2{
+    font-size: 14px !important;
+    color: #646777 !important;
+    font-weight: bold !important;
+}
+.simple-form .fade-enter-done button[class^="MuiButton"]{
+  background: #646777 !important;
+}
+.simple-form div[class^="MuiCardContent"] .ra-input-attributes ul{
+  margin-top: 20px !important;
+}
+.simple-form div[class^="MuiCardContent"] .ra-input:nth-child(2){
+display: none !important;
+}
+#menu- ul li[class^="MuiButtonBase"]{
+  height: 10px !important;
+  font-size: 14px !important;
+}
+#menu- div[class^="MuiPaper"]{
+  /* top: 243px !important;
+  left: 508px !important; */
+  min-width: 276px !important;
+}
+#menu- ul li[class^="MuiButtonBase"] > div span{
+  font-size: 14px !important;
+}
+div[class^="MuiPaper"] ul li[class^="MuiButtonBase"] span{
+  font-size: 14px !important;
+}
+.list-page [class^="MuiToolbar"] [class^="MuiFormLabel"], .list-page [class^="MuiToolbar"] [class^="MuiInput"]{
+  min-width: 230px !important;
+}
+body{font-family: Roboto,sans-serif !important;}
+.recharts-legend-item-text{
+  font-size: 13px !important;
+    font-weight: bold !important;
+    color: #666979 !important;
+}
+.recharts-layer.recharts-cartesian-axis-tick{
+  font-size: 13px !important;
+  font-weight: bold !important;
+  color: #666979 !important;
+}
+#dashboard .chartjs-render-monitor{
+  height: inherit !important;
+}
+.ra-field.ra-field-undefined.page-title{
+  float: inherit !important;
+}
+/* .edit-page div[class^="MuiPaper"] div[class^="MuiCardContent"]:nth-child(1){
+  float: right !important;
+} */
+#edit-form div[class^="MuiCardContent"]:nth-child(2){
+  float: left;
+}
+div[class^="MuiPaper"] #edit-form div[class^="MuiCardContent"]:nth-child(1){
+float: left !important;
+}
+div[class^="MuiPaper"] #edit-form div[class^="MuiCardContent"] .ra-input:nth-child(3){
+  display: none !important;
+  }
+#edit-form .ra-input-notify ul li{
+  border-bottom: none !important;
+}
+#emails ul li{
+  border-bottom: none !important;
+}
+#emails ul li p{display: none !important;}
+#triggers ul li p{display: none !important;}
+#triggers ul div li {
+  border-bottom:none !important;
 }

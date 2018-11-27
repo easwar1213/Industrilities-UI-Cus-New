@@ -132,7 +132,7 @@ export const MaintenancePlanShow = (props) => (
 
 export const MaintenancePlanEdit = props => (
     <Edit title="Maintenance" {...props}>
-        <SimpleForm redirect="show" >
+        <SimpleForm id="edit-form" redirect="show" >
             <h3 className='page-title'>Edit Maintenance Plan</h3>
             <DisabledInput label="Plan Name *" source="planName" />
             <br />
