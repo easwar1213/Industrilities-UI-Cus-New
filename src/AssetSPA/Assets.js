@@ -102,68 +102,6 @@ const AssetDetailsTab = ({ record }) => {
     );
 };
 
-//export const showAsset = (props) => (
-
-//     <Show title="Assets" {...props}  >
-//             <Map vale="check" />    
-//         {/* <Card>
-//             <CardBody>
-//                 <Collapse className="with-shadow" title="Device Details ">
-//                     <div class="card">
-//                         <div class="card-body">
-//                             <Map vale="check" />
-//                         </div>
-//                     </div>
-//                 </Collapse>
-//                 <Collapse className="with-shadow" title="Device Details ">
-//                     <div class="card">
-//                         <div class="card-body">
-//                             <SensorGroupTable />
-//                         </div>
-//                     </div>
-//                 </Collapse>
-//                 <Collapse className="with-shadow" title="Device Details ">
-//                     <div class="card">
-//                         <div class="card-body">
-//                             <AssetDetailsTab />
-//                         </div>
-//                     </div>
-//                 </Collapse>
-//                 <Collapse className="with-shadow" title="Device Details ">
-//                     <div class="card">
-//                         <div class="card-body">
-//                             <ReferenceManyField filters={<AlertFilter />}  {...props} label="Alerts" target="telematicsSerialNumber" source="telematicsSerialNumber" reference="getAssetAlerts" className="TableResponsive">
-//                                 <Datagrid>
-//                                     <TextField source="assetName" />
-//                                     <TextField label="Time Active" source="timeStamp" />
-//                                     <TextField source="alertPriority" />
-//                                     <TextField source="alertStatus" />
-//                                     <TextField source="event" />
-//                                 </Datagrid>
-//                             </ReferenceManyField>
-//                         </div>
-//                     </div>
-//                 </Collapse>
-//                 <Collapse className="with-shadow" title="Device Details ">
-//                     <div class="card">
-//                         <div class="card-body">
-//                             <ReferenceManyField filters={<AssetFilter />} label="Maintenance" target="telematicsSerialNumber" source="telematicsSerialNumber" reference="getAssetMaintenance" className="TableResponsive">
-//                                 <Datagrid>
-//                                     <TextField source="plan" />
-//                                     <TextField source="serviceRunHours" />
-//                                     <TextField source="lastService" />
-//                                     <TextField source="status" />
-//                                     <TextField source="assetName" />
-//                                 </Datagrid>
-//                             </ReferenceManyField>
-//                         </div>
-//                     </div>
-//                 </Collapse>
-//             </CardBody>
-//         </Card>     */}
-//     </Show >
-// );
-
 
 export const showAsset = (props) => (
     <Show title="Assets" {...props}  >
