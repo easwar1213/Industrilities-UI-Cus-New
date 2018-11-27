@@ -176,7 +176,7 @@ class AlertContainer extends React.Component {
         <Row>
           <Col md={12}>
           {/* <h2 className='heade_title'>Dashboard</h2> */}
-            <h3 className='page-title'>Dashboard</h3>
+            <h3 className='page-title'>Home</h3>
           </Col>
         </Row>
         {/* <Row>

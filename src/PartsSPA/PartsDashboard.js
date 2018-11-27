@@ -190,7 +190,7 @@ export const PartsDashboard = ({ ...props }) => (
     <Container id="deviceContainer">
         <Row>
             <Col md={12}>
-                <h3 className='page-title'>Parts Dashboard</h3>
+                <h3 className='page-title'>Parts</h3>
             </Col>
         </Row>
         {/* <Row>
@@ -206,7 +206,7 @@ export const PartsDashboard = ({ ...props }) => (
         </Row>
         <Row>
             <Panel xs={12} md={12} lg={12} title="Parts Details">
-                <List title="Parts Dashboard" filters={<PartsFilter />} {...props}>
+                <List title="Parts" filters={<PartsFilter />} {...props}>
                     <PartsDataGrid />
                 </List>
             </Panel>

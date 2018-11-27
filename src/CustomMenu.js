@@ -41,11 +41,12 @@ import Typography from '@material-ui/core/Typography';
 
 
 const items = [
-    { name: 'getDashboardData', label: 'Dashboard', icon: <DashboardIcon /> },
+    { name: 'getDashboardData', label: 'Home', icon: <DashboardIcon /> },
     { name: 'getMapViewData', label: 'Map', icon: <LocationIcon /> },
     { name: 'getAssetList', label: 'Assets', icon: <AssetIcon /> },
     { name: 'getDeviceList', label: 'Devices', icon: <DeviceIcon /> },
     { name: 'getListOfAnalyticsReports', label: 'Analytics', icon: <AnalytcisIcon /> },
+    { name: 'getPartsStatus', label: 'Parts', icon: <PartsIcon /> },
 ];
 
 const styles = theme => ({
@@ -190,7 +191,7 @@ class Menu extends React.Component {
                         </List>
                     </div>
 
-                    <div>
+                    {/* <div>
                         <List>
                             <ListItem className={classes.itemsvg} button onClick={this.handleClickParts}>
                                 <ListItemIcon>
@@ -203,28 +204,16 @@ class Menu extends React.Component {
                                 {this.state.openParts ? <ExpandLess color="textSecondary" /> : <ExpandMore color="textSecondary" />}
                             </ListItem>
                             <Collapse in={this.state.openParts} timeout="auto" unmountOnExit>
-                                <List component="div" disablePadding>
-                                    {/* <ListItem className={classes.nested} >
-                                    <ListItemIcon>
-                                        <MenuItemLink to="/getListOfCustomers" primaryText="Customers" onClick={onMenuClick} />
-                                    </ListItemIcon>
-                                </ListItem> */}
-
+                                <List component="div" disablePadding>   
                                     <ListItem button className={classes.nested} >
                                         <ListItemIcon>
                                             <MenuItemLink to="/getPartsStatus" className={classes.item3} primaryText="Dashboard" onClick={onMenuClick} />
                                         </ListItemIcon>
-                                    </ListItem>
-                                    {/*
-                                <ListItem button className={classes.nested} >
-                                    <ListItemIcon>
-                                        <MenuItemLink to="/getListOfAlertConfiguration" primaryText="Alert Configuration" onClick={onMenuClick} />
-                                    </ListItemIcon>
-                                </ListItem> */}
+                                    </ListItem>                               
                                 </List>
                             </Collapse>
                         </List>
-                    </div>
+                    </div> */}
 
                     
 
