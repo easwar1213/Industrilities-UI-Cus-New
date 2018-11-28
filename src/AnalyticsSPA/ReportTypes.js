@@ -405,10 +405,10 @@ class ReportTypes extends Component {
                             <br />
                             {this.state.dateRange == "Custom" && (
                                 <div>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;<span>
+                                    <strong className="analysisDate">Start Date</strong><span>
                                         <TextField
                                             id="startDate"
-                                            label="Start Date"
+                                            //label="Start Date"
                                             type="date"
                                             // value={this.state.startDate}
                                             onChange={this.handleStartDateChange}
@@ -416,10 +416,10 @@ class ReportTypes extends Component {
                                                 shrink: true,
                                             }}
                                         />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                       <strong className="analysisDate">End Date</strong>
                              <TextField
                                             id="endDate"
-                                            label="End Date"
+                                            //label="End Date"
                                             type="date"
                                             // value={this.state.endDate}
                                             onChange={this.handleEndDateChange}
