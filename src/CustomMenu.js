@@ -105,6 +105,9 @@ class Menu extends React.Component {
         return (
             <div>
                 <Paper className={classes.root} elevation={11}>
+                <div className="logo_sec">
+                <img src="../img/logonew.png"/>
+                </div>
                     <div className={classes.root} >
                         {/* <DashboardMenuItem onClick={onMenuClick} /> */}
                         {items.map(item => (

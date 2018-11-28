@@ -1622,3 +1622,29 @@ text-align: center;
     max-width: 48% !important;
 }
 .card .card-body .col-6.col-md-6.col-lg-6 h5{text-align: center !important;}
+main[class^="Layout"]{
+  margin-top:0px !important;
+}
+.headroom-wrapper .headroom header{
+  background-color: #ffffff00 !important;
+}
+.logo_sec{
+  left: 55px;
+  position: relative;
+  background: gray;
+  top: 0px;
+  width: 185px;
+  padding: 10px;
+}
+.logo_sec img{
+width: 100% !important;
+}
+main[class^="Layout"]{
+  background: #ffffff !important;
+}
+main[class^="Layout"] div[class^="Layout"]{
+  margin-top: 60px !important;
+}
+div[class^="MuiDrawer"] div[class^="MuiPaper"]{
+  min-height:calc(110vh - 60px) !important;
+}
