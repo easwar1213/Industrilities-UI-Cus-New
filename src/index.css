@@ -485,7 +485,7 @@ div[class^="MuiDrawer"] > div {
 }
 
 div[class^="MuiGrid"] > div[class^="MuiPaper"]{
-   margin-top: 8px !important;
+   margin-top: 15px !important;
    max-width:100% !important;
    border-radius: 4px !important;
  }
@@ -810,7 +810,7 @@ div[class^="MuiGrid"] > div[class^="MuiPaper"] > div[class^="MuiToolbar"] > div[
 .dashboard.container .row > div > div > div #tableTitle{color:rgba(0, 0, 0, 0.54) !important;font-size: 14px;text-align: center;font-weight: bold;text-transform: uppercase;}
 .dashboard.container .row > div > div table tbody tr th{padding: 0px !important;}
 .dashboard.container .row > div > div table{border-right: 2px solid #e0e0e0 !important;}
-.dashboard.container .row > div > div table tbody tr{border-bottom: 2px solid #e0e0e0 !important;}
+.dashboard.container .row > div > div table tbody tr{border-bottom: 1px solid #e0e0e0 !important;}
 div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding-left: 0px !important;
 }
@@ -837,7 +837,7 @@ div[class^="MuiGrid"] > div[class^="MuiGrid"] tbody tr td{
 }
 div[class^="MuiTypography"] tbody tr td{
   border-bottom: 2px solid #e0e0e0 !important;
-  padding-top: 17px !important;
+  padding-top: 10px !important;
 }
 .simple-form .SelectFieldDiv div[class^="MuiSelect"]{
   min-width: 280px !important;
@@ -873,9 +873,9 @@ div[class^="MuiDialogActions"] svg{
   fill: #FFFFFF !important;
 }
 
-div[class^="MuiGrid"] > div[class^="MuiGrid"]{
+/* div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding-top: 4px !important;
-}
+} */
 div[class^="MuiModal"] > div[class^="MuiPaper"]{
   max-width: 422px !important;
 }
@@ -1067,7 +1067,7 @@ width: 100% !important;
   box-shadow:none !important;
 }
 #analysisrep div[class^="WSMachineSummaryContainer"]{
-margin-left: 12px !important;
+  margin-top: 15px !important;
 }
 #analysisrep .dashboard.container .row > div > div table{
   border-right:none !important;
@@ -1272,8 +1272,8 @@ div[class^="MuiButtonBase"]:hover .tooltiptext{
   visibility: visible;
 } */
 
-.SimpleFormIterator{
-  border-bottom: none !important;
+section[class^="SimpleFormIterator"] .ra-input div[class^="MuiFormControl"]{
+  margin-bottom: -1px !important;
 }
 span[class^="translate"]{
   color:#646777 !important;
@@ -1461,7 +1461,7 @@ div[class^="MuiCardContent"] div[class^="MuiChip"]{
 }
 #analysisrep .recharts-default-legend .recharts-legend-item{
   width: 100%;
-  padding-left: 128px;
+  padding-left: 78px;
 }
 #analysisrep .recharts-default-legend .recharts-legend-item span{
     text-align: center;
@@ -1471,12 +1471,30 @@ div[class^="MuiCardContent"] div[class^="MuiChip"]{
 .repBarTitle{
   width: 100% !important; 
   text-align: center !important;
-  padding-left: 60px;
 }
-#analysisrep div[class^="MuiGrid"]{
+#analysisrep div[class^="MuiTypography"] div[class^="MuiGrid"]{
 margin: 0 auto !important;
 }
 #repForm{
   width: 100%;
   float: left;
 }
+#analysisrep .dashboard table tbody tr:last-child th{
+  border-bottom: none !important;
+}
+#analysisrep .dashboard div[class^="MuiPaper"]{
+  border: 1px solid #d2d4d6;
+}
+.dashboard .recharts-wrapper .recharts-surface{
+  height: 310 !important;
+}
+.dashboard .recharts-wrapper{
+  height: 331px !important;
+}
+#analysisrep div[class^="MuiGrid"] > div[class^="MuiGrid"]{
+  padding:7px 15px !important;
+}
+
+/* #repFault{
+  margin-top: 6px !important;
+} */

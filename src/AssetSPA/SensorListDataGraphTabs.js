@@ -91,7 +91,7 @@ class SensorListDataGraphTabs extends React.Component {
                     </TableRow>   
                 })}
                 </TableBody> */}
-                {/* <DeluxeSummaryChart/> */}
+                {/* <DeluxeSummaryChart fill={this.props.fillColor}/> */}
           </TabContainer>
          }
         {value === 1 && <TabContainer>Item Two</TabContainer>}

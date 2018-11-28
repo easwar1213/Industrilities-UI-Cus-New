@@ -17,7 +17,7 @@ class DeluxeSummaryChart extends PureComponent {
       // let data =this.props.value;
        //console.log(data)
   	return (
-    	<ComposedChart width={450} height={400} data={data}
+    	<ComposedChart width={450} height={330} data={data}
             margin={{top: 7, right: 20, left: 20, bottom: 5}}>
        <CartesianGrid strokeDasharray="3 3"/>
        <XAxis dataKey="name"/>

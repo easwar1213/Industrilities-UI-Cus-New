@@ -103,11 +103,9 @@ class DeluxeReportSummary extends PureComponent {
                         <WSMachineSummaryContainer value={this.state.machineStatistics} />
                         </Grid>
                         <br/>
-                            <br/>
                         <Grid label="Bar" item xs={6}>
-                        <Paper>
-                        <br />
-                         <b> <div className="repBarTitle"> Deluxe Summary</div> </b>
+                        <Paper>                       
+                         <b> <div className="repBarTitle"> Machine Summary</div> </b>
                         <DeluxeSummaryChart fillColor="#4BC0C0"/>
                         </Paper>
                         </Grid>
@@ -128,7 +126,7 @@ class DeluxeReportSummary extends PureComponent {
                         <WSMachineSummaryContainer value={this.state.VSDPerformance}  />
                        
                         </Grid>
-                        <Grid label="Bar" item xs={6}>
+                        <Grid id="repFault" label="Bar" item xs={6}>
                         <WSMachineSummaryContainer value={this.state.FaultInformation}  />
                         </Grid>          
                     </Grid>

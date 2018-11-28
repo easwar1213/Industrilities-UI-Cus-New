@@ -28,7 +28,7 @@ const WSMachineSummaryContainer = ({ value, translate, classes }) => (
         <Card className={classes.card}>
      
         <Typography className={classes.title} color="textSecondary">
-              <b>  {value.title}</b>
+              <b><div className="repBarTitle">{value.title}</div></b>
             </Typography>
             <Typography variant="headline" component="h2">
                 <CustomizedTable value={value.value}/>
