@@ -949,7 +949,7 @@ div[class^="MuiCardActions"]{
 }
 .ra-field-assetName{float: left !important;margin-right: 20px !important;}
 .ra-field-plan{float: left !important;margin-right: 20px !important;}
-.ra-field.ra-field-undefined{float: left !important;margin-right: 20px !important;}
+.ra-field.ra-field-undefined{float: left !important;margin-right: 0px !important;}
 .ra-field-workOrder{float: left !important;margin-right: 20px !important;}
 .ra-field-completedBy{float: left !important;margin-right: 20px !important;}
 .ra-field-serviceRunHours{float: left !important;margin-right: 20px !important;}
@@ -1040,6 +1040,7 @@ svg[class^="MuiSvgIcon"] {
 }  
 .show-page div[class^="MuiCardContent"] label[class^="MuiFormLabel"] > span{
   font-weight: bold !important;
+  font-size: 20px !important;
 }
 div[class^="MuiCardContent"] span .ra-field.ra-field-undefined{ 
 float: inherit !important;
@@ -1494,7 +1495,93 @@ margin: 0 auto !important;
 #analysisrep div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding:7px 15px !important;
 }
-
-/* #repFault{
-  margin-top: 6px !important;
-} */
+.ra-field.ra-field-emails{
+  float: left;
+  width: 50%;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  margin-bottom: 20px !important;
+}
+.ra-field.ra-field-triggers{
+  float: left;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+}
+.ra-field.ra-field-emails table .datagrid-body tr:last-child td{
+border-bottom: none !important;
+}
+.ra-field.ra-field-emails table thead tr{
+  border-top:1px solid #ccc !important;
+  height: 40px !important;
+  }
+.ra-field.ra-field-triggers table thead tr{
+  border-top:1px solid #ccc !important;
+  height: 40px !important;
+  }
+.ra-field.ra-field-emails table tbody tr{
+    border-top:1px solid #ccc !important;
+    height: 40px !important;
+    }
+.ra-field.ra-field-triggers table tbody tr{
+    border-top:1px solid #ccc !important;
+    height: 40px !important;
+    }
+.ra-field.ra-field-triggers .datagrid-body tr:last-child td{
+  border-bottom: none !important;
+  }
+div[class^="MuiFormControl"]{
+  margin-bottom: 0px !important;
+}
+label[class^="MuiFormLabel"]{
+  transform-origin: top center !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+.ra-field div[class^="MuiFormControl"] span[class^="MuiTypography"] {
+width: 100% !important;
+text-align: center;
+}
+#alert_form{
+  float: left !important;
+  width: 100% !important;
+  padding: 0px 20px !important;
+}
+.edit-page div[class^="MuiPaper"] #alert_form div[class^="MuiCardContent"]{
+  float: left !important; width: 100% !important;
+}
+.edit-page div[class^="MuiPaper"] #alert_form div[class^="MuiCardContent"] div[class^="Toolbar"]{
+  justify-content: left !important;
+}
+.edit-page div[class^="MuiPaper"] #alert_form div[class^="MuiCardContent"] div[class^="Toolbar"] button{
+  margin-right:10px !important;
+}
+#repForm div[class^="MuiInput"] input{
+  border: 1px solid #d2d4d6;
+  color: #646777;
+  padding-left: 10px !important;
+}
+.ra-field-assets table thead tr{
+  border-top: 1px solid #cccccc;
+  height: 40px !important;
+}
+.ra-field-documentLinks table thead tr{
+  border-top: 1px solid #cccccc;
+  height: 40px !important;
+}
+.ra-field-notify table thead tr{
+  border-top: 1px solid #cccccc;
+  height: 40px !important;
+}
+.ra-field-assets table tbody tr{
+  border-top: 1px solid #cccccc;
+  height: 40px !important;
+}
+.ra-field-documentLinks table tbody tr{
+  border-top: 1px solid #cccccc;
+  height: 40px !important;
+}
+.ra-field-notify table tbody tr{
+  border-top: 1px solid #cccccc;
+  height: 40px !important;
+}

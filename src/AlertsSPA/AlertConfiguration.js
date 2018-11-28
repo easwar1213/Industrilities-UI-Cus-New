@@ -9,7 +9,7 @@ import Panel from '../components/Panel';
 
 export const AlertConfiguration = (props) => (
 
-    <Container id="deviceContainer">
+    <Container id="alert_section">
         <Row>
             <Col md={12}>
                 <h3 className='page-title'>Alerts Configuration</h3>
@@ -54,8 +54,8 @@ export const showAlertConfiguration = (props) => (
     <ShowController title="Alerts" {...props}>
         {controllerProps =>
             <ShowView {...props} {...controllerProps}>            
-                <SimpleShowLayout>
-                <h3 className='page-title'>Show Alert Configuration Details</h3>
+                <SimpleShowLayout >
+                <h3 id="alertShow" className='page-title'>Show Alert Configuration Details</h3>
                     <TextField label="Alert Configuration Name" source="alertConfigName" />
 
                     <br />
@@ -175,7 +175,7 @@ export const createAlertConfiguration = (props) => (
 
 export const editAlertConfiguration = (props) => (
     <Edit title="Alerts" {...props}>    
-        <SimpleForm redirect="show">
+        <SimpleForm redirect="show" id="alert_form">
         <h3 className='page-title'>Edit Alert Configuration </h3>
             <TextInput label="Alert Configuration Name" source="alertConfigName" />
             <br />
