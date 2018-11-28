@@ -118,46 +118,32 @@ class DeluxeReport extends React.Component {
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Pressure  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Pressure</div> </b>
+                  <WS_VSD_Charts fillColor="#FF6384"/>
                 </Paper>
               </Grid>
-              <br />
-              <br />
               <br />
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Temp(F)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Temp(F)</div> </b>
+                  <WS_VSD_Charts fillColor="#FFCE56"/>
                 </Paper>
               </Grid>
-              <br />
-              <br />
               <br />
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Flow(ACFM)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Flow(ACFM)</div> </b>
+                  <WS_VSD_Charts fillColor="#4BC0C0"/>
                 </Paper>
               </Grid>
-              <br />
-              <br />
               <br />
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Power(KW)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Power(KW)</div> </b>
+                  <WS_VSD_Charts fillColor="#36A2EB"/>
                 </Paper>
               </Grid>
             </TabContainer>}
@@ -165,46 +151,32 @@ class DeluxeReport extends React.Component {
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Pressure  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Pressure</div> </b>
+                  <WS_VSD_Charts fillColor="#FF6384"/>
                 </Paper>
               </Grid>
-              <br />
-              <br />
               <br />
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Temp(F)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Temp(F)</div> </b>
+                  <WS_VSD_Charts fillColor="#FFCE56"/>
                 </Paper>
               </Grid>
-              <br />
-              <br />
               <br />
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Flow(ACFM)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Flow(ACFM)</div> </b>
+                  <WS_VSD_Charts fillColor="#4BC0C0"/>
                 </Paper>
               </Grid>
-              <br />
-              <br />
               <br />
               <Grid label="Bar" item xs={8}>
                 <Paper>
                   <br />
-                  <b> <div align="center"> &nbsp;&nbsp; Power(KW)  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                  <br />
-                  <br />
-                  <WS_VSD_Charts />
+                  <b> <div className="repBarTitle"> Power(KW)</div> </b>
+                  <WS_VSD_Charts fillColor="#36A2EB"/>
                 </Paper>
               </Grid>
             </TabContainer>}

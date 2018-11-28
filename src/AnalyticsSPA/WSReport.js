@@ -123,22 +123,16 @@ class WSReport extends React.Component {
             <Grid label="Bar" item xs={8}>
                         <Paper>
                             <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Lifetime VSD History  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
+                            <b> <div className="repBarTitle">Lifetime VSD History</div> </b>
+                             <WS_VSD_Charts fillColor="#4BC0C0"/>
                         </Paper>
                     </Grid>
-                    <br/>
-                    <br/>
                     <br/>
                     <Grid label="Bar" item xs={8}>
                         <Paper>
                             <br />
-                            <b> <div align="center"> &nbsp;&nbsp; Recent VSD History  &nbsp;&nbsp;&nbsp;&nbsp; </div> </b>
-                            <br />
-                            <br />
-                             <WS_VSD_Charts/>
+                            <b> <div className="repBarTitle">Recent VSD History</div> </b>
+                            <WS_VSD_Charts fillColor="#36A2EB"/>
                         </Paper>
                     </Grid>
             </TabContainer>}

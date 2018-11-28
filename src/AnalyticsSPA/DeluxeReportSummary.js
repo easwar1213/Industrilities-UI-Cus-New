@@ -106,7 +106,9 @@ class DeluxeReportSummary extends PureComponent {
                             <br/>
                         <Grid label="Bar" item xs={6}>
                         <Paper>
-                        <DeluxeSummaryChart />
+                        <br />
+                         <b> <div className="repBarTitle"> Deluxe Summary</div> </b>
+                        <DeluxeSummaryChart fillColor="#4BC0C0"/>
                         </Paper>
                         </Grid>
                     </Grid>

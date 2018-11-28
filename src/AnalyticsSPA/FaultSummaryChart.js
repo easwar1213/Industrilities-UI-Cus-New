@@ -25,7 +25,7 @@ class UtilizationSummaryChart extends PureComponent {
        {/* <YAxis yAxisId="right" orientation="right" /> */}
        <Tooltip/>
       
-          <Bar yAxisId="left"  dataKey="uv" fill='#413ea0' />
+          <Bar yAxisId="left"  dataKey="uv" fill={this.props.fillColor} />
        {/* <Line yAxisId="left" type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/> */}
       {/* <Line yAxisId="left" type="monotone" dataKey="Avg Run Hours/Day" stroke="#82ca9d" /> */}
     

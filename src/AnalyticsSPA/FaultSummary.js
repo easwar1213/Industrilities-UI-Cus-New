@@ -107,7 +107,7 @@ class FaultSummary extends PureComponent {
                     <Col md={12} lg={12} xs={12}>
                         <h5 className='page-title'>Occurrence(s) Per Day</h5>
                         <br />
-                        <FaultSummaryChart/>
+                        <FaultSummaryChart fillColor="#FF6384"/>
                     </Col>
                 </Row>
                 <Row>

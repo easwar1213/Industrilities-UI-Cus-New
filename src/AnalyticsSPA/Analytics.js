@@ -19,7 +19,7 @@ const ReportTitle = ({ record }) => {
 };
 
 export const AnalyticsView = (props) => (
-    <Container id="deviceContainer">
+    <Container>
         <Row>
             <Col md={12}>
                 <h3 className='page-title'>Analytics</h3>

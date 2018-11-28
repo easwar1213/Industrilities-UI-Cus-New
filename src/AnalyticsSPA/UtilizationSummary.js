@@ -114,7 +114,7 @@ class UtilizationSummary extends PureComponent {
                     <Col md={12} lg={12} xs={12}>
                             <h5 className='page-title'>Total Run Hours for Last 7 days</h5>
                             <br/>
-                            <UtilizationSummaryChart value={this.props.value.TotalRunHoursForGraph} />
+                            <UtilizationSummaryChart value={this.props.value.TotalRunHoursForGraph} fillColor="#36A2EB" />
                     </Col>
                 </Row>
                 <Row>

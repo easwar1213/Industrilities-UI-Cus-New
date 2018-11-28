@@ -28,7 +28,7 @@ class UtilizationSummaryChart extends PureComponent {
           <Legend />
           <Bar yAxisId="left" dataKey="Total Run Hours" fill='#413ea0' />
           {/* <Line yAxisId="left" type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/> */}
-          <Line yAxisId="left" type="monotone" dataKey="Avg Run Hours/Day" stroke="#82ca9d" />
+          <Line yAxisId="left" type="monotone" dataKey="Avg Run Hours/Day" stroke={this.props.fillColor} />
         </ComposedChart>
       </ResponsiveContainer>
     );

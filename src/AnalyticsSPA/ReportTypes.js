@@ -356,7 +356,7 @@ class ReportTypes extends Component {
             mainTitle = "Custom"
         }
         return (
-            <Container>
+            <Container id="reportTypes">
                 <Row>
                     <Col md={12}>
                         <h3 className='page-title'>{mainTitle + " / " + reportTitle}</h3>
@@ -364,8 +364,8 @@ class ReportTypes extends Component {
                 </Row>
                 <Row>
                     <Panel xs={12} md={12} lg={12} title="Analytics Details">
-                        <b> <div align="right"><Button label="List Reports" onClick={this.handleBackToList}><ListIcon /></Button></div></b>
-                        <form >
+                        <b> <div id="repTitle"><Button label="List Reports" onClick={this.handleBackToList}><ListIcon /></Button></div></b>
+                        <form id="repForm">
                             &nbsp;&nbsp;&nbsp;&nbsp;  Select Date Range: &nbsp;&nbsp; <FormControl >
                                 <NativeSelect
                                     defaultValue={"7d"}
