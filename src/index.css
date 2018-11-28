@@ -1648,3 +1648,6 @@ main[class^="Layout"] div[class^="Layout"]{
 div[class^="MuiDrawer"] div[class^="MuiPaper"]{
   min-height:calc(110vh - 60px) !important;
 }
+header h2{
+  visibility: hidden !important;
+}
