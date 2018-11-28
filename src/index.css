@@ -1533,12 +1533,21 @@ border-bottom: none !important;
 div[class^="MuiFormControl"]{
   margin-bottom: 0px !important;
 }
-label[class^="MuiFormLabel"]{
+.Cols-width label[class^="MuiFormLabel"]{
   transform-origin: top center !important;
   width: 100% !important;
   text-align: center !important;
 }
-.ra-field div[class^="MuiFormControl"] span[class^="MuiTypography"] {
+.Cols-width div[class^="MuiFormControl"] span[class^="MuiTypography"] {
+width: 100% !important;
+text-align: center;
+}
+.Cols-div-width-width label[class^="MuiFormLabel"]{
+  transform-origin: top center !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+.Cols-div-width-width div[class^="MuiFormControl"] span[class^="MuiTypography"] {
 width: 100% !important;
 text-align: center;
 }
@@ -1585,3 +1594,31 @@ text-align: center;
   border-top: 1px solid #cccccc;
   height: 40px !important;
 }
+.ra-field-emails label{
+  width: 100%;
+  text-align: center;
+  transform-origin:top center !important;
+}
+.ra-field-triggers label{
+  width: 100%;
+  text-align: center;
+  transform-origin:top center !important;
+}
+.ra-field-alertConfigName{
+  margin-bottom: 10px !important;
+}
+/* span[class^="MuiSwitch"]{
+  background-color: #646777 !important;
+} */
+.simple-form div[class^="MuiFormControl"] ul li button[class^="MuiButton"]{
+  background: #646777 !important;
+}
+.card .card-body .col-6.col-md-6.col-lg-6{
+  float: left;
+    border:1px solid #ccc !important;
+    padding-top: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    max-width: 48% !important;
+}
+.card .card-body .col-6.col-md-6.col-lg-6 h5{text-align: center !important;}

@@ -134,7 +134,7 @@ const DeviceDetailedView = ({ record }) => {
         // <Panel xs={12} md={12} lg={12} title={"Device : " + record.model+" - "+record.telematicsSerialNumber}> 
         <Card>
             <CardBody>
-                <h5 class="bold-text heading-txt">{"Device : " + record.model+" - "+record.telematicsSerialNumber}</h5>
+                <h5 class="bold-text">{"Device ( " + record.model+" - "+record.telematicsSerialNumber + " )"}</h5>
                 <div class="card">
                     <div class="card-body">
                         <Col md={6} lg={6} xs={6}>
