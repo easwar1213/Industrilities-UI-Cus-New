@@ -449,7 +449,7 @@ class ReportTypes extends Component {
                     </Grid>
                 </Row> */}
                 <Row>
-                    <Panel xs={12} md={12} lg={12} title="Analystics Reports Display" >
+                    <Panel xs={12} md={12} lg={12} title="Analytics Reports Display" >
                     <br/>
                         {this.state.showDailyAssetRunTable && (
                             // <CustomizedTable value={maintenanceValues} />

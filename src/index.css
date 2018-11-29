@@ -907,12 +907,12 @@ div[class^="MuiList"] > div[class^="MuiButtonBase"]{
   border-bottom: 1px solid #eff1f5;
 }
 .list-page th[class^="MuiTableCell"]{
-  text-align: center !important;
-  padding: 4px 10px 4px 10px !important;
+  /* text-align: center !important; */
+  padding: 0px !important;
 }
-tbody[class^="MuiTableBody"] td{
+/* tbody[class^="MuiTableBody"] td{
   text-align: center !important;
-}
+} */
 .list-page table{
   width: 100% !important;
 }
@@ -978,7 +978,7 @@ div[class^="MuiCardActions"]{
 }
 
 #partstbl tbody tr td{
-  padding: 4px 15px 4px 15px !important;
+  padding: 4px 15px 4px 0px !important;
 }
 
 table thead th, table thead th span{
@@ -992,7 +992,8 @@ table thead th, table thead th span{
 } */
 
 div[class^="Labeled"] table thead tr th{
-  text-align: center !important;
+  /* text-align: center !important; */
+  padding-left: 0px !important;
 }
   div[class^="Labeled"] table thead tr th span span{
     color: #646777  !important;
@@ -1080,7 +1081,7 @@ td[class^="MuiTableCell"]{
   padding:0px !important;
 }
 #device td[class^="MuiTableCell"]{
-  padding: 9px 28px 4px 24px !important;
+  padding: 9px 28px 4px 0px !important;
 }
 #loginfrm div[class^="MuiInput-error"]::after{
   border-bottom-color:#FFFFFF !important;
@@ -1729,4 +1730,46 @@ header h2{
 }
 #alert_form_create .ra-input-assetsForRef div[class^="MuiFormControl"] label span{
   font-size: 14px !important;
+}
+#assetInfo li{
+  list-style-type: none !important;
+  color: #646777 !important;
+  font-size: 16px !important;
+}
+.ra-input div[class^="MuiInput"]{
+  border: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+#edit-form li button{
+  margin-top: 21px;
+    margin-left: 10px;
+}
+.ra-input div[class^="MuiInput"]:before{
+  border-bottom:none !important;
+}
+input{font-size: 14px !important;}
+.ra-input.ra-input-scheduleType{
+  float: left;
+  width: 100% !important;
+}
+#edit-form .ra-input:nth-child(16){
+  float: left !important;
+}
+#assetShow label{
+  position:fixed !important;
+}
+#assetShow .TableResponsive div[class^="MuiFormControl"]{
+  margin-top: 0px !important;
+}
+#assetShow .card-body .table tbody td{
+  padding-top: 8px !important;
+  padding-bottom: 5px !important;
+}
+#assetShow .card-body .table tbody tr{
+  height: 45px !important;
+}
+tbody tr td a{
+  padding: 7px 0px !important;
+}
+#device .table-responsive table thead tr{
+  height:15px !important;
 }

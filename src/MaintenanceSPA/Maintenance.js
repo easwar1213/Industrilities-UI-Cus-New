@@ -126,8 +126,7 @@ const MaintenanceGrid = ({ ids, data, basePath,classes }) => (
                     <TableCell>Last Service</TableCell>
                     <TableCell> Status</TableCell>
                     <TableCell>Asset Name</TableCell>
-                    <TableCell>Complete Maintenance</TableCell>
-               
+                    <TableCell>Complete Maintenance</TableCell>               
                 </TableRow>
             </TableHead>
             <TableBody>

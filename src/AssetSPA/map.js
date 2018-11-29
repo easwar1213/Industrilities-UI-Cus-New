@@ -28,7 +28,7 @@ export default class Map extends React.Component {
             markers: [],
             maps: [],
             startDate: '',
-            endDate: '',
+            endDate: ''           
         }
     }
 
@@ -125,8 +125,9 @@ export default class Map extends React.Component {
                 <Row>
                     <Col xs={12} md={12} lg={12}>
                         <section id="map">
-                            <div className="container">
-                            <h5 class="bold-text heading-txt">Map Location</h5>
+                            <div className="container">                            
+                            <h5 class="bold-text">Map Location</h5>
+                            <br/>
                                 <div className="row">
                                     <div className="col-md-12 text-left">
                                         <MapWithAMarker
@@ -145,9 +146,10 @@ export default class Map extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={12} md={12} lg={12}>
-                        <br />
-                        <br />
+                    <br/>
+                </Row>
+                <Row>
+                    <Col xs={12} md={12} lg={12}>      
                         <form noValidate>
                             <span>
                                 <TextField
@@ -180,8 +182,11 @@ export default class Map extends React.Component {
                         </Col>
                 </Row>
                 <Row>
+                    <br/>
+                </Row>
+                <Row>
                     <Col xs={12} md={12} lg={12}>
-                    <h5 class="bold-text heading-txt">Latitude and Longitude Details</h5>
+                    <h5 class="bold-text">Latitude and Longitude Details</h5>
                     <div className="tbl-height">
                     <Table responsive className='table-bordered'>
                             <thead>
