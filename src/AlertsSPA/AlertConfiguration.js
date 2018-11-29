@@ -103,7 +103,7 @@ export const showAlertConfiguration = (props) => (
 
 export const createAlertConfiguration = (props) => (
     <Create title="Alerts" {...props}>    
-        <SimpleForm redirect="show">
+        <SimpleForm redirect="show" id="alert_form_create">
         <h3 className='page-title'>create Alert Configuration</h3>
             <TextInput label="Alert Configuration Name" source="alertConfigName" />
             <br />

@@ -1661,3 +1661,42 @@ header h2{
   font-weight: normal !important;
   padding-left: 20px;
 }
+#alert_form_create .ra-input-triggers div[class^="MuiFormControl"]{
+  width: 100% !important;
+}
+#alert_form_create .ra-input ul .ra-input{
+  float: left !important;
+  width: 220px !important;
+  margin: 5px !important;
+}
+#alert_form_create .ra-input ul .ra-input div[class^="MuiInput"]:before{
+  border-bottom:none !important;
+}
+#alert_form_create .ra-input ul .ra-input div[class^="MuiInput"]{
+  border: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+#alert_form_create .ra-input ul .ra-input label{
+  font-size: 14px !important;
+  margin-left: 10px !important;
+  margin-top: 4px !important;
+} 
+#alert_form_create .ra-input ul .ra-input span{
+  font-size: 14px !important;
+} 
+#alert_form_create .ra-input ul li span button{
+  margin-top: 26px !important;
+} 
+#alert_form_create .ra-input-emails div[class^="MuiFormControl"]{
+  width: 220px !important;
+}
+#alert_form_create .ra-input-assets div[class^="MuiFormControl"]{
+  width: 220px !important;
+  margin-left: 5px;
+}
+#alert_form_create .ra-input-assets div[class^="MuiFormControl"] div[class^="MuiInput"]{
+  border: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+#alert_form_create .ra-input-assets div[class^="MuiFormControl"] div[class^="MuiInput"]:before{
+  border-bottom:none !important;
+}
+
