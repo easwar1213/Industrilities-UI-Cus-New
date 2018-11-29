@@ -26,7 +26,7 @@ class SensorDataChart extends PureComponent {
        <YAxis   padding={{ top: 20 }} label={{ value:group, angle: -90, position: 'insideBottomLeft' }} yAxisId="left" />
        {/* <YAxis yAxisId="right" orientation="right" /> */}
        <Tooltip/>
-      <Legend/>
+      {/* <Legend/> */}
       {/* <Brush /> */}
       <Line name ={sensor}yAxisId="left"  dataKey="sensorValue" fill='#413ea0' />
        

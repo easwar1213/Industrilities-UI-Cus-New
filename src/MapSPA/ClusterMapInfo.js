@@ -168,7 +168,7 @@ export default class Mymap extends React.Component {
 
         // Return Map.
         return (
-            <Container id="map">
+            <Container>
                 <Row>
                     <Col xs={12} md={12} lg={12}>
                         <FilterButton action={this.handleClickSubmitOnChild} />

@@ -91,8 +91,9 @@ export const showAlertConfiguration = (props) => (
                             <TextField source="autoClear" />
                             <TextField label="Notify On Return" source="notifyOnReturn" />
 
-                        </Datagrid>
+                        </Datagrid>                        
                     </ArrayField>
+                    
                 </SimpleShowLayout>
             </ShowView>
         }

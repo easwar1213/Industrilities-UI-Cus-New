@@ -405,7 +405,7 @@ class ReportTypes extends Component {
                             <br />
                             {this.state.dateRange == "Custom" && (
                                 <div>
-                                    <strong className="analysisDate">Start Date</strong><span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
                                         <TextField
                                             id="startDate"
                                             //label="Start Date"
@@ -416,7 +416,7 @@ class ReportTypes extends Component {
                                                 shrink: true,
                                             }}
                                         />
-                                       <strong className="analysisDate">End Date</strong>
+                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                              <TextField
                                             id="endDate"
                                             //label="End Date"
@@ -429,7 +429,6 @@ class ReportTypes extends Component {
                                         />
                                         &nbsp;&nbsp;&nbsp;&nbsp;
                             </span>
-                                    <br />
                                     <br />
                                     &nbsp;&nbsp;&nbsp;&nbsp;
                  </div>
@@ -451,6 +450,7 @@ class ReportTypes extends Component {
                 </Row> */}
                 <Row>
                     <Panel xs={12} md={12} lg={12} title="Analystics Reports Display" >
+                    <br/>
                         {this.state.showDailyAssetRunTable && (
                             // <CustomizedTable value={maintenanceValues} />
                             <DynamicTable value={this.state.reportData} />

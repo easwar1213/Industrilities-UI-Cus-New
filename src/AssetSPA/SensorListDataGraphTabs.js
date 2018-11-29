@@ -48,7 +48,7 @@ class SensorListDataGraphTabs extends React.Component {
     const { value } = this.state;
     let array = [0,1,2]
     return (
-      <div className={classes.root}>
+      <div id="assetData" className={classes.root}>
         <AppBar position="static" color="default">
           <Tabs
             value={this.state.value}

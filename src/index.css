@@ -1308,7 +1308,7 @@ div[class^="MuiModal"] div[class^="MuiPaper"] div[class^="MuiPaper"] div[class^=
 .Cols-width {
   width: 13% !important;
   float: left !important;
-  min-height: 80px;
+  min-height: 46px;
 }
 
 .Cols-div-width {
@@ -1445,11 +1445,11 @@ div[class^="MuiCardContent"] div[class^="MuiChip"]{
   width: 300px !important;
 }
 #reportTypes form div[class^="MuiInput"] div[class^="MuiSelect"] div[class^="MuiSelect"]{
-  border: 1px solid #d2d4d6;
+  /* border: 1px solid #d2d4d6; */
   color: #646777;
 }
 #reportTypes form div[class^="MuiInput"] div[class^="MuiNativeSelect"]{
-  border: 1px solid #d2d4d6;
+  /* border: 1px solid #d2d4d6; */
   color: #646777;
   padding-left: 10px !important;
 }
@@ -1492,6 +1492,11 @@ margin: 0 auto !important;
 .dashboard .recharts-wrapper{
   height: 331px !important;
 }
+
+/* #assetData .recharts-wrapper{
+  height: 181px !important;
+} */
+
 #analysisrep div[class^="MuiGrid"] > div[class^="MuiGrid"]{
   padding:7px 15px !important;
 }
@@ -1566,7 +1571,7 @@ text-align: center;
   margin-right:10px !important;
 }
 #repForm div[class^="MuiInput"] input{
-  border: 1px solid #d2d4d6;
+  /* border: 1px solid #d2d4d6; */
   color: #646777;
   padding-left: 10px !important;
 }
@@ -1650,4 +1655,9 @@ div[class^="MuiDrawer"] div[class^="MuiPaper"]{
 }
 header h2{
   visibility: hidden !important;
+}
+
+#analysisDate{
+  font-weight: normal !important;
+  padding-left: 20px;
 }
