@@ -5,7 +5,7 @@ import {RichTextInput, DateInput,ArrayField,ShowButton,Show,Filter,List, Edit, C
 export const MaintenancePlanCreate = (props) => (
     <Create {...props}>    
     
-        <SimpleForm>
+        <SimpleForm id="alert_form_create">
             <TextInput source="planName" />
             <TextInput source="teaser" options={{ multiLine: true }} />
             <TextInput source="description" />

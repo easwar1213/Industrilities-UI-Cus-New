@@ -1627,7 +1627,7 @@ text-align: center;
     max-width: 48% !important;
 }
 .card .card-body .col-6.col-md-6.col-lg-6 h5{text-align: center !important;}
-main[class^="Layout"]{
+/* main[class^="Layout"]{
   margin-top:0px !important;
 }
 .headroom-wrapper .headroom header{
@@ -1649,7 +1649,7 @@ main[class^="Layout"]{
 }
 main[class^="Layout"] div[class^="Layout"]{
   margin-top: 60px !important;
-}
+} */
 div[class^="MuiDrawer"] div[class^="MuiPaper"]{
   min-height:calc(110vh - 60px) !important;
 }
@@ -1681,7 +1681,7 @@ header h2{
   margin-top: 4px !important;
 } 
 #alert_form_create .ra-input ul .ra-input span{
-  font-size: 14px !important;
+  font-size: 16px !important;
 } 
 #alert_form_create .ra-input ul li span button{
   margin-top: 26px !important;
@@ -1699,4 +1699,34 @@ header h2{
 #alert_form_create .ra-input-assets div[class^="MuiFormControl"] div[class^="MuiInput"]:before{
   border-bottom:none !important;
 }
-
+#alert_form_create .ra-input-assets div[class^="MuiFormControl"] label{
+  margin-left:10px !important;
+}
+#alert_form_create .ra-input-assets div[class^="MuiFormControl"] label span{
+  font-size: 14px !important;
+}
+#alert_form_create div[class^="MuiCardContent"] .ra-input:nth-child(3){
+  display: none !important;
+}
+.page-title{
+  padding-bottom: 0px !important;
+}
+.ra-field.ra-field-triggers{
+  margin-bottom: 15px;
+}
+#alert_form_create .ra-input-assetsForRef div[class^="MuiFormControl"]{
+  width: 220px !important;
+  margin-left: 5px;
+}
+#alert_form_create .ra-input-assetsForRef div[class^="MuiFormControl"] div[class^="MuiInput"]{
+  border: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+#alert_form_create .ra-input-assetsForRef div[class^="MuiFormControl"] div[class^="MuiInput"]:before{
+  border-bottom:none !important;
+}
+#alert_form_create .ra-input-assetsForRef div[class^="MuiFormControl"] label{
+  margin-left:10px !important;
+}
+#alert_form_create .ra-input-assetsForRef div[class^="MuiFormControl"] label span{
+  font-size: 14px !important;
+}
