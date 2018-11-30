@@ -56,7 +56,7 @@ class SensorDataList extends React.Component {
             <div id="sensorList">
                 <Row>
                     <Col md={2} id="first_grid">
-                        <h6>Refer#</h6>
+                        <h6>Refer #522</h6>
                     </Col>
                     <Col md={6}>
                         <SensorDataChart group={group} chartValue={value} />

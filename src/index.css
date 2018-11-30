@@ -846,7 +846,7 @@ div[class^="MuiTypography"] tbody tr td{
   min-width: 190px !important;
 }
 .simple-form div[class^="MuiFormControl"] .button-add{
-  min-width: 80px !important;
+  min-width: 100px !important;
   margin-top: 15px !important;
   background: #646777 !important;
   color: #FFFFFF !important;
@@ -1738,7 +1738,15 @@ header h2{
 #assetInfo li{
   list-style-type: none !important;
   color: #646777 !important;
-  font-size: 16px !important;
+  font-size: 15px !important;
+}
+#assetInfo strong{
+  /* margin-right: 10px; */
+    width: 125px;
+    float: left;
+}
+#assetInfo span{
+margin-left: 5px;
 }
 /* .ra-input div[class^="MuiInput"]{
   border: 1px solid rgba(0, 0, 0, 0.42) !important;
@@ -1824,4 +1832,8 @@ tbody tr td a{
 }
 #middle_grid .col-md-12{
   text-align: center !important;
+}
+#middle_grid .col-md-12 span svg{
+  float: left !important;
+  fill: #6467777a !important;
 }

@@ -139,11 +139,11 @@ export const showAsset = (props) => (
                     </Col>
                     <Col md={7}>
                         <ul id="assetInfo">
-                            <li><strong>Owner Name : Georgia-Pacific Plant</strong></li>
-                            <li><strong>Asset Model : LS 110</strong></li>
-                            <li><strong>Asset Serial# : 1212343456</strong></li>
-                            <li><strong>Model Year : 2017</strong></li>
-                            <li><strong>Compressor Type : Stationary</strong></li>                            
+                            <li><strong>Owner Name </strong>:  <span>Georgia-Pacific Plant</span></li>
+                            <li><strong>Asset Model </strong>:  <span>LS 110</span></li>
+                            <li><strong>Asset Serial# </strong>:  <span>1212343456</span></li>
+                            <li><strong>Model Year </strong>:  <span>2017</span></li>
+                            <li><strong>Compressor Type </strong>:  <span>Stationary</span></li>                            
                         </ul>                        
                     </Col>
                 </Row>
