@@ -53,16 +53,16 @@ class FaultSummary extends PureComponent {
                 footer: "Avg Fault Per Faulting Models"
             },
 
-            top10FaultingAssets: {
-                title: "Top 10 Faulting Assets",
-                value: 0
+            top10FaultingAssets: {                
+                value: 0,
+                title: "Top 10 Faulting Assets"
                 // value:{"Sullair Test3":1},
                 //  footer:"hours"
             },
 
-            top10FaultingModels: {
-                title: "Top 10 Faulting Models",
-                value: "Sullair Test 3"
+            top10FaultingModels: {                
+                value: "Sullair Test 3",
+                title: "Top 10 Faulting Models"
                 // value:{"Model":"LS 90","Count":1,"Asset %":33.33},
                 //  footer:"hours"
             }
@@ -83,7 +83,7 @@ class FaultSummary extends PureComponent {
             <Container className='dashboard'>
                 <Row>
                     <Col md={12}>
-                        <h3 className='page-title'>{"Fault Summary"}</h3>
+                        <h3 className='subpage-title'>{"Fault Summary"}</h3>
                     </Col>
                 </Row>
                 <Row>
@@ -105,7 +105,7 @@ class FaultSummary extends PureComponent {
                 </Row>
                 <Row>
                     <Col md={12} lg={12} xs={12}>
-                        <h5 className='page-title'>Occurrence(s) Per Day</h5>
+                        <h3 className='subpage-title'>Occurrence(s) Per Day</h3>
                         <br />
                         <FaultSummaryChart fillColor="#FF6384"/>
                     </Col>

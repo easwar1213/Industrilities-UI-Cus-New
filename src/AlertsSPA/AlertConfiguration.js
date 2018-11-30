@@ -25,7 +25,7 @@ export const AlertConfiguration = (props) => (
                         <TextField source="alertConfigName" />
                         <TextField source="triggerCount" />
                         <TextField source="assetCount" />
-                        <ShowButton />
+                        <ShowButton label="Show" />
                     </Datagrid>
                 </List>
             </Panel>
@@ -109,10 +109,9 @@ export const createAlertConfiguration = (props) => (
             <br />
             <ArrayInput label="Notify (Max 10 emails)" source="emails" >
                 <SimpleFormIterator>
-                    <TextInput source="email" />
+                    <TextInput label="Email" source="email" />
                 </SimpleFormIterator>
             </ArrayInput>
-
 
             <ReferenceArrayInput label="Pick Assets" source="assets" reference="getAssetListForReference">
                 <SelectArrayInput optionText="assetName" />

@@ -134,10 +134,10 @@ export const showAsset = (props) => (
         <Row>
             <Panel xs={12} md={12} lg={12} title="">
                 <Row>
-                    <Col md={4}>
+                    <Col md={3}>
                         <img src="../img/LS90.jpg" width="300" height="140" />
                     </Col>
-                    <Col md={7}>
+                    <Col md={9}>
                         <ul id="assetInfo">
                             <li><strong>Owner Name </strong>:  <span>Georgia-Pacific Plant</span></li>
                             <li><strong>Asset Model </strong>:  <span>LS 110</span></li>

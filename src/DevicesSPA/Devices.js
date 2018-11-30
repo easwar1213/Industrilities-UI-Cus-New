@@ -39,16 +39,14 @@ const gridStyle = {
 };
 
 
+
 export const DeviceList = (props) => (
     <Container id="deviceContainer">
         <Row>
             <Col md={12}>
                 <h3 className='page-title'>Device</h3>
             </Col>
-        </Row>
-        {/* <Row>
-            <br />
-        </Row> */}
+        </Row>       
         <Row>
             <StatusStatisticsContainer />
             <StatusTrendContainer />

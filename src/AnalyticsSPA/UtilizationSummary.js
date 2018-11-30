@@ -90,7 +90,7 @@ class UtilizationSummary extends PureComponent {
             <Container className='dashboard'>
                 <Row>
                     <Col md={12}>
-                        <h3 className='page-title'>{"Utilization Summary (in hours)"}</h3>
+                        <h3 className='subpage-title'>{"Utilization Summary (in hours)"}</h3>
                     </Col>
                 </Row>
                 <Row>
@@ -112,7 +112,7 @@ class UtilizationSummary extends PureComponent {
                 </Row>
                 <Row>
                     <Col md={12} lg={12} xs={12}>
-                            <h5 className='page-title'>Total Run Hours for Last 7 days</h5>
+                            <h3 className='subpage-title'>Total Run Hours for Last 7 days</h3>
                             <br/>
                             <UtilizationSummaryChart value={this.props.value.TotalRunHoursForGraph} fillColor="#36A2EB" />
                     </Col>
@@ -133,7 +133,7 @@ class UtilizationSummary extends PureComponent {
                 </Row>
                 <Row>
                     <Col md={12}>
-                        <h3 className='page-title'>{"Time Of Day Utilization Summary"}</h3>
+                        <h3 className='subpage-title'>{"Time Of Day Utilization Summary"}</h3>
                     </Col>
                 </Row>
                 <Row>

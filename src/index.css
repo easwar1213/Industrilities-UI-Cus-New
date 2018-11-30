@@ -750,7 +750,14 @@ main div[class^="Layout"]{
   color: #646777 !important;
   font-weight: 500;
   text-transform: capitalize;
-  padding-bottom: 10px;
+  padding-bottom: 8px !important;
+}
+
+.subpage-title {  
+  font-size: 16px;
+  color: #646777 !important;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 .info-title-span {
@@ -846,7 +853,7 @@ div[class^="MuiTypography"] tbody tr td{
   min-width: 190px !important;
 }
 .simple-form div[class^="MuiFormControl"] .button-add{
-  min-width: 80px !important;
+  min-width: 100px !important;
   margin-top: 15px !important;
   background: #646777 !important;
   color: #FFFFFF !important;
@@ -908,7 +915,7 @@ div[class^="MuiList"] > div[class^="MuiButtonBase"]{
 }
 .list-page th[class^="MuiTableCell"]{
   /* text-align: center !important; */
-  padding: 0px !important;
+  padding: 0px 4px !important;
 }
 /* tbody[class^="MuiTableBody"] td{
   text-align: center !important;
@@ -1470,7 +1477,7 @@ div[class^="MuiCardContent"] div[class^="MuiChip"]{
 }
 #analysisrep .recharts-default-legend .recharts-legend-item{
   width: 100%;
-  padding-left: 78px;
+  padding-left: 48px;
 }
 #analysisrep .recharts-default-legend .recharts-legend-item span{
     text-align: center;
@@ -1658,9 +1665,9 @@ main[class^="Layout"]{
 main[class^="Layout"] div[class^="Layout"]{
   margin-top: 60px !important;
 } */
-div[class^="MuiDrawer"] div[class^="MuiPaper"]{
+/* div[class^="MuiDrawer"] div[class^="MuiPaper"]{
   min-height:calc(110vh - 60px) !important;
-}
+} */
 header h2{
   visibility: hidden !important;
 }
@@ -1716,9 +1723,7 @@ header h2{
 #alert_form_create div[class^="MuiCardContent"] .ra-input:nth-child(3){
   display: none !important;
 }
-.page-title{
-  padding-bottom: 0px !important;
-}
+
 .ra-field.ra-field-triggers{
   margin-bottom: 15px;
 }
@@ -1816,7 +1821,7 @@ span[class^="MuiTab"]{
   color: #646777 !important;
 }
 div[class^="MuiPaper"]{
-  border: 1px solid #eff1f5 !important;
+  /* border: 1px solid #eff1f5 !important; */
   box-shadow: 5px 2px 22px 5px rgba(0, 0, 0, 0.1) !important;
 }
 .rt-tbody .rt-td{
@@ -1832,4 +1837,149 @@ div[class^="MuiPaper"]{
   font-size: 14px;
   font-weight: bold;
   color: #646777 !important;
+}
+.dashboard #sensorList .recharts-wrapper{
+  height: auto !important;
+}
+
+
+#sensorList .col-md-2, .col-md-6{border-right: 1px solid #cccccc;}
+#sensorList #last_grid{border-right:none !important;}
+#sensorList #middle_grid {
+  padding: 0px !important;
+}
+.dashboard #sensorList .recharts-wrapper{
+  height: auto !important;
+}
+#middle_grid .col-md-12{
+  border-bottom: 1px solid #cccccc;
+  padding: 20px 15px; 
+}
+#middle_grid .col-md-12:last-child{
+  border-bottom: none !important;
+}
+#first_grid h6{
+  text-align: center;
+    padding: 84px 0px;
+}
+#last_grid h6{
+  text-align: center;
+    padding: 84px 0px;
+}
+#middle_grid .col-md-12{
+  text-align: center !important;
+}
+#middle_grid .col-md-12 svg{
+  fill: #92949f !important;
+  float: left !important;
+}
+
+#assetInfo li{
+  list-style-type: none !important;
+  color: #646777 !important;
+  font-size: 15px !important;
+}
+#assetInfo strong{
+  margin-right: 10px;
+    width: 125px;
+    float: left;
+}
+#assetInfo span{
+margin-left: 5px;
+}
+/* .ra-input div[class^="MuiInput"]{
+  border: 1px solid rgba(0, 0, 0, 0.42) !important;
+} */
+#edit-form li button{
+  margin-top: 21px;
+    margin-left: 10px;
+}
+/* .ra-input div[class^="MuiInput"]:before{
+  border-bottom:none !important;
+} */
+input{font-size: 14px !important;}
+.ra-input.ra-input-scheduleType{
+  float: left;
+  width: 100% !important;
+}
+#edit-form .ra-input:nth-child(16){
+  float: left !important;
+}
+#assetShow label{
+  position:fixed !important;
+}
+#assetShow .TableResponsive div[class^="MuiFormControl"]{
+  margin-top: 0px !important;
+}
+#assetShow .card-body .table tbody td{
+  padding-top: 8px !important;
+  padding-bottom: 5px !important;
+}
+#assetShow .card-body .table tbody tr{
+  height: 45px !important;
+}
+tbody tr td a{
+  padding: 7px 0px !important;
+}
+#device .table-responsive table thead tr{
+  height:15px !important;
+}
+.asset_req{
+  font-size: 13px !important;
+  float: right;
+  text-align: center;
+  width: 50%;
+  margin-top: 5px;
+  color: #f44336;
+}
+.date_field{
+  float: left;
+  margin-left: 20px !important;
+}
+#repForm button{
+  margin-left: 18px;
+  float: left;
+}
+
+#assetShow .col-12 .collapse .ra-field-undefined .dashboard div[class^="MuiGrid"]{
+  flex-basis:100% !important;
+  max-width:100% !important;
+}
+#sensorList{border: 1px solid #cccccc; border-radius: 5px;}
+#sensorList .col-md-2, .col-md-6{border-right: 1px solid #cccccc;}
+#sensorList #last_grid{border-right:none !important;}
+#sensorList #middle_grid {
+  padding: 0px !important;
+}
+.dashboard #sensorList .recharts-wrapper{
+  height: auto !important;
+}
+#middle_grid .col-md-12{
+  border-bottom: 1px solid #cccccc;
+  padding: 20px 15px; 
+}
+#middle_grid .col-md-12:last-child{
+  border-bottom: none !important;
+}
+#first_grid h6{
+  text-align: center;
+    padding: 84px 0px;
+}
+#last_grid h6{
+  text-align: center;
+    padding: 84px 0px;
+}
+#middle_grid .col-md-12{
+  text-align: center !important;
+}
+#middle_grid .col-md-12 span svg{
+  float: left !important;
+  fill: #6467777a !important;
+}
+.dashboard.container .col-12 p[class^="MuiTypography"]{
+  color: rgba(0, 0, 0, 0.77) !important;
+  font-weight: 500 !important;
+}
+.filter-field button[class^="MuiButtonBase"]{
+  height:30px !important;
 }
