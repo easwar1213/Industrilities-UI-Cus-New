@@ -1808,7 +1808,7 @@ tbody tr td a{
   padding: 0px !important;
 }
 div[class^="recharts"]{
-  font-size: 14px !important;
+  font-size: 13px !important;
   font-family:Roboto,sans-serif !important;
   font-weight: bold !important;
 }
@@ -1817,6 +1817,7 @@ span[class^="MuiTab"]{
 }
 div[class^="MuiPaper"]{
   border: 1px solid #eff1f5 !important;
+  box-shadow: 5px 2px 22px 5px rgba(0, 0, 0, 0.1) !important;
 }
 .rt-tbody .rt-td{
   text-align: center;
