@@ -373,7 +373,7 @@ class ReportTypes extends Component {
                 <Row>
                     <Panel xs={12} md={12} lg={12} title="Analytics Details">
                         <b> <div id="repTitle"><Button label="List Reports" onClick={this.handleBackToList}><ListIcon /></Button></div></b>
-                        <span>{this.state.errMsg ? "Asset is Required" : null}</span>
+                        
                         <form id="repForm">
                             &nbsp;&nbsp;&nbsp;&nbsp;  Select Date Range: &nbsp;&nbsp; <FormControl >
                                 <NativeSelect
@@ -399,6 +399,7 @@ class ReportTypes extends Component {
                                     autoWidth={true}
                                     onChange={this.handleChange('selectedAssets')}
                                     MenuProps={MenuProps}
+                                    error={this.state.errMsg}
                                 >
 
                                     {this.state.assets.map(asset => (
@@ -408,13 +409,13 @@ class ReportTypes extends Component {
                                             {asset.assetName}
                                         </MenuItem>
                                     ))}
-                                </Select>                                
+                                </Select> 
+                                                             
                             </FormControl >
-                            <br />
-                            <br />
+                            <p class="asset_req">{this.state.errMsg ? "Asset is Required" : null}</p>
                             {this.state.dateRange == "Custom" && (
-                                <div>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Start Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>
+                                <div class="date_field">
+                                    Start Date :<span>
                                         <TextField
                                             id="startDate"
                                             //label="Start Date"
@@ -424,9 +425,9 @@ class ReportTypes extends Component {
                                             InputLabelProps={{
                                                 shrink: true,
                                             }}
-                                            error={this.state.errMsg}
+                                            
                                         />
-                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                       End Date :
                              <TextField
                                             id="endDate"
                                             //label="End Date"
