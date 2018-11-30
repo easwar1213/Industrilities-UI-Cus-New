@@ -1146,7 +1146,7 @@ div[class^="MuiButtonBase"] a{
   min-width: 80px !important;
 }
 .simple-form button[class^="MuiButton"] svg{
-  fill: #ffffff !important;
+  fill: #646777 !important;
 }
 
 div[class^="MuiDialogActions"] button:nth-child(1){
@@ -1631,7 +1631,12 @@ text-align: center;
   background-color: #646777 !important;
 } */
 .simple-form div[class^="MuiFormControl"] ul li button[class^="MuiButton"]{
-  background: #646777 !important;
+  background: #ffffff !important;
+  color: #646777 !important;
+}
+.simple-form div[class^="MuiFormControl"] ul li button[class^="MuiButton"]:hover{
+  background: #e0e0e0 !important;
+  color: #646777 !important;
 }
 .card .card-body .col-6.col-md-6.col-lg-6{
   float: left;
@@ -1681,7 +1686,7 @@ header h2{
 }
 #alert_form_create .ra-input ul .ra-input{
   float: left !important;
-  width: 220px !important;
+  width: 145px !important;
   margin: 5px !important;
 }
 /* #alert_form_create .ra-input ul .ra-input div[class^="MuiInput"]:before{
@@ -1692,11 +1697,11 @@ header h2{
 } */
 #alert_form_create .ra-input ul .ra-input label{
   font-size: 14px !important;
-  margin-left: 10px !important;
+  margin-left: 0px !important;
   margin-top: 4px !important;
 } 
 #alert_form_create .ra-input ul .ra-input span{
-  font-size: 16px !important;
+  font-size: 14px !important;
 } 
 #alert_form_create .ra-input ul li span button{
   margin-top: 26px !important;
@@ -1964,10 +1969,12 @@ tbody tr td a{
 #first_grid h6{
   text-align: center;
     padding: 84px 0px;
+    font-weight: 400 !important;
 }
 #last_grid h6{
   text-align: center;
     padding: 84px 0px;
+    font-weight: 400 !important;
 }
 #middle_grid .col-md-12{
   text-align: center !important;
@@ -1983,3 +1990,26 @@ tbody tr td a{
 .filter-field button[class^="MuiButtonBase"]{
   height:30px !important;
 }
+.edit-page div[class^="MuiPaper"] div[class^="MuiCardContent"]{
+  float:right;
+}
+#alert_form_create{
+  float: left;
+  width: 100%;
+}
+#alert_form_create .ra-input-triggers .ra-input div[class^="MuiInput"]{
+  width:85% !important;
+}
+#alert_form_create div[class^="MuiSelect"]{
+  min-width: 0px !important;
+}
+.fade-enter-done section .ra-input:nth-child(4) input{
+  height: 1.5em !important;
+}
+#locDate .span div[class^="MuiFormControl"] button{
+  background-color: #70bbfd !important;
+}
+#locDateBtn{
+  background-color:#646777 !important;
+}
+

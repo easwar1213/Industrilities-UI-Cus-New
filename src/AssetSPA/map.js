@@ -149,7 +149,7 @@ export default class Map extends React.Component {
                     <br/>
                 </Row>
                 <Row>
-                    <Col xs={12} md={12} lg={12}>      
+                    <Col xs={12} md={12} lg={12}>  
                         <form noValidate>
                             <span>
                                 <TextField
@@ -174,7 +174,7 @@ export default class Map extends React.Component {
                                     }}
                                 />
                                
-                              <Button variant="contained" color="primary" label="Acknowledge" onClick={this.handleClickSubmit}>
+                              <Button id="locDateBtn" variant="contained" color="primary" label="Acknowledge" onClick={this.handleClickSubmit}>
                                     Submit
                      </Button>
                             </span>

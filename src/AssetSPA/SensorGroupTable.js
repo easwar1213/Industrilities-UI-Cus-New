@@ -37,9 +37,9 @@ class SensorGroupTable extends React.Component {
         showSensorGroupList: false,
         showSensorList: false,
         selectedSensorGroup: '',
-        selectedSensorGroupList :[],
-        selectedSensorGroupData :[],
-        selectedSensors:[]
+        selectedSensorGroupList: [],
+        selectedSensorGroupData: [],
+        selectedSensors: []
     };
 
 
@@ -54,7 +54,7 @@ class SensorGroupTable extends React.Component {
                 console.log(response);
                 let sensorGroupList = response.data
                 this.setState({ sensorGroupList: sensorGroupList })
-               // console.log(sensorGroupList)
+                // console.log(sensorGroupList)
                 this.setState({ showSensorGroupList: true })
             })
             .catch(error => {
@@ -68,7 +68,7 @@ class SensorGroupTable extends React.Component {
     handleClickSelectOnChild = (childProps) => {
         console.log("childProps")
         console.log(childProps)
-        this.setState({selectedSensors:childProps})
+        this.setState({ selectedSensors: childProps })
     }
 
     handleShowSensorList = (item) => {
@@ -81,10 +81,10 @@ class SensorGroupTable extends React.Component {
             filter: { sensorGroup: item.sensorGroup },
         })
             .then((response) => {
-             //   this.setState({ showSensorList: true })
+                //   this.setState({ showSensorList: true })
                 let selectedSensorGroupList = response.data
-                 this.setState({ selectedSensorGroupList: selectedSensorGroupList })
-                 this.handleGetSensorsCurrentValue(selectedSensorGroupList)
+                this.setState({ selectedSensorGroupList: selectedSensorGroupList })
+                this.handleGetSensorsCurrentValue(selectedSensorGroupList)
                 console.log(this.state.selectedSensorGroup)
             })
             .catch(error => {
@@ -98,18 +98,18 @@ class SensorGroupTable extends React.Component {
     handleGetSensorsCurrentValue = (sensorList) => {
 
         this.setState({ showSensorGroupList: false })
-        let projectionString ="";
+        let projectionString = "";
         let telematicsSerialNumber = this.props.record.telematicsSerialNumber
         console.log(telematicsSerialNumber)
-        let counter =0 ,count= sensorList.length;
-        sensorList.map(sensor=>{
-            if(counter== (count-1)){
-                projectionString+= sensor.id
+        let counter = 0, count = sensorList.length;
+        sensorList.map(sensor => {
+            if (counter == (count - 1)) {
+                projectionString += sensor.id
             }
             else {
-                projectionString+= sensor.id+","
+                projectionString += sensor.id + ","
             }
-          
+
             counter++;
         })
         console.log(projectionString)
@@ -117,14 +117,14 @@ class SensorGroupTable extends React.Component {
         dataProvider(GET_LIST, 'getAssetCurrentData', {
             pagination: { page: 1, perPage: 10 },
             sort: { field: 'title', order: 'ASC' },
-            filter: { projection: projectionString, id:telematicsSerialNumber },
+            filter: { projection: projectionString, id: telematicsSerialNumber },
         })
             .then((response) => {
                 console.log(response)
-                this.setState({selectedSensorGroupData:response.json})
-                
+                this.setState({ selectedSensorGroupData: response.json })
+
                 this.setState({ showSensorList: true })
-               // console.log(selectedSensorGroupList)
+                // console.log(selectedSensorGroupList)
             })
             .catch(error => {
                 //showNotification(error.message, 'error');
@@ -139,14 +139,14 @@ class SensorGroupTable extends React.Component {
 
 
     render() {
-        const { classes,record } = this.props;
-       // console.log(this.props)
+        const { classes, record } = this.props;
+        // console.log(this.props)
         return (
             <div>
                 {this.state.showSensorGroupList && (
                     <div>
                         <Paper className={classes.root}>
-                        <Table responsive className='table-bordered' >
+                            <Table responsive className='table-bordered' >
                                 <TableHead className="table-heading">
                                     <TableRow>
                                         <TableCell>Sensor Group</TableCell>
@@ -188,37 +188,42 @@ class SensorGroupTable extends React.Component {
                 )}
 
                 {this.state.showSensorList && (
-                               
-                                <Container className='dashboard'>
-                                    <Row>
-                                        <Grid container spacing={24}>
-                                            
-                                            {/* <EnhancedTable action ={this.handleClickSelectOnChild} data={this.state.selectedSensorGroupData} asset={record.telematicsSerialNumber} value={this.state.selectedSensorGroup}/>                          
-                                            <br />
-                                           <br /> */}
-                                            <Grid  item xs ={8}>
-                                            <Paper>
-                                            <SensorDataList group={this.state.selectedSensorGroup} data={this.state.selectedSensors} />
-                                            </Paper>
-                                            </Grid>
-                                      
-                                        </Grid>
-                    
-                                    </Row>
-                                </Container>
-                               
-                   
+
+                    <Container className='dashboard'>
+                        <Row>
+                            <Grid container spacing={24}>
+                                <Grid item xs={8}>
+                                    <Paper>
+                                        <SensorDataList group={this.state.selectedSensorGroup} data={this.state.selectedSensors} />
+                                    </Paper>
+                                </Grid>
+
+                                {/* <EnhancedTable action={this.handleClickSelectOnChild} data={this.state.selectedSensorGroupData} asset={record.telematicsSerialNumber} value={this.state.selectedSensorGroup} />
+                                <br />
+                                <br />
+                                <Grid item xs={8}>
+                                    <Paper>
+                                        <SensorListDatagraphTabs group={this.state.selectedSensorGroup} data={this.state.selectedSensors} />
+                                    </Paper>
+                                </Grid> */}
+
+                            </Grid>
+
+                        </Row>
+                    </Container>
+
+
                     //   <span>  
                     // <div>
                     //     <EnhancedTable value={this.state.selectedSensorGroup} />
-                       
-                   
+
+
                     //     <EnhancedTable value={this.state.selectedSensorGroup} />
-                      
+
                     // </div>   
                     // </span> 
-                
-                   )}
+
+                )}
 
             </div>
         );

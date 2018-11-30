@@ -116,9 +116,7 @@ export const createAlertConfiguration = (props) => (
             <ReferenceArrayInput label="Pick Assets" source="assets" reference="getAssetListForReference">
                 <SelectArrayInput optionText="assetName" />
             </ReferenceArrayInput>
-
-
-
+            
             <ArrayInput label="Triggers" source="triggers" >
 
                 <SimpleFormIterator>

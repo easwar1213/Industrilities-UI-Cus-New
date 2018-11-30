@@ -20,8 +20,6 @@ import FilterListIcon from '@material-ui/icons/FilterList';
 import { lighten } from '@material-ui/core/styles/colorManipulator';
 import {Filter,SelectArrayInput} from 'react-admin';
 import SensorValueContainer from './SensorValueContainer';
-import SensorListDataGraphTabs from './SensorListDataGraphTabs'
-import SensorDataList from './SensorDataList';
 
 let counter = 0;
 function createData(name, calories, fat, carbs, protein) {
@@ -362,15 +360,13 @@ class EnhancedTable extends React.Component {
                       key={n.sensorName}
                       selected={isSelected}
                     >
-                     <TableCell>
-                        <SensorListDataGraphTabs />
-                      </TableCell>
-                      {/* <TableCell padding="checkbox">
+                      <TableCell padding="checkbox">
                         <Checkbox checked={isSelected} />
                       </TableCell>
                       <TableCell component="th" scope="row" >
+                        {/* {n.sensor +""+1} */}
                         <SensorValueContainer value={n} />
-                      </TableCell > */}
+                      </TableCell >
                       {/* <TableCell   colSpan={0.5} numeric>{0}</TableCell> */}
                     </TableRow>
                   );
