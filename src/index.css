@@ -1178,7 +1178,7 @@ div[class^="MuiDialogContent"] .simple-form div[class^="MuiCardContent"]{
   border-left: none !important;
   border-right: none !important;
 }
-.table-bordered tr th{text-align: center !important;}
+.table-bordered tr th{padding: 0px !important;}
 .table-responsive tr th {
   text-align: left !important;
 }
@@ -1798,9 +1798,30 @@ tbody tr td a{
   flex-basis:100% !important;
   max-width:100% !important;
 }
-#sensorList{border: 1px solid gray;}
-#sensorList .col-md-2, .col-md-6{border-right: 1px solid gray;}
+#sensorList{border: 1px solid #cccccc; border-radius: 5px;}
+#sensorList .col-md-2, .col-md-6{border-right: 1px solid #cccccc;}
 #sensorList #last_grid{border-right:none !important;}
 #sensorList #middle_grid {
   padding: 0px !important;
+}
+.dashboard #sensorList .recharts-wrapper{
+  height: auto !important;
+}
+#middle_grid .col-md-12{
+  border-bottom: 1px solid #cccccc;
+  padding: 20px 15px; 
+}
+#middle_grid .col-md-12:last-child{
+  border-bottom: none !important;
+}
+#first_grid h6{
+  text-align: center;
+    padding: 84px 0px;
+}
+#last_grid h6{
+  text-align: center;
+    padding: 84px 0px;
+}
+#middle_grid .col-md-12{
+  text-align: center !important;
 }

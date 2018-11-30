@@ -10,6 +10,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SensorDataChart from './SensorDataChart'
 import { Col, Container, Row } from 'reactstrap';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
+
 function TabContainer({ children, dir }) {
     return (
         <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
@@ -55,22 +59,21 @@ class SensorDataList extends React.Component {
                         <h6>Refer#</h6>
                     </Col>
                     <Col md={6}>
-                        <h6>Chart</h6>
-                        {/* <SensorDataChart group={group} chartValue={value} /> */}
+                        <SensorDataChart group={group} chartValue={value} />
                     </Col>
                     <Col md={2} id="middle_grid">
                         <Col md={12}>
-                            <h6>Chart</h6>
+                            <span><ArrowUpwardIcon />47.3 F</span>
                         </Col>
                         <Col md={12}>
-                            <h6>Chart</h6>
+                        <span><CompareArrowsIcon />26.5 F</span>
                         </Col>
                         <Col md={12}>
-                            <h6>Chart</h6>
+                        <span><ArrowDownwardIcon />2.3 F</span>
                         </Col>
                     </Col>
                     <Col md={2} id="last_grid">
-                        <h6>Sensor Values</h6>
+                        <h6>47.3 F</h6>
                     </Col>
                 </Row>
             </div>
