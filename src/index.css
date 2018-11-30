@@ -917,6 +917,9 @@ div[class^="MuiList"] > div[class^="MuiButtonBase"]{
   /* text-align: center !important; */
   padding: 0px 4px !important;
 }
+#device .table-responsive table thead tr th{
+  padding: 10px 0px !important;
+}
 /* tbody[class^="MuiTableBody"] td{
   text-align: center !important;
 } */
