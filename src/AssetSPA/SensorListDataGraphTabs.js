@@ -9,6 +9,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import SensorDataChart from './SensorDataChart'
+import { Col, Container, Row } from 'reactstrap';
 function TabContainer({ children, dir }) {
   return (
     <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
@@ -19,7 +20,7 @@ function TabContainer({ children, dir }) {
 
 TabContainer.propTypes = {
   children: PropTypes.node.isRequired,
-  
+
 };
 
 const styles = theme => ({
@@ -43,62 +44,75 @@ class SensorListDataGraphTabs extends React.Component {
   };
 
   render() {
-      console.log(this.props)
-    const { classes, theme ,data,group} = this.props;
+    console.log(this.props)
+    const { classes, theme, data, group } = this.props;
     const { value } = this.state;
-    let array = [0,1,2]
+    let array = [0, 1, 2]
     return (
-      <div id="assetData" className={classes.root}>
-        <AppBar position="static" color="default">
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            indicatorColor="primary"
-            textColor="primary"
-            fullWidth
-            centered
-          >
-            <Tab label="Chart">
-          
-            </Tab>
-            <Tab label="Raw values" />
-           
-          </Tabs>
-        </AppBar>
-        {value === 0 && <TabContainer>
-       
-            <div>
-            <TableBody>
-            {data.map(item=>{
-                 return (
-            <TableRow
-            key={item}
-            >
-                    <TableCell>
-                    <SensorDataChart group={group} chartValue ={item}/>
-                    </TableCell>    
-                 </TableRow>  )
-            })}     
-            </TableBody>    
-            </div>
-                {/* <TableBody>
-
-                {array.map(n=>{
-                     <TableRow>
-                    <TableCell>
-                   
-                    </TableCell>    
-                    </TableRow>   
-                })}
-                </TableBody> */}
-                {/* <DeluxeSummaryChart fill={this.props.fillColor}/> */}
-          </TabContainer>
-         }
-        {value === 1 && <TabContainer>Item Two</TabContainer>}
-
-       
+      <div>
+        <Row>
+          <Col md={3}>
+              {value.sensorName}
+          </Col>
+          <Col md={6}>
+            <SensorDataChart group={group} chartValue={value} />
+          </Col>
+          <Col md={3}>
+              {value.sensorName}
+          </Col>
+        </Row>
       </div>
-    );
+      // <div id="assetData" className={classes.root}>
+      //   <AppBar position="static" color="default">
+      //     <Tabs
+      //       value={this.state.value}
+      //       onChange={this.handleChange}
+      //       indicatorColor="primary"
+      //       textColor="primary"
+      //       fullWidth
+      //       centered
+      //     >
+      //       <Tab label="Chart">
+
+      //       </Tab>
+      //       <Tab label="Raw values" />
+
+      //     </Tabs>
+      //   </AppBar>
+      //   {value === 0 && <TabContainer>
+
+      //     <div>
+      //       <TableBody>
+      //         {data.map(item => {
+      //           return (
+      //             <TableRow
+      //               key={item}
+      //             >
+      //               <TableCell>
+      //                 <SensorDataChart group={group} chartValue={item} />
+      //               </TableCell>
+      //             </TableRow>)
+      //         })}
+      //       </TableBody>
+      //     </div>
+      //     {/* <TableBody>
+
+      //           {array.map(n=>{
+      //                <TableRow>
+      //               <TableCell>
+                   
+      //               </TableCell>    
+      //               </TableRow>   
+      //           })}
+      //           </TableBody> */}
+      //     {/* <DeluxeSummaryChart fill={this.props.fillColor}/> */}
+      //   </TabContainer>
+      //   }
+      //   {value === 1 && <TabContainer>Item Two</TabContainer>}
+
+
+      // </div>
+          );
   }
 }
 

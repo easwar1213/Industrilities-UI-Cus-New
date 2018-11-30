@@ -3,6 +3,7 @@ import React from 'react';
 import { SelectArrayInput, ShowButton, Show, Filter, List, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput, SimpleShowLayout } from 'react-admin';
 import Complete from './CompleteMaintenanceButton';
 import MaintenanceIcon from '@material-ui/icons/Build';
+import AlertIcon from '@material-ui/icons/ErrorOutline';
 import { Label, PieChart, Pie, ResponsiveContainer } from 'recharts';
 import Chip from '@material-ui/core/Chip';
 import PropTypes from "prop-types";
@@ -156,7 +157,7 @@ const MaintenanceGrid = ({ ids, data, basePath,classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>        
-                                <TableCell><Badge color='primary'><MaintenanceIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Due</Badge></TableCell>                        
+                                <TableCell><Badge color='primary'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Due</Badge></TableCell>                        
                             )}
 
                             {(data[id]).status == 'upcoming' && (
@@ -171,7 +172,7 @@ const MaintenanceGrid = ({ ids, data, basePath,classes }) => (
                                 //         variant="outlined"
                                 //     />
                                 // </TableCell>
-                                <TableCell><Badge color='warning'><MaintenanceIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Upcoming</Badge></TableCell>
+                                <TableCell><Badge color='warning'><AlertIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Upcoming</Badge></TableCell>
                             )}
                             <TableCell>{(data[id]).assetName} </TableCell>
                             <TableCell > <Complete record={(data[id])} /> </TableCell>  

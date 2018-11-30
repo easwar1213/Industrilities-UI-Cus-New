@@ -48,7 +48,7 @@ const MaintenanceHistoryTitle = ({ record }) => {
     return <span>Maintenance History / Details </span>;
 };
 
-const DeviceDetailedView = ({ record }) => {
+const MaintennaceDetailedView = ({ record }) => {
     return (
         // <Panel xs={12} md={12} lg={12} title={"Device : " + record.model+" - "+record.telematicsSerialNumber}> 
         <Card>
@@ -135,7 +135,7 @@ export const MaintenanceHistoryDetails = (props) => (
             <TextField source="status" />
         </SimpleShowLayout> */}
 
-        <DeviceDetailedView/>
+        <MaintennaceDetailedView/>
 
     </Show>
 );

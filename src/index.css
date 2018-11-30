@@ -1793,3 +1793,14 @@ tbody tr td a{
   margin-left: 18px;
   float: left;
 }
+
+#assetShow .col-12 .collapse .ra-field-undefined .dashboard div[class^="MuiGrid"]{
+  flex-basis:100% !important;
+  max-width:100% !important;
+}
+#sensorList{border: 1px solid gray;}
+#sensorList .col-md-2, .col-md-6{border-right: 1px solid gray;}
+#sensorList #last_grid{border-right:none !important;}
+#sensorList #middle_grid {
+  padding: 0px !important;
+}

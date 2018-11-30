@@ -16,6 +16,7 @@ import { Container, Row } from 'reactstrap';
 import Grid from "@material-ui/core/Grid";
 //import DeluxeSummaryChart from './Assets/TestCharts'
 import SensorListDatagraphTabs from "./SensorListDataGraphTabs"
+import SensorDataList from "./SensorDataList";
 
 const styles = theme => ({
     root: {
@@ -192,12 +193,12 @@ class SensorGroupTable extends React.Component {
                                     <Row>
                                         <Grid container spacing={24}>
                                             
-                                            <EnhancedTable action ={this.handleClickSelectOnChild} data={this.state.selectedSensorGroupData} asset={record.telematicsSerialNumber} value={this.state.selectedSensorGroup}/>                          
+                                            {/* <EnhancedTable action ={this.handleClickSelectOnChild} data={this.state.selectedSensorGroupData} asset={record.telematicsSerialNumber} value={this.state.selectedSensorGroup}/>                          
                                             <br />
-                                           <br />
+                                           <br /> */}
                                             <Grid  item xs ={8}>
                                             <Paper>
-                                            <SensorListDatagraphTabs group={this.state.selectedSensorGroup} data={this.state.selectedSensors} />
+                                            <SensorDataList group={this.state.selectedSensorGroup} data={this.state.selectedSensors} />
                                             </Paper>
                                             </Grid>
                                       
