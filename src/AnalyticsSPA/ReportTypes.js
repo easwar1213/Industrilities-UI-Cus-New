@@ -77,6 +77,7 @@ const maintenanceValues = [
 class ReportTypes extends Component {
     state = {
         error: false,
+        errMsg:false,
         showDialog: false,
         selectedAssets: [],
         assets: [],
@@ -291,24 +292,31 @@ class ReportTypes extends Component {
     handleClickSubmit = () => {
         //  console.log("handleClickSubmit")
         //  console.log(this.props)
-        if (this.props.type.id == 'AssetUtilizationSummary') {
-            this.handleReportSummaryData()
+        if(this.state.selectedAssets!=""){
+            this.setState({errMsg:false});
+            if (this.props.type.id == 'AssetUtilizationSummary') {
+                this.handleReportSummaryData()
+            }
+            else if (this.props.type.id == 'AssetFaultData') {
+                this.handleFaultReportData()
+            }
+            else if (this.props.type.id == 'FaultSummary') {
+                this.handleFaultSummary()
+            }
+            else if (this.props.type.id == 'WSServiceReport') {
+                this.handleWSServiceReport()
+            }
+            else if (this.props.type.id == 'DeluxeStationaryReport') {
+                this.hanldeDeluxeStationaryReport();
+            }
+            else {
+                this.handleReportData()
+            }
         }
-        else if (this.props.type.id == 'AssetFaultData') {
-            this.handleFaultReportData()
+        else{
+            this.setState({errMsg:true});
         }
-        else if (this.props.type.id == 'FaultSummary') {
-            this.handleFaultSummary()
-        }
-        else if (this.props.type.id == 'WSServiceReport') {
-            this.handleWSServiceReport()
-        }
-        else if (this.props.type.id == 'DeluxeStationaryReport') {
-            this.hanldeDeluxeStationaryReport();
-        }
-        else {
-            this.handleReportData()
-        }
+       
 
 
         // console.log(this.state)
@@ -365,6 +373,7 @@ class ReportTypes extends Component {
                 <Row>
                     <Panel xs={12} md={12} lg={12} title="Analytics Details">
                         <b> <div id="repTitle"><Button label="List Reports" onClick={this.handleBackToList}><ListIcon /></Button></div></b>
+                        <span>{this.state.errMsg ? "Asset is Required" : null}</span>
                         <form id="repForm">
                             &nbsp;&nbsp;&nbsp;&nbsp;  Select Date Range: &nbsp;&nbsp; <FormControl >
                                 <NativeSelect
@@ -399,7 +408,7 @@ class ReportTypes extends Component {
                                             {asset.assetName}
                                         </MenuItem>
                                     ))}
-                                </Select>
+                                </Select>                                
                             </FormControl >
                             <br />
                             <br />
@@ -415,6 +424,7 @@ class ReportTypes extends Component {
                                             InputLabelProps={{
                                                 shrink: true,
                                             }}
+                                            error={this.state.errMsg}
                                         />
                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Date :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                              <TextField
