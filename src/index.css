@@ -846,7 +846,7 @@ div[class^="MuiTypography"] tbody tr td{
   min-width: 190px !important;
 }
 .simple-form div[class^="MuiFormControl"] .button-add{
-  min-width: 100px !important;
+  min-width: 80px !important;
   margin-top: 15px !important;
   background: #646777 !important;
   color: #FFFFFF !important;
@@ -1065,6 +1065,7 @@ div[class^="MuiDialogTitle"]{
 }
 .row #analysisrep div[class^="MuiPaper-root"]{
 width: 100% !important;
+padding: 15px !important;
 }
 #analysisrep div[class^="MuiPaper"] table tr{
   height: 20px !important;
@@ -1178,7 +1179,9 @@ div[class^="MuiDialogContent"] .simple-form div[class^="MuiCardContent"]{
   border-left: none !important;
   border-right: none !important;
 }
-.table-bordered tr th{padding: 0px !important;}
+.table-bordered tr th{
+  padding: 0px !important;
+}
 .table-responsive tr th {
   text-align: left !important;
 }
@@ -1495,7 +1498,7 @@ margin: 0 auto !important;
   height: 310 !important;
 }
 .dashboard .recharts-wrapper{
-  height: 331px !important;
+  height: 300px !important;
 }
 
 /* #assetData .recharts-wrapper{
@@ -1738,15 +1741,7 @@ header h2{
 #assetInfo li{
   list-style-type: none !important;
   color: #646777 !important;
-  font-size: 15px !important;
-}
-#assetInfo strong{
-  /* margin-right: 10px; */
-    width: 125px;
-    float: left;
-}
-#assetInfo span{
-margin-left: 5px;
+  font-size: 16px !important;
 }
 /* .ra-input div[class^="MuiInput"]{
   border: 1px solid rgba(0, 0, 0, 0.42) !important;
@@ -1806,34 +1801,34 @@ tbody tr td a{
   flex-basis:100% !important;
   max-width:100% !important;
 }
-#sensorList{border: 1px solid #cccccc; border-radius: 5px;}
-#sensorList .col-md-2, .col-md-6{border-right: 1px solid #cccccc;}
+#sensorList{border: 1px solid gray;}
+#sensorList .col-md-2, .col-md-6{border-right: 1px solid gray;}
 #sensorList #last_grid{border-right:none !important;}
 #sensorList #middle_grid {
   padding: 0px !important;
 }
-.dashboard #sensorList .recharts-wrapper{
-  height: auto !important;
+div[class^="recharts"]{
+  font-size: 14px !important;
+  font-family:Roboto,sans-serif !important;
+  font-weight: bold !important;
 }
-#middle_grid .col-md-12{
-  border-bottom: 1px solid #cccccc;
-  padding: 20px 15px; 
+span[class^="MuiTab"]{
+  color: #646777 !important;
 }
-#middle_grid .col-md-12:last-child{
-  border-bottom: none !important;
+div[class^="MuiPaper"]{
+  border: 1px solid #eff1f5 !important;
 }
-#first_grid h6{
+.rt-tbody .rt-td{
   text-align: center;
-    padding: 84px 0px;
+  font-size: 14px !important;
+  color: #646777 !important;
 }
-#last_grid h6{
-  text-align: center;
-    padding: 84px 0px;
+.ReactTable .rt-thead.-header{
+  border-bottom: 1px solid #eff1f5 !important;
+  box-shadow: none !important;
 }
-#middle_grid .col-md-12{
-  text-align: center !important;
-}
-#middle_grid .col-md-12 span svg{
-  float: left !important;
-  fill: #6467777a !important;
+.ReactTable .rt-thead.-header .rt-resizable-header-content{
+  font-size: 14px;
+  font-weight: bold;
+  color: #646777 !important;
 }
