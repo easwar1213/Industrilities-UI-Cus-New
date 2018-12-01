@@ -1334,9 +1334,9 @@ div[class^="MuiModal"] div[class^="MuiPaper"] div[class^="MuiPaper"] div[class^=
   float: left !important;
   /* padding: 10px; */
 }
-div[class^="MuiCardContent"] .ra-field:nth-child(7){
+/* div[class^="MuiCardContent"] .ra-field:nth-child(7){
   display: none !important;
-}
+} */
 div[class^="MuiCardContent"] .ra-field:nth-child(8) div[class^="MuiFormControl"]{
   margin-top: 6px !important;
 }
@@ -1689,7 +1689,7 @@ header h2{
 }
 #alert_form_create .ra-input ul .ra-input{
   float: left !important;
-  width: 145px !important;
+  width: 225px !important;
   margin: 5px !important;
 }
 /* #alert_form_create .ra-input ul .ra-input div[class^="MuiInput"]:before{

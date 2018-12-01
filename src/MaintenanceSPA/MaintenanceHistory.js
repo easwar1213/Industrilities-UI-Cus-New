@@ -4,6 +4,29 @@ import { SimpleShowLayout, ShowButton, Show, Filter, List, Edit, Create, Datagri
 import { Card,CardBody,Col, Container, Row, Badge } from 'reactstrap';
 import Panel from '../components/Panel';
 import Table from '../components/table/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Avatar from '@material-ui/core/Avatar';
+import DoneIcon from '@material-ui/icons/Done';
+import BlockIcon from '@material-ui/icons/Block';
+// import Table from '@material-ui/core/Table';
+
+const styles = theme => ({
+    root: {
+        width: '100%',
+        marginTop: theme.spacing.unit * 3,
+        overflowX: 'auto',
+    },
+    table: {
+        minWidth: 700,
+    },
+});
+
+const gridStyle = {
+    width: '60%',
+};
 
 
 export const MaintenanceHistory = (props) => (
@@ -20,13 +43,14 @@ export const MaintenanceHistory = (props) => (
         <Row>
             <Panel xs={12} md={12} lg={12} title="History Details">
                 <List title="Maintenance History" {...props} filter={{ status: "completed" }} >
-                    <Datagrid>
+                <MaintenanceHistoryGrid />
+                    {/* <Datagrid>
                         <TextField source="plan" />
                         <TextField source="assetName" />
                         <TextField source="status" />
                         <TextField label="Completed At" source="serviceDate" />
                         <ShowButton label="Show" />
-                    </Datagrid>
+                    </Datagrid> */}
                 </List>
             </Panel>
         </Row>
@@ -43,6 +67,49 @@ export const MaintenanceHistory = (props) => (
     // </List>
 );
 
+
+const MaintenanceHistoryGrid = ({ ids, data, basePath }) => (
+    <div id="device" style={{ gridStyle }}>
+
+        <Table responsive style={{ tableLayout: 'auto' }}  >
+            <TableHead>
+                <TableRow>
+                    <TableCell>Plan</TableCell>
+                    <TableCell>Asset Name</TableCell>
+                    <TableCell>Status</TableCell>
+                    <TableCell>Completed At</TableCell>
+                    <TableCell>Show</TableCell>
+                </TableRow>
+            </TableHead>
+            <TableBody>
+                {ids.map(id => {
+                    return (
+                        <TableRow
+                            key={id}>
+                            <TableCell>{(data[id]).plan}</TableCell>                            
+                            <TableCell>{(data[id]).assetName}</TableCell>
+                            {(data[id]).status == 'due' && (                                   
+                                <TableCell><Badge color='primary'><DoneIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Due</Badge></TableCell>                        
+                            )}
+                            {(data[id]).status == 'upcoming' && (                               
+                                <TableCell><Badge color='warning'><DoneIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Upcoming</Badge></TableCell>
+                            )}                           
+                            {(data[id]).status == 'completed' && (
+                                <TableCell><Badge color='success'><DoneIcon style={{ width: 25, height: 25,paddingRight:5 }}/>Completed</Badge></TableCell>
+                            )}   
+                            <TableCell>{(data[id]).serviceDate}</TableCell>  
+                            <TableCell>
+                                <ShowButton
+                                    resource="getMaintenanceHistory" basePath={basePath} record={(data[id])}
+                                />
+                            </TableCell>
+                        </TableRow>
+                    );
+                })}
+            </TableBody>
+        </Table>
+    </div>
+)
 
 const MaintenanceHistoryTitle = ({ record }) => {
     return <span>Maintenance History / Details </span>;
@@ -139,4 +206,9 @@ export const MaintenanceHistoryDetails = (props) => (
 
     </Show>
 );
+
+MaintenanceHistoryGrid.defaultProps = {
+    data: {},
+    ids: [],
+};
 

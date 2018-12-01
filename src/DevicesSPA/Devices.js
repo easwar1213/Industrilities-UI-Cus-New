@@ -114,7 +114,6 @@ const DeviceGrid = ({ ids, data, basePath }) => (
             </TableBody>
         </Table>
     </div>
-
 )
 
 DeviceGrid.defaultProps = {
