@@ -1371,9 +1371,9 @@ div[class^="MuiDialogTitle"] h2{
 .simple-form div[class^="MuiCardContent"] .ra-input-attributes ul{
   margin-top: 20px !important;
 }
-.simple-form div[class^="MuiCardContent"] .ra-input:nth-child(2){
+/* .simple-form div[class^="MuiCardContent"] .ra-input:nth-child(2){
 display: none !important;
-}
+} */
 #menu- ul li[class^="MuiButtonBase"]{
   height: 10px !important;
   font-size: 14px !important;
@@ -1418,9 +1418,9 @@ body{font-family: Roboto,sans-serif !important;}
 div[class^="MuiPaper"] #edit-form div[class^="MuiCardContent"]:nth-child(1){
 float: left !important;
 }
-div[class^="MuiPaper"] #edit-form div[class^="MuiCardContent"] .ra-input:nth-child(3){
+/* div[class^="MuiPaper"] #edit-form div[class^="MuiCardContent"] .ra-input:nth-child(3){
   display: none !important;
-  }
+  } */
 #edit-form .ra-input-notify ul li{
   border-bottom: none !important;
 }
@@ -1728,9 +1728,9 @@ header h2{
 #alert_form_create .ra-input-assets div[class^="MuiFormControl"] label span{
   font-size: 14px !important;
 }
-#alert_form_create div[class^="MuiCardContent"] .ra-input:nth-child(3){
+/* #alert_form_create div[class^="MuiCardContent"] .ra-input:nth-child(3){
   display: none !important;
-}
+} */
 
 .ra-field.ra-field-triggers{
   margin-bottom: 15px;

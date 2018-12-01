@@ -6,7 +6,8 @@ export default (type, params) => {
     if (type === AUTH_LOGIN) {
         const { username, password } = params;
        // const request = new Request('https://xl1xob5uqg.execute-api.us-east-2.amazonaws.com/dev/login', {
-        const request = new Request('https://f594u5uu7j.execute-api.us-east-2.amazonaws.com/dev/login', {
+        // const request = new Request('https://f594u5uu7j.execute-api.us-east-2.amazonaws.com/dev/login', {
+            const request = new Request('https://f594u5uu7j.execute-api.us-east-2.amazonaws.com/dev/newLogin', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
             headers: new Headers({ 'Content-Type': 'application/json' }),
@@ -22,7 +23,8 @@ export default (type, params) => {
             })
             .then((response) => {
               
-                localStorage.setItem('token', response.AuthenticationResult.AccessToken);
+                // localStorage.setItem('token', response.AuthenticationResult.AccessToken);
+                localStorage.setItem('token', response.AuthenticationResult.IdToken); //AccessToken
                 localStorage.setItem('username', response.username);
                 let username = localStorage.getItem('username');
                // console.log('token :'+username)
